@@ -14,3 +14,5 @@ A Killing Floor 3 website for Character Build and Loadout
 - Reddit backlink
 - Rating
 - Match progression / Economy
+- Maps view
+- Material
