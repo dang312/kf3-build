@@ -1,0 +1,74 @@
+{
+    "name": "Ninja",
+    "character": "",
+    "skillTable": {
+        "passives": [
+            [
+                {
+                    "name": "Yoroi",
+                    "effect": {
+                        "type": "passive",
+                        "description": "Maximum armor is increased by {{X}}.<br /><br />Stamina lost while blocking attacks is reduced by <b>50%</b>."
+                    },
+                    "values": {
+                        "X": [
+                            20,
+                            30,
+                            40,
+                            50
+                        ]
+                    }
+                },
+                {
+                    "name": "Kenko",
+                    "effect": {
+                        "type": "passive",
+                        "description": "Maximum health is increased by {{X}}.<br /><br />Performing a perfect parry will restore <b>10</b> health over 5 seconds. Additional perfect parries refresh this duration.",
+                        "values": {
+                            "X": [
+                                20,
+                                30,
+                                40,
+                                50
+                            ]
+                        }
+                    },
+                    "icon": "images/skills/kenko.png"
+                }
+            ]
+        ],
+        "throwable": [
+            []
+        ],
+        "gadget": [
+            []
+        ]
+    },
+    "proficiency": [
+        {
+            "name": "zed_time_movementspeed",
+            "description": "{{X}}% Zed Time Movement Speed",
+            "values": {
+                "X": [
+                    5,
+                    10,
+                    15,
+                    20,
+                    25
+                ]
+            }
+        },
+        {
+            "name": "zed_time_melee_attackspeed",
+            "description": "{{X}}% Zed Time Melee Attack Speed",
+            "values": {
+                "X": [
+                    40,
+                    45,
+                    50,
+                    55
+                ]
+            }
+        }
+    ]
+}
