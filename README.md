@@ -9,7 +9,8 @@ A Killing Floor 3 website for Character Build and Loadout
 
 # Later
 - Comments/Discussion on Build
-- Login ?
+- Login
+- Store Build
 - Reddit backlink
 - Rating
 - Match progression / Economy
