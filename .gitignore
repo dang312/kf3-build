@@ -37,6 +37,10 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+# .NET build output
+bin/
+obj/
+
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -124,6 +128,22 @@ dist
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Local game-data investigation output
+scratch/
+local/
+*.pak
+*.ucas
+*.utoc
+*.uasset
+*.umap
+*.uexp
+*.ubulk
+*.sig
+oodle-data-shared.dll
+liboodle-data-shared.so
+libz-ng.so
+zlib-ng2.dll
 
 # yarn v3
 .pnp.*
