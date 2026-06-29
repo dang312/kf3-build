@@ -1,74 +1,1647 @@
 {
-    "name": "Ninja",
-    "character": "",
-    "skillTable": {
-        "passives": [
-            [
-                {
-                    "name": "Yoroi",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum armor is increased by {{X}}.<br /><br />Stamina lost while blocking attacks is reduced by <b>50%</b>."
-                    },
-                    "values": {
-                        "X": [
-                            20,
-                            30,
-                            40,
-                            50
-                        ]
-                    }
-                },
-                {
-                    "name": "Kenko",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum health is increased by {{X}}.<br /><br />Performing a perfect parry will restore <b>10</b> health over 5 seconds. Additional perfect parries refresh this duration.",
-                        "values": {
-                            "X": [
-                                20,
-                                30,
-                                40,
-                                50
-                            ]
-                        }
-                    },
-                    "icon": "images/skills/kenko.png"
-                }
-            ]
-        ],
-        "throwable": [
-            []
-        ],
-        "gadget": [
-            []
-        ]
-    },
-    "proficiency": [
-        {
-            "name": "zed_time_movementspeed",
-            "description": "{{X}}% Zed Time Movement Speed",
-            "values": {
-                "X": [
-                    5,
-                    10,
-                    15,
-                    20,
-                    25
-                ]
-            }
-        },
-        {
-            "name": "zed_time_melee_attackspeed",
-            "description": "{{X}}% Zed Time Melee Attack Speed",
-            "values": {
-                "X": [
-                    40,
-                    45,
-                    50,
-                    55
-                ]
-            }
-        }
-    ]
+	"slug": "commando",
+	"name": "Commando",
+	"character": "Foster",
+	"dataStatus": "candidate-extracted",
+	"source": {
+		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
+		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
+		"collectionSummary": {
+			"packageCount": 6,
+			"skillPreviewCount": 149,
+			"previewCandidateSkillCount": 148,
+			"candidateSkillCount": 211,
+			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithTier": 210,
+			"candidateSkillsWithUnlockLevel": 210,
+			"locresSkillRecords": 198,
+			"rawSkillTreeAssets": 18,
+			"rawSkillTreeSkillReferences": 210,
+			"duplicateCandidateSkillSlugs": [
+				{
+					"candidateSkillSlug": "commando-hothead",
+					"count": 2
+				}
+			],
+			"perkCount": 6,
+			"perkSkillCounts": {
+				"commando": 35,
+				"engineer": 35,
+				"firebug": 35,
+				"medic": 36,
+				"ninja": 35,
+				"sharpshooter": 35
+			},
+			"fmodelFilesScanned": 0,
+			"fmodelFilesSkipped": 0,
+			"fmodelMatchesRecorded": 0
+		},
+		"levelRequirements": {
+			"passives": [
+				2,
+				8,
+				14,
+				20,
+				26
+			],
+			"throwable": [
+				4,
+				10,
+				16,
+				22,
+				28
+			],
+			"gadget": [
+				6,
+				12,
+				18,
+				24,
+				30
+			]
+		},
+		"notes": [
+			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
+			"Each skill.source preserves the original collected candidate record, including locres keys, raw skill-tree asset paths, preview files, collection status, and notes.",
+			"Descriptions still contain game markup and unresolved locres placeholders such as {0}; value extraction is a later normalization step."
+		]
+	},
+	"skillTable": {
+		"passives": [
+			[
+				{
+					"slug": "commando-insider-trading",
+					"name": "Insider Trading",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "InsiderTrading",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "passives",
+						"description": "Maximum armor integrity is increased by <Emp>[{0}]</>.<cf><cf>Armor costs from the trader are reduced by <Emp>[{1}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-insider-trading",
+						"candidateSkillName": "Insider Trading",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "InsiderTrading",
+						"category": "passives",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 2,
+						"description": "Maximum armor integrity is increased by <Emp>[{0}]</>.<cf><cf>Armor costs from the trader are reduced by <Emp>[{1}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-fire-sale",
+					"name": "Fire Sale",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "FireSale",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "passives",
+						"description": "Max ammo capacity is increased by <Emp>[{0}%]</>.<cf><cf>Ammo costs from the trader are reduced by <Emp>[{1}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-fire-sale",
+						"candidateSkillName": "Fire Sale",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "FireSale",
+						"category": "passives",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 2,
+						"description": "Max ammo capacity is increased by <Emp>[{0}%]</>.<cf><cf>Ammo costs from the trader are reduced by <Emp>[{1}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-hothead",
+					"name": "Hothead",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "Hothead",
+					"treeOrder": 0,
+					"skillNumber": 3,
+					"effect": {
+						"type": "passives",
+						"description": "Destroying an enemy's head with a Ballistic <img id=\"Ballistic\"/> weapon has a <Emp>[{0}%]</> chance to trigger an explosion, dealing <sEmp>175</> Force <img id=\"Force\"/> damage."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-hothead",
+						"candidateSkillName": "Hothead",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Hothead_Preview.mp4",
+								"folder": "Commando_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Movies/Hothead_Preview.mp4"
+							},
+							{
+								"fileName": "Comm_Hothead_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_Hothead_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Hothead",
+						"category": "passives",
+						"skillNumber": 3,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 8,
+						"description": "Destroying an enemy's head with a Ballistic <img id=\"Ballistic\"/> weapon has a <Emp>[{0}%]</> chance to trigger an explosion, dealing <sEmp>175</> Force <img id=\"Force\"/> damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-offset",
+					"name": "Offset",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "Offset",
+					"treeOrder": 1,
+					"skillNumber": 4,
+					"effect": {
+						"type": "passives",
+						"description": "While magazine is over half full, weapon <sEmp>Stumble</> is increased by <Emp>[{0}%]</>.<cf><cf>While magazine is less than half full, weapon damage is increased by <Emp>[{1}%]</> instead."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-offset",
+						"candidateSkillName": "Offset",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_Offset_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_Offset_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Offset",
+						"category": "passives",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 8,
+						"description": "While magazine is over half full, weapon <sEmp>Stumble</> is increased by <Emp>[{0}%]</>.<cf><cf>While magazine is less than half full, weapon damage is increased by <Emp>[{1}%]</> instead.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-preferred-customer",
+					"name": "Preferred Customer",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "PreferredCustomer",
+					"treeOrder": 2,
+					"skillNumber": 5,
+					"effect": {
+						"type": "passives",
+						"description": "Weapon costs from trader pod are reduced by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-preferred-customer",
+						"candidateSkillName": "Preferred Customer",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "PreferredCustomer",
+						"category": "passives",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 2,
+						"unlockLevel": 8,
+						"description": "Weapon costs from trader pod are reduced by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-not-dead-yet",
+					"name": "Not Dead Yet",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "NotDeadYet",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "passives",
+						"description": "Taking lethal damage leaves you at <sEmp>1</> HP and grants you invulnerability and healing over time for <sEmp>5</> seconds. <cf><cf>This skill has a <Emp>[{0}]</> minute cooldown. Killing enemies reduces cooldown by <sEmp>5</> seconds."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-not-dead-yet",
+						"candidateSkillName": "Not Dead Yet",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_NotDeadYet_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_NotDeadYet_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "NotDeadYet",
+						"category": "passives",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 14,
+						"description": "Taking lethal damage leaves you at <sEmp>1</> HP and grants you invulnerability and healing over time for <sEmp>5</> seconds. <cf><cf>This skill has a <Emp>[{0}]</> minute cooldown. Killing enemies reduces cooldown by <sEmp>5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-booster-shot",
+					"name": "Booster Shot",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "BoosterShot",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "passives",
+						"description": "Max Syringe capacity is increased by <sEmp>2</>.<cf><cf>After using a Syringe, regenerate <Emp>[{0}]</> additional health per second for <sEmp>5</> seconds."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-booster-shot",
+						"candidateSkillName": "Booster Shot",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_BoosterShot_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_BoosterShot_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BoosterShot",
+						"category": "passives",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 14,
+						"description": "Max Syringe capacity is increased by <sEmp>2</>.<cf><cf>After using a Syringe, regenerate <Emp>[{0}]</> additional health per second for <sEmp>5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-time-and-again",
+					"name": "Time and Again",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "TimeAndAgain",
+					"treeOrder": 0,
+					"skillNumber": 8,
+					"effect": {
+						"type": "passives",
+						"description": "Amount of Zed Time gained when destroying critical hit zones is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-time-and-again",
+						"candidateSkillName": "Time and Again",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "TimeAndAgain",
+						"category": "passives",
+						"skillNumber": 8,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 20,
+						"description": "Amount of Zed Time gained when destroying critical hit zones is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-get-loaded",
+					"name": "Get Loaded",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "GetLoaded",
+					"treeOrder": 1,
+					"skillNumber": 9,
+					"effect": {
+						"type": "passives",
+						"description": "Weapons automatically reload when holstered for <sEmp>2.5</> seconds.<cf><cf>Weapon swap speed is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-get-loaded",
+						"candidateSkillName": "Get Loaded",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_GetLoaded_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_GetLoaded_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "GetLoaded",
+						"category": "passives",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 20,
+						"description": "Weapons automatically reload when holstered for <sEmp>2.5</> seconds.<cf><cf>Weapon swap speed is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-a-real-rager",
+					"name": "A Real Rager",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "LimbReaper",
+					"treeOrder": 0,
+					"skillNumber": 10,
+					"effect": {
+						"type": "passives",
+						"description": "Using a Syringe increases movement speed by <Emp>[{0}%]</>, weapon damage by  <Emp>[{1}%]</>, and bash damage by <Emp>[{2}%]</> for <sEmp>20</> seconds.<cf><cf>Using additional Syringes will refresh duration of buff. "
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-a-real-rager",
+						"candidateSkillName": "A Real Rager",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_ARealRager_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_ARealRager_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateSkillSlugs": [
+							"commando-limb-reaper"
+						],
+						"internalName": "LimbReaper",
+						"category": "passives",
+						"skillNumber": 10,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 26,
+						"description": "Using a Syringe increases movement speed by <Emp>[{0}%]</>, weapon damage by  <Emp>[{1}%]</>, and bash damage by <Emp>[{2}%]</> for <sEmp>20</> seconds.<cf><cf>Using additional Syringes will refresh duration of buff. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-barrels-blazing",
+					"name": "Barrels Blazing",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "BarrelsBlazing",
+					"treeOrder": 1,
+					"skillNumber": 11,
+					"effect": {
+						"type": "passives",
+						"description": "Shooting weapons grants stacks of <Emp>BLAZE</> up to <sEmp>10</>. <Emp>BLAZE</> stacks rapidly decay while not shooting. Spray and beam-type weapons do not generate stacks.<cf><cf><Emp>BLAZE:</>At <sEmp>10</> stacks, deal <Emp>[{0}%]</> increased weapon damage."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-barrels-blazing",
+						"candidateSkillName": "Barrels Blazing",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_BarrelsBlazing_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_BarrelsBlazing_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BarrelsBlazing",
+						"category": "passives",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 26,
+						"description": "Shooting weapons grants stacks of <Emp>BLAZE</> up to <sEmp>10</>. <Emp>BLAZE</> stacks rapidly decay while not shooting. Spray and beam-type weapons do not generate stacks.<cf><cf><Emp>BLAZE:</>At <sEmp>10</> stacks, deal <Emp>[{0}%]</> increased weapon damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-limb-reaper",
+					"name": "Limb Reaper",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "ARealRager",
+					"treeOrder": 2,
+					"skillNumber": 12,
+					"effect": {
+						"type": "passives",
+						"description": "Destroying enemy limbs or armor with Ballistic <img id=\"Ballistic\"/> weapons increases weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-limb-reaper",
+						"candidateSkillName": "Limb Reaper",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_LimbReaper_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_LimbReaper_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateSkillSlugs": [
+							"commando-a-real-rager"
+						],
+						"internalName": "ARealRager",
+						"category": "passives",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 26,
+						"description": "Destroying enemy limbs or armor with Ballistic <img id=\"Ballistic\"/> weapons increases weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"throwable": [
+			[
+				{
+					"slug": "commando-a-bigger-bang",
+					"name": "A Bigger Bang",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "ABiggerBang",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "throwable",
+						"description": "Grenade explosion radius is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-a-bigger-bang",
+						"candidateSkillName": "A Bigger Bang",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_ABiggerBang_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_ABiggerBang_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ABiggerBang",
+						"category": "throwable",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 4,
+						"description": "Grenade explosion radius is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-knockabout",
+					"name": "Knockabout",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "Knockabout",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "throwable",
+						"description": "Grenade explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-knockabout",
+						"candidateSkillName": "Knockabout",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_Knockabout_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_Knockabout_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Knockabout",
+						"category": "throwable",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 4,
+						"description": "Grenade explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-think-fast",
+					"name": "Think Fast!",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "ThinkFast!",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "throwable",
+						"description": "Grenades explode on impact.<cf><cf>Self-damage from grenades is reduced by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-think-fast",
+						"candidateSkillName": "Think Fast!",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_ThinkFast_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_ThinkFast_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Think Fast!"
+						],
+						"internalName": "ThinkFast!",
+						"category": "throwable",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 4,
+						"description": "Grenades explode on impact.<cf><cf>Self-damage from grenades is reduced by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-capacity-tier2",
+					"name": "Capacity Tier2",
+					"category": "throwable",
+					"tierNumber": 2,
+					"unlockLevel": 10,
+					"internalName": "Capacity_Tier2",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-capacity-tier2",
+						"candidateSkillName": "Capacity Tier2",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier2",
+						"category": "throwable",
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 10,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-cluster-bombs",
+					"name": "Cluster Bombs",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "ClusterBombs",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "throwable",
+						"description": "Grenade explosion spawns <sEmp>3</> smaller bombs that explode for <Emp>[{0}]</> Force <img id=\"Force\"/> damage."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-cluster-bombs",
+						"candidateSkillName": "Cluster Bombs",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_ClusterBombs_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_ClusterBombs_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ClusterBombs",
+						"category": "throwable",
+						"skillNumber": 4,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 16,
+						"description": "Grenade explosion spawns <sEmp>3</> smaller bombs that explode for <Emp>[{0}]</> Force <img id=\"Force\"/> damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-corrosion-explosion",
+					"name": "Corrosion Explosion",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "CorrosionExplosion",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "throwable",
+						"description": "Grenade's damage type is changed to Acidic <img id=\"Acidic\"/>.<cf><cf>Grenade explosion deals <sEmp>50%</> less damage but creates a lingering cloud that deals Acidic <img id=\"Acidic\"/> damage over <Emp>[{0}]</> seconds."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-corrosion-explosion",
+						"candidateSkillName": "Corrosion Explosion",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_CorrosionExplosion_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_CorrosionExplosion_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "CorrosionExplosion",
+						"category": "throwable",
+						"skillNumber": 5,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 16,
+						"description": "Grenade's damage type is changed to Acidic <img id=\"Acidic\"/>.<cf><cf>Grenade explosion deals <sEmp>50%</> less damage but creates a lingering cloud that deals Acidic <img id=\"Acidic\"/> damage over <Emp>[{0}]</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-capacity-tier4",
+					"name": "Capacity Tier4",
+					"category": "throwable",
+					"tierNumber": 4,
+					"unlockLevel": 22,
+					"internalName": "Capacity_Tier4",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-capacity-tier4",
+						"candidateSkillName": "Capacity Tier4",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier4",
+						"category": "throwable",
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 22,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-scavenger",
+					"name": "Scavenger",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "Scavenger",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "throwable",
+						"description": "Destroying an enemy’s head grants a stack of <Emp>SCAVENGER</>. <cf><cf><Emp>SCAVENGER:</> At <Emp>[{0}]</> stacks, consume all stacks to refill <sEmp>1</> grenade ammo."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-scavenger",
+						"candidateSkillName": "Scavenger",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_Scavenger_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_Scavenger_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Scavenger",
+						"category": "throwable",
+						"skillNumber": 6,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 28,
+						"description": "Destroying an enemy’s head grants a stack of <Emp>SCAVENGER</>. <cf><cf><Emp>SCAVENGER:</> At <Emp>[{0}]</> stacks, consume all stacks to refill <sEmp>1</> grenade ammo.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-action-hero",
+					"name": "Action Hero",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "ActionHero",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "throwable",
+						"description": "Amount of Zed Time gained when destroying enemy limbs and armor is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-action-hero",
+						"candidateSkillName": "Action Hero",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ActionHero",
+						"category": "throwable",
+						"skillNumber": 7,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 28,
+						"description": "Amount of Zed Time gained when destroying enemy limbs and armor is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-money-spinner",
+					"name": "Money-Spinner",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "MoneySpinner",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "throwable",
+						"description": "Grenade kills grant <Emp>[{0}]</> extra Dosh up to a maximum of <Emp>[{1}]</> per wave."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-money-spinner",
+						"candidateSkillName": "Money-Spinner",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_MoneySpinner_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_MoneySpinner_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Money-Spinner"
+						],
+						"internalName": "MoneySpinner",
+						"category": "throwable",
+						"skillNumber": 8,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 28,
+						"description": "Grenade kills grant <Emp>[{0}]</> extra Dosh up to a maximum of <Emp>[{1}]</> per wave.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"gadget": [
+			[
+				{
+					"slug": "commando-acceptable-damage",
+					"name": "Acceptable Damage",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "AcceptableDamage",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "gadget",
+						"description": "Acid clouds spawned by Hellion's projectiles deal <Emp>[{0}%]</> increased damage to enemies hit by initial projectile."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-acceptable-damage",
+						"candidateSkillName": "Acceptable Damage",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "AcceptableDamage",
+						"category": "gadget",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 6,
+						"description": "Acid clouds spawned by Hellion's projectiles deal <Emp>[{0}%]</> increased damage to enemies hit by initial projectile.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-market-panic",
+					"name": "Market Panic",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "MarketPanic",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "gadget",
+						"description": "Enemies in Hellion's acid clouds stay in <sEmp>Panic</> for <Emp>[{0}%]</> longer."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-market-panic",
+						"candidateSkillName": "Market Panic",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_MarketPanic_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_MarketPanic_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "MarketPanic",
+						"category": "gadget",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 6,
+						"description": "Enemies in Hellion's acid clouds stay in <sEmp>Panic</> for <Emp>[{0}%]</> longer.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-guardian-angel",
+					"name": "Guardian Angel",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "GuardianAngel",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "gadget",
+						"description": "Take <Emp>[{0}%]</> reduced damage while Hellion is active."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-guardian-angel",
+						"candidateSkillName": "Guardian Angel",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_GuardianAngel_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_GuardianAngel_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "GuardianAngel",
+						"category": "gadget",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 6,
+						"description": "Take <Emp>[{0}%]</> reduced damage while Hellion is active.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-extended-coverage",
+					"name": "Extended Coverage",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "ExtendedCoverage",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "gadget",
+						"description": "Hellion's acid cloud last for an additional <Emp>[{0}]</> seconds."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-extended-coverage",
+						"candidateSkillName": "Extended Coverage",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ExtendedCoverage",
+						"category": "gadget",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 12,
+						"description": "Hellion's acid cloud last for an additional <Emp>[{0}]</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-widen-out",
+					"name": "Widen Out",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "WidenOut",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "gadget",
+						"description": "Radius of Hellion's acid clouds is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-widen-out",
+						"candidateSkillName": "Widen Out",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_WidenOut_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_WidenOut_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "WidenOut",
+						"category": "gadget",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 12,
+						"description": "Radius of Hellion's acid clouds is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-easy-upgrade",
+					"name": "Easy Upgrade",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "EasyUpgrade",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "gadget",
+						"description": "Hellion's projectile's initial impact damage is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-easy-upgrade",
+						"candidateSkillName": "Easy Upgrade",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "EasyUpgrade",
+						"category": "gadget",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 18,
+						"description": "Hellion's projectile's initial impact damage is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-slow-dance",
+					"name": "Slow Dance",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "SlowDance",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "gadget",
+						"description": "Initial impact explosions from Hellion's projectiles apply <Emp>[{0}]</> <sEmp>Enfeeble</> affliction."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-slow-dance",
+						"candidateSkillName": "Slow Dance",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_SlowDance_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_SlowDance_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SlowDance",
+						"category": "gadget",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 18,
+						"description": "Initial impact explosions from Hellion's projectiles apply <Emp>[{0}]</> <sEmp>Enfeeble</> affliction.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-caustic-cure",
+					"name": "Caustic Cure",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "CausticCure",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "gadget",
+						"description": "Standing in Hellion's acid clouds regenerates <Emp>[{0}]</> health per second."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-caustic-cure",
+						"candidateSkillName": "Caustic Cure",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_CausticCure_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_CausticCure_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "CausticCure",
+						"category": "gadget",
+						"skillNumber": 8,
+						"tierNumber": 3,
+						"treeOrder": 2,
+						"unlockLevel": 18,
+						"description": "Standing in Hellion's acid clouds regenerates <Emp>[{0}]</> health per second.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-quick-return",
+					"name": "Quick Return",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "QuickReturn",
+					"treeOrder": 0,
+					"skillNumber": 9,
+					"effect": {
+						"type": "gadget",
+						"description": "Destroying enemy weak spots with weapons grants <Emp>[{0}]</> gadget activation energy."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-quick-return",
+						"candidateSkillName": "Quick Return",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_QuickReturn_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_QuickReturn_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "QuickReturn",
+						"category": "gadget",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 24,
+						"description": "Destroying enemy weak spots with weapons grants <Emp>[{0}]</> gadget activation energy.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-business-expansion",
+					"name": "Business Expansion",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "BusinessExpansion",
+					"treeOrder": 1,
+					"skillNumber": 10,
+					"effect": {
+						"type": "gadget",
+						"description": "Increase maximum number of rounds fired by Hellion by <Emp>[{0}]</> and its max duration by <Emp>[{1}]</> seconds."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-business-expansion",
+						"candidateSkillName": "Business Expansion",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_BusinessExpansion_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_BusinessExpansion_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BusinessExpansion",
+						"category": "gadget",
+						"skillNumber": 10,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 24,
+						"description": "Increase maximum number of rounds fired by Hellion by <Emp>[{0}]</> and its max duration by <Emp>[{1}]</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "commando-smog-warning",
+					"name": "Smog Warning",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "SmogWarning",
+					"treeOrder": 0,
+					"skillNumber": 11,
+					"effect": {
+						"type": "gadget",
+						"description": "Hellion's acid cloud damage increases by <Emp>[{0}%]</> for each second they’re active."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-smog-warning",
+						"candidateSkillName": "Smog Warning",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SmogWarning",
+						"category": "gadget",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 30,
+						"description": "Hellion's acid cloud damage increases by <Emp>[{0}%]</> for each second they’re active.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-boom-cycle",
+					"name": "Boom Cycle",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "BoomCycle",
+					"treeOrder": 1,
+					"skillNumber": 12,
+					"effect": {
+						"type": "gadget",
+						"description": "Initial projectile impact damage increases by <Emp>[{0}%]</> for each shot fired during current gadget activation."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-boom-cycle",
+						"candidateSkillName": "Boom Cycle",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_BoomCycle_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_BoomCycle_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BoomCycle",
+						"category": "gadget",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 30,
+						"description": "Initial projectile impact damage increases by <Emp>[{0}%]</> for each shot fired during current gadget activation.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "commando-survivor-type",
+					"name": "Survivor Type",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "SurvivorType",
+					"treeOrder": 2,
+					"skillNumber": 13,
+					"effect": {
+						"type": "gadget",
+						"description": "Standing in Hellion's acid clouds makes it so  your health can't be reduced below <Emp>{0}</> for 3 seconds.<cf><cf>Continuing to stand in clouds refreshes this duration."
+					},
+					"source": {
+						"perkSlug": "commando",
+						"candidateSkillSlug": "commando-survivor-type",
+						"candidateSkillName": "Survivor Type",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Comm_SurvivorType_Preview.mp4",
+								"folder": "Commando_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Commando_Skills_Previews/Comm_SurvivorType_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SurvivorType",
+						"category": "gadget",
+						"skillNumber": 13,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 30,
+						"description": "Standing in Hellion's acid clouds makes it so  your health can't be reduced below <Emp>{0}</> for 3 seconds.<cf><cf>Continuing to stand in clouds refreshes this duration.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Foster",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Foster",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			]
+		]
+	},
+	"proficiency": [],
+	"unplacedSkillCandidates": []
 }

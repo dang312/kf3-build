@@ -1,74 +1,1672 @@
 {
-    "name": "Ninja",
-    "character": "",
-    "skillTable": {
-        "passives": [
-            [
-                {
-                    "name": "Yoroi",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum armor is increased by {{X}}.<br /><br />Stamina lost while blocking attacks is reduced by <b>50%</b>."
-                    },
-                    "values": {
-                        "X": [
-                            20,
-                            30,
-                            40,
-                            50
-                        ]
-                    }
-                },
-                {
-                    "name": "Kenko",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum health is increased by {{X}}.<br /><br />Performing a perfect parry will restore <b>10</b> health over 5 seconds. Additional perfect parries refresh this duration.",
-                        "values": {
-                            "X": [
-                                20,
-                                30,
-                                40,
-                                50
-                            ]
-                        }
-                    },
-                    "icon": "images/skills/kenko.png"
-                }
-            ]
-        ],
-        "throwable": [
-            []
-        ],
-        "gadget": [
-            []
-        ]
-    },
-    "proficiency": [
-        {
-            "name": "zed_time_movementspeed",
-            "description": "{{X}}% Zed Time Movement Speed",
-            "values": {
-                "X": [
-                    5,
-                    10,
-                    15,
-                    20,
-                    25
-                ]
-            }
-        },
-        {
-            "name": "zed_time_melee_attackspeed",
-            "description": "{{X}}% Zed Time Melee Attack Speed",
-            "values": {
-                "X": [
-                    40,
-                    45,
-                    50,
-                    55
-                ]
-            }
-        }
-    ]
+	"slug": "firebug",
+	"name": "Firebug",
+	"character": "Devlin",
+	"dataStatus": "candidate-extracted",
+	"source": {
+		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
+		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
+		"collectionSummary": {
+			"packageCount": 6,
+			"skillPreviewCount": 149,
+			"previewCandidateSkillCount": 148,
+			"candidateSkillCount": 211,
+			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithTier": 210,
+			"candidateSkillsWithUnlockLevel": 210,
+			"locresSkillRecords": 198,
+			"rawSkillTreeAssets": 18,
+			"rawSkillTreeSkillReferences": 210,
+			"duplicateCandidateSkillSlugs": [
+				{
+					"candidateSkillSlug": "commando-hothead",
+					"count": 2
+				}
+			],
+			"perkCount": 6,
+			"perkSkillCounts": {
+				"commando": 35,
+				"engineer": 35,
+				"firebug": 35,
+				"medic": 36,
+				"ninja": 35,
+				"sharpshooter": 35
+			},
+			"fmodelFilesScanned": 0,
+			"fmodelFilesSkipped": 0,
+			"fmodelMatchesRecorded": 0
+		},
+		"levelRequirements": {
+			"passives": [
+				2,
+				8,
+				14,
+				20,
+				26
+			],
+			"throwable": [
+				4,
+				10,
+				16,
+				22,
+				28
+			],
+			"gadget": [
+				6,
+				12,
+				18,
+				24,
+				30
+			]
+		},
+		"notes": [
+			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
+			"Each skill.source preserves the original collected candidate record, including locres keys, raw skill-tree asset paths, preview files, collection status, and notes.",
+			"Descriptions still contain game markup and unresolved locres placeholders such as {0}; value extraction is a later normalization step."
+		]
+	},
+	"skillTable": {
+		"passives": [
+			[
+				{
+					"slug": "firebug-firewall",
+					"name": "Firewall",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "Firewall",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "passives",
+						"description": "Take <Emp>[{0}%]</> less damage from <sEmp>Burning</> enemies."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-firewall",
+						"candidateSkillName": "Firewall",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Firewall",
+						"category": "passives",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 2,
+						"description": "Take <Emp>[{0}%]</> less damage from <sEmp>Burning</> enemies.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-too-hot-to-handle",
+					"name": "Too Hot to Handle",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "TooHotToHandle",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "passives",
+						"description": "Retaliate with a small burst of flame that applies <sEmp>Burn</> and <sEmp>150</> Heat <img id=\"Heat\"/> damage against enemy melee attacks.<cf><cf>This skill has a <Emp>[{0}]</> second cooldown between triggers."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-too-hot-to-handle",
+						"candidateSkillName": "Too Hot to Handle",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_TooHotToHandle_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_TooHotToHandle_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Too Hot to Handle"
+						],
+						"internalName": "TooHotToHandle",
+						"category": "passives",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 2,
+						"description": "Retaliate with a small burst of flame that applies <sEmp>Burn</> and <sEmp>150</> Heat <img id=\"Heat\"/> damage against enemy melee attacks.<cf><cf>This skill has a <Emp>[{0}]</> second cooldown between triggers.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-heat-exposure",
+					"name": "Heat Exposure",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "HeatExposure",
+					"treeOrder": 0,
+					"skillNumber": 3,
+					"effect": {
+						"type": "passives",
+						"description": "Heat <img id=\"Heat\"/> weapons apply <Emp>[{0}%]</> increased <sEmp>Burn</> affliction and cause enemies to <sEmp>Burn</> for <Emp>[{1}%]</> longer."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-heat-exposure",
+						"candidateSkillName": "Heat Exposure",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_HeatExposure_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_HeatExposure_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HeatExposure",
+						"category": "passives",
+						"skillNumber": 3,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 8,
+						"description": "Heat <img id=\"Heat\"/> weapons apply <Emp>[{0}%]</> increased <sEmp>Burn</> affliction and cause enemies to <sEmp>Burn</> for <Emp>[{1}%]</> longer.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-focus-fire",
+					"name": "Focus Fire",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "FocusFire",
+					"treeOrder": 1,
+					"skillNumber": 4,
+					"effect": {
+						"type": "passives",
+						"description": "Deal <Emp>[{0}%]</> increased direct weapon damage with Heat <img id=\"Heat\"/> weapons."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-focus-fire",
+						"candidateSkillName": "Focus Fire",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "FocusFire",
+						"category": "passives",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 8,
+						"description": "Deal <Emp>[{0}%]</> increased direct weapon damage with Heat <img id=\"Heat\"/> weapons.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-scorched-earth",
+					"name": "Scorched Earth",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "ScorchedEarth",
+					"treeOrder": 2,
+					"skillNumber": 5,
+					"effect": {
+						"type": "passives",
+						"description": "Ground fire effects caused by weapons deal <Emp>[{0}%]</> increased damage."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-scorched-earth",
+						"candidateSkillName": "Scorched Earth",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_ScorchedEarth_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_ScorchedEarth_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ScorchedEarth",
+						"category": "passives",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 2,
+						"unlockLevel": 8,
+						"description": "Ground fire effects caused by weapons deal <Emp>[{0}%]</> increased damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-fuel-to-burn",
+					"name": "Fuel to Burn",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "FuelToBurn",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "passives",
+						"description": "Max ammo capacity is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-fuel-to-burn",
+						"candidateSkillName": "Fuel to Burn",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "FuelToBurn",
+						"category": "passives",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 14,
+						"description": "Max ammo capacity is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-slow-cook",
+					"name": "Slow Cook",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "SlowCook",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "passives",
+						"description": "Ground fire effects caused by weapons are <Emp>[{0}%]</> bigger and apply <Emp>[{1}]</> <sEmp>Enfeeble</> affliction per tick."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-slow-cook",
+						"candidateSkillName": "Slow Cook",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_SlowCook_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_SlowCook_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SlowCook",
+						"category": "passives",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 14,
+						"description": "Ground fire effects caused by weapons are <Emp>[{0}%]</> bigger and apply <Emp>[{1}]</> <sEmp>Enfeeble</> affliction per tick.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-red-zone",
+					"name": "Red Zone",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "RedZone",
+					"treeOrder": 0,
+					"skillNumber": 8,
+					"effect": {
+						"type": "passives",
+						"description": "Killing nearby enemies grants stacks of <Emp>RED ZONE</>, granting more stacks for larger enemies. <cf><cf><Emp>RED ZONE:</> At 5 stacks, all stacks can be consumed to repair <Emp>[{0}]</> armor integrity."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-red-zone",
+						"candidateSkillName": "Red Zone",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_RedZone_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_RedZone_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "RedZone",
+						"category": "passives",
+						"skillNumber": 8,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 20,
+						"description": "Killing nearby enemies grants stacks of <Emp>RED ZONE</>, granting more stacks for larger enemies. <cf><cf><Emp>RED ZONE:</> At 5 stacks, all stacks can be consumed to repair <Emp>[{0}]</> armor integrity.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-hotfoot",
+					"name": "Hotfoot",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "Hotfoot",
+					"treeOrder": 1,
+					"skillNumber": 9,
+					"effect": {
+						"type": "passives",
+						"description": "Ground fire effects caused by weapons heal you for <Emp>[{0}]</> health per second while standing in them."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-hotfoot",
+						"candidateSkillName": "Hotfoot",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_Hotfoot_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_Hotfoot_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Hotfoot",
+						"category": "passives",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 20,
+						"description": "Ground fire effects caused by weapons heal you for <Emp>[{0}]</> health per second while standing in them.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-extinguisher",
+					"name": "Extinguisher",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "Extinguisher",
+					"treeOrder": 0,
+					"skillNumber": 10,
+					"effect": {
+						"type": "passives",
+						"description": "Weapon reload speed is increased by <Emp>[{0}%]</>.<cf><cf>Reloading weapon damages nearby enemies, applying <sEmp>Panic</> and <sEmp>75</> Heat <img id=\"Heat\"/> damage. <sEmp>Burning</> enemies take triple damage, but are extinguished."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-extinguisher",
+						"candidateSkillName": "Extinguisher",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_Extinguisher_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_Extinguisher_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Extinguisher",
+						"category": "passives",
+						"skillNumber": 10,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 26,
+						"description": "Weapon reload speed is increased by <Emp>[{0}%]</>.<cf><cf>Reloading weapon damages nearby enemies, applying <sEmp>Panic</> and <sEmp>75</> Heat <img id=\"Heat\"/> damage. <sEmp>Burning</> enemies take triple damage, but are extinguished.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-barbecue-bash",
+					"name": "Barbecue Bash",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "BarbecueBash",
+					"treeOrder": 1,
+					"skillNumber": 11,
+					"effect": {
+						"type": "passives",
+						"description": "Bashes deal <Emp>[{0}]</> bonus damage. This bonus is doubled against <sEmp>Burning</> enemies."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-barbecue-bash",
+						"candidateSkillName": "Barbecue Bash",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_BarbecueBash_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_BarbecueBash_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BarbecueBash",
+						"category": "passives",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 26,
+						"description": "Bashes deal <Emp>[{0}]</> bonus damage. This bonus is doubled against <sEmp>Burning</> enemies.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-explosive-reaction",
+					"name": "Explosive Reaction",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "ExplosiveReaction",
+					"treeOrder": 2,
+					"skillNumber": 12,
+					"effect": {
+						"type": "passives",
+						"description": "Enemies killed by Heat <img id=\"Heat\"/> weapons have a <Emp>[{0}%]</> chance to explode on death, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage and creating a ground fire."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-explosive-reaction",
+						"candidateSkillName": "Explosive Reaction",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_ExplosiveReaction_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_ExplosiveReaction_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ExplosiveReaction",
+						"category": "passives",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 26,
+						"description": "Enemies killed by Heat <img id=\"Heat\"/> weapons have a <Emp>[{0}%]</> chance to explode on death, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage and creating a ground fire.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"throwable": [
+			[
+				{
+					"slug": "firebug-cocktail-party",
+					"name": "Cocktail Party",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "CocktailParty",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "throwable",
+						"description": "Enemies hit by the initial Molotov explosion will <sEmp>Panic</> for <Emp>[{0}%]</> longer."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-cocktail-party",
+						"candidateSkillName": "Cocktail Party",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_CocktailParty_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_CocktailParty_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "CocktailParty",
+						"category": "throwable",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 4,
+						"description": "Enemies hit by the initial Molotov explosion will <sEmp>Panic</> for <Emp>[{0}%]</> longer.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-boom-out",
+					"name": "Boom Out",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "BoomOut",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "throwable",
+						"description": "Increase Molotov explosion radius by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-boom-out",
+						"candidateSkillName": "Boom Out",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_BoomOut_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_BoomOut_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BoomOut",
+						"category": "throwable",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 4,
+						"description": "Increase Molotov explosion radius by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-firecracker",
+					"name": "Firecracker",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "Firecracker",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "throwable",
+						"description": "Hitting an enemy directly with Molotov applies <sEmp>Panic</> and deals <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-firecracker",
+						"candidateSkillName": "Firecracker",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_Firecracker_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_Firecracker_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Firecracker",
+						"category": "throwable",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 4,
+						"description": "Hitting an enemy directly with Molotov applies <sEmp>Panic</> and deals <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-capacity-tier2",
+					"name": "Capacity Tier2",
+					"category": "throwable",
+					"tierNumber": 2,
+					"unlockLevel": 10,
+					"internalName": "Capacity_Tier2",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-capacity-tier2",
+						"candidateSkillName": "Capacity Tier2",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier2",
+						"category": "throwable",
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 10,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-extended-edition",
+					"name": "Extended Edition",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "ExtendedEdition",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "throwable",
+						"description": "Molotov ground fire duration is extended by <Emp>[{0}]</> seconds."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-extended-edition",
+						"candidateSkillName": "Extended Edition",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ExtendedEdition",
+						"category": "throwable",
+						"skillNumber": 4,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 16,
+						"description": "Molotov ground fire duration is extended by <Emp>[{0}]</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-out-with-a-bang",
+					"name": "Out With a Bang",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "OutWithABang",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "throwable",
+						"description": "Molotov explosion damage is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-out-with-a-bang",
+						"candidateSkillName": "Out With a Bang",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "OutWithABang",
+						"category": "throwable",
+						"skillNumber": 5,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 16,
+						"description": "Molotov explosion damage is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-capacity-tier4",
+					"name": "Capacity Tier4",
+					"category": "throwable",
+					"tierNumber": 4,
+					"unlockLevel": 22,
+					"internalName": "Capacity_Tier4",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-capacity-tier4",
+						"candidateSkillName": "Capacity Tier4",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier4",
+						"category": "throwable",
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 22,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-asphyxiate",
+					"name": "Asphyxiate",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "Asphyxiate",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "throwable",
+						"description": "Molotov ground fires apply <Emp>[{0}]</> <sEmp>Enfeeble</> affliction per second."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-asphyxiate",
+						"candidateSkillName": "Asphyxiate",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_Asphyxiate_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_Asphyxiate_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Asphyxiate",
+						"category": "throwable",
+						"skillNumber": 6,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 28,
+						"description": "Molotov ground fires apply <Emp>[{0}]</> <sEmp>Enfeeble</> affliction per second.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-hot-mess",
+					"name": "Hot Mess",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "HotMess",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "throwable",
+						"description": "Molotov secondary projectiles explode when they land, dealing <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage in addition to spawning ground fire."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-hot-mess",
+						"candidateSkillName": "Hot Mess",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_HotMess_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_HotMess_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HotMess",
+						"category": "throwable",
+						"skillNumber": 7,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 28,
+						"description": "Molotov secondary projectiles explode when they land, dealing <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage in addition to spawning ground fire.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-up-in-flames",
+					"name": "Up in Flames",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "UpInFlames",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "throwable",
+						"description": "Increase number of secondary Molotov projectiles spawned by <Emp>[{0}]</>.<cf><cf>Secondary Molotov projectiles are now launched upwards."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-up-in-flames",
+						"candidateSkillName": "Up in Flames",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_UpInFlames_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_UpInFlames_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Up in Flames"
+						],
+						"internalName": "UpInFlames",
+						"category": "throwable",
+						"skillNumber": 8,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 28,
+						"description": "Increase number of secondary Molotov projectiles spawned by <Emp>[{0}]</>.<cf><cf>Secondary Molotov projectiles are now launched upwards.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"gadget": [
+			[
+				{
+					"slug": "firebug-front-row-seats",
+					"name": "Front Row Seats",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "FrontRowSeats",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "gadget",
+						"description": "Nearby enemies take <Emp>[{0}%]</> increased damage from Wildfire's blast wave."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-front-row-seats",
+						"candidateSkillName": "Front Row Seats",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_FrontRowSeats_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_FrontRowSeats_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "FrontRowSeats",
+						"category": "gadget",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 6,
+						"description": "Nearby enemies take <Emp>[{0}%]</> increased damage from Wildfire's blast wave.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-ready-for-action",
+					"name": "Ready for Action",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "ReadyForAction",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "gadget",
+						"description": "Using Wildfire reloads weapon and increases weapon damage by <Emp>[{0}%]</> for <sEmp>10</> seconds."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-ready-for-action",
+						"candidateSkillName": "Ready for Action",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_ReadyForAction_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_ReadyForAction_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Ready for Action"
+						],
+						"internalName": "ReadyForAction",
+						"category": "gadget",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 6,
+						"description": "Using Wildfire reloads weapon and increases weapon damage by <Emp>[{0}%]</> for <sEmp>10</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-heat-therapy",
+					"name": "Heat Therapy",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "HeatTherapy",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "gadget",
+						"description": "Using Wildfire heals you for <Emp>[{0}]</> health"
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-heat-therapy",
+						"candidateSkillName": "Heat Therapy",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_HeatTherapy_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_HeatTherapy_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HeatTherapy",
+						"category": "gadget",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 6,
+						"description": "Using Wildfire heals you for <Emp>[{0}]</> health",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-footlights",
+					"name": "Footlights",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "Footlights",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "gadget",
+						"description": "Ground fires created by Wildfire have <sEmp>25%</> increased radius and deal <Emp>[{0}%]</> increased damage."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-footlights",
+						"candidateSkillName": "Footlights",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Footlights",
+						"category": "gadget",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 12,
+						"description": "Ground fires created by Wildfire have <sEmp>25%</> increased radius and deal <Emp>[{0}%]</> increased damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-speedy-exit",
+					"name": "Speedy Exit",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "SpeedyExit",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "gadget",
+						"description": "Using Wildfire grants <Emp>[{0}%]</> increased movement speed for <sEmp>10</> seconds."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-speedy-exit",
+						"candidateSkillName": "Speedy Exit",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_SpeedyExit_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_SpeedyExit_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SpeedyExit",
+						"category": "gadget",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 12,
+						"description": "Using Wildfire grants <Emp>[{0}%]</> increased movement speed for <sEmp>10</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-triple-play",
+					"name": "Triple Play",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "TriplePlay",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "gadget",
+						"description": "Using Wildfire sends out a cone of <sEmp>3</>  fireballs in target direction. Fireballs apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage to enemies they hit."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-triple-play",
+						"candidateSkillName": "Triple Play",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_TriplePlay_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_TriplePlay_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "TriplePlay",
+						"category": "gadget",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 18,
+						"description": "Using Wildfire sends out a cone of <sEmp>3</>  fireballs in target direction. Fireballs apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage to enemies they hit.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-red-carpet",
+					"name": "Red Carpet",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "RedCarpet",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "gadget",
+						"description": "Ground fires created by Wildfire last for an additional <Emp>[{0}]</> seconds.<cf><cf>Standing in ground fire created by Wildfire grants <sEmp>20%</> increased Heat <img id=\"Heat\"/> weapon damage."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-red-carpet",
+						"candidateSkillName": "Red Carpet",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_RedCarpet_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_RedCarpet_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "RedCarpet",
+						"category": "gadget",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 18,
+						"description": "Ground fires created by Wildfire last for an additional <Emp>[{0}]</> seconds.<cf><cf>Standing in ground fire created by Wildfire grants <sEmp>20%</> increased Heat <img id=\"Heat\"/> weapon damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-in-the-public-eye",
+					"name": "In the Public Eye",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "InThePublicEye",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "gadget",
+						"description": "Firing Wildfire causes all nearby enemies to concentrate on you and causes you to take <Emp>[{0}%]</> reduced damage for <sEmp>10</> seconds."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-in-the-public-eye",
+						"candidateSkillName": "In the Public Eye",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_InThePublicEye_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_InThePublicEye_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"In the Public Eye"
+						],
+						"internalName": "InThePublicEye",
+						"category": "gadget",
+						"skillNumber": 8,
+						"tierNumber": 3,
+						"treeOrder": 2,
+						"unlockLevel": 18,
+						"description": "Firing Wildfire causes all nearby enemies to concentrate on you and causes you to take <Emp>[{0}%]</> reduced damage for <sEmp>10</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-hot-streak",
+					"name": "Hot Streak",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "HotStreak",
+					"treeOrder": 0,
+					"skillNumber": 9,
+					"effect": {
+						"type": "gadget",
+						"description": "Killing nearby enemies grants <Emp>[{0}]</> gadget activation energy.<cf><cf>Gadget kills do not count towards this."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-hot-streak",
+						"candidateSkillName": "Hot Streak",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_HotStreak_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_HotStreak_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HotStreak",
+						"category": "gadget",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 24,
+						"description": "Killing nearby enemies grants <Emp>[{0}]</> gadget activation energy.<cf><cf>Gadget kills do not count towards this.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-blast-zone",
+					"name": "Blast Zone",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "BlastZone",
+					"treeOrder": 1,
+					"skillNumber": 10,
+					"effect": {
+						"type": "gadget",
+						"description": "Wildfire's blast wave radius is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-blast-zone",
+						"candidateSkillName": "Blast Zone",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_BlastZone_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_BlastZone_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BlastZone",
+						"category": "gadget",
+						"skillNumber": 10,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 24,
+						"description": "Wildfire's blast wave radius is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "firebug-flammable-material",
+					"name": "Flammable Material",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "DoubleFeature",
+					"treeOrder": 0,
+					"skillNumber": 11,
+					"effect": {
+						"type": "gadget",
+						"description": "Using Wildfire causes you to ignite for <Emp>[{0}]</> seconds.<cf><cf>While on fire, apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <sEmp>25</> Heat <img id=\"Heat\"/> damage per second to all enemies close to you."
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-flammable-material",
+						"candidateSkillName": "Flammable Material",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_FlammableMaterial_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_FlammableMaterial_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateSkillSlugs": [
+							"firebug-double-feature"
+						],
+						"internalName": "DoubleFeature",
+						"category": "gadget",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 30,
+						"description": "Using Wildfire causes you to ignite for <Emp>[{0}]</> seconds.<cf><cf>While on fire, apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <sEmp>25</> Heat <img id=\"Heat\"/> damage per second to all enemies close to you.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-double-feature",
+					"name": "Double Feature",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "FlammableMaterial",
+					"treeOrder": 1,
+					"skillNumber": 12,
+					"effect": {
+						"type": "gadget",
+						"description": "After discharging, Wildfire will discharge a second time after a short delay.<cf><cf>Wildfire's blast wave damage is decreased by <Emp>[{0}%]</>. "
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-double-feature",
+						"candidateSkillName": "Double Feature",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_DoubleFeature_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_DoubleFeature_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateSkillSlugs": [
+							"firebug-flammable-material"
+						],
+						"internalName": "FlammableMaterial",
+						"category": "gadget",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 30,
+						"description": "After discharging, Wildfire will discharge a second time after a short delay.<cf><cf>Wildfire's blast wave damage is decreased by <Emp>[{0}%]</>. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "firebug-from-the-ashes",
+					"name": "From the Ashes",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "FromTheAshes",
+					"treeOrder": 2,
+					"skillNumber": 13,
+					"effect": {
+						"type": "gadget",
+						"description": "Once per match, while downed, you may activate Wildfire to get back up, repair <Emp>[{0}]</> Armor integrity, and become invulnerable for <sEmp>4</> seconds. "
+					},
+					"source": {
+						"perkSlug": "firebug",
+						"candidateSkillSlug": "firebug-from-the-ashes",
+						"candidateSkillName": "From the Ashes",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Fire_FromTheAshes_Preview.mp4",
+								"folder": "Firebug_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Firebug_Skills_Previews/Fire_FromTheAshes_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"From the Ashes"
+						],
+						"internalName": "FromTheAshes",
+						"category": "gadget",
+						"skillNumber": 13,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 30,
+						"description": "Once per match, while downed, you may activate Wildfire to get back up, repair <Emp>[{0}]</> Armor integrity, and become invulnerable for <sEmp>4</> seconds. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Devlin",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			]
+		]
+	},
+	"proficiency": [],
+	"unplacedSkillCandidates": []
 }

@@ -1,74 +1,1651 @@
 {
-    "name": "Ninja",
-    "character": "",
-    "skillTable": {
-        "passives": [
-            [
-                {
-                    "name": "Yoroi",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum armor is increased by {{X}}.<br /><br />Stamina lost while blocking attacks is reduced by <b>50%</b>."
-                    },
-                    "values": {
-                        "X": [
-                            20,
-                            30,
-                            40,
-                            50
-                        ]
-                    }
-                },
-                {
-                    "name": "Kenko",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum health is increased by {{X}}.<br /><br />Performing a perfect parry will restore <b>10</b> health over 5 seconds. Additional perfect parries refresh this duration.",
-                        "values": {
-                            "X": [
-                                20,
-                                30,
-                                40,
-                                50
-                            ]
-                        }
-                    },
-                    "icon": "images/skills/kenko.png"
-                }
-            ]
-        ],
-        "throwable": [
-            []
-        ],
-        "gadget": [
-            []
-        ]
-    },
-    "proficiency": [
-        {
-            "name": "zed_time_movementspeed",
-            "description": "{{X}}% Zed Time Movement Speed",
-            "values": {
-                "X": [
-                    5,
-                    10,
-                    15,
-                    20,
-                    25
-                ]
-            }
-        },
-        {
-            "name": "zed_time_melee_attackspeed",
-            "description": "{{X}}% Zed Time Melee Attack Speed",
-            "values": {
-                "X": [
-                    40,
-                    45,
-                    50,
-                    55
-                ]
-            }
-        }
-    ]
+	"slug": "ninja",
+	"name": "Ninja",
+	"character": "Nakata",
+	"dataStatus": "candidate-extracted",
+	"source": {
+		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
+		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
+		"collectionSummary": {
+			"packageCount": 6,
+			"skillPreviewCount": 149,
+			"previewCandidateSkillCount": 148,
+			"candidateSkillCount": 211,
+			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithTier": 210,
+			"candidateSkillsWithUnlockLevel": 210,
+			"locresSkillRecords": 198,
+			"rawSkillTreeAssets": 18,
+			"rawSkillTreeSkillReferences": 210,
+			"duplicateCandidateSkillSlugs": [
+				{
+					"candidateSkillSlug": "commando-hothead",
+					"count": 2
+				}
+			],
+			"perkCount": 6,
+			"perkSkillCounts": {
+				"commando": 35,
+				"engineer": 35,
+				"firebug": 35,
+				"medic": 36,
+				"ninja": 35,
+				"sharpshooter": 35
+			},
+			"fmodelFilesScanned": 0,
+			"fmodelFilesSkipped": 0,
+			"fmodelMatchesRecorded": 0
+		},
+		"levelRequirements": {
+			"passives": [
+				2,
+				8,
+				14,
+				20,
+				26
+			],
+			"throwable": [
+				4,
+				10,
+				16,
+				22,
+				28
+			],
+			"gadget": [
+				6,
+				12,
+				18,
+				24,
+				30
+			]
+		},
+		"notes": [
+			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
+			"Each skill.source preserves the original collected candidate record, including locres keys, raw skill-tree asset paths, preview files, collection status, and notes.",
+			"Descriptions still contain game markup and unresolved locres placeholders such as {0}; value extraction is a later normalization step."
+		]
+	},
+	"skillTable": {
+		"passives": [
+			[
+				{
+					"slug": "ninja-yoroi",
+					"name": "Yoroi",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "Yoroi",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "passives",
+						"description": "Maximum armor is increased by <Emp>[{0}]</>. <cf><cf>Stamina lost while blocking attacks is reduced by <sEmp>50%</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-yoroi",
+						"candidateSkillName": "Yoroi",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Yoroi",
+						"category": "passives",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 2,
+						"description": "Maximum armor is increased by <Emp>[{0}]</>. <cf><cf>Stamina lost while blocking attacks is reduced by <sEmp>50%</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-kenko",
+					"name": "Kenko",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "Kenko",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "passives",
+						"description": "Maximum health is increased by <Emp>[{0}]</>. <cf><cf>Performing a perfect parry will restore <sEmp>10</> health over <sEmp>5</> seconds. Additional perfect parries refresh this duration."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-kenko",
+						"candidateSkillName": "Kenko",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Kenko_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Kenko_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Kenko",
+						"category": "passives",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 2,
+						"description": "Maximum health is increased by <Emp>[{0}]</>. <cf><cf>Performing a perfect parry will restore <sEmp>10</> health over <sEmp>5</> seconds. Additional perfect parries refresh this duration.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-kaishakunin",
+					"name": "Kaishakunin",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "Kaishakunin",
+					"treeOrder": 0,
+					"skillNumber": 3,
+					"effect": {
+						"type": "passives",
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage when hitting enemies in the head. "
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-kaishakunin",
+						"candidateSkillName": "Kaishakunin",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Kaishakunin_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Kaishakunin_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Kaishakunin",
+						"category": "passives",
+						"skillNumber": 3,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 8,
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage when hitting enemies in the head. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-roaring-tiger",
+					"name": "Roaring Tiger",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "RoaringTiger",
+					"treeOrder": 1,
+					"skillNumber": 4,
+					"effect": {
+						"type": "passives",
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage with heavy melee attacks.<cf><cf>Deal <Emp>[{1}%]</> increased Cut <img id=\"Cut\"/> weapon damage with ranged weapons while aiming down sights."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-roaring-tiger",
+						"candidateSkillName": "Roaring Tiger",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_RoaringTiger_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_RoaringTiger_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "RoaringTiger",
+						"category": "passives",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 8,
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage with heavy melee attacks.<cf><cf>Deal <Emp>[{1}%]</> increased Cut <img id=\"Cut\"/> weapon damage with ranged weapons while aiming down sights.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-kuji-kiri",
+					"name": "Kuji-kiri",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "Kuji-kiri",
+					"treeOrder": 2,
+					"skillNumber": 5,
+					"effect": {
+						"type": "passives",
+						"description": "Performing a perfect parry increases weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds.<cf><cf>Additional perfect parries refresh this duration."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-kuji-kiri",
+						"candidateSkillName": "Kuji-kiri",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_KujiKiri_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_KujiKiri_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Kuji-kiri"
+						],
+						"internalName": "Kuji-kiri",
+						"category": "passives",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 2,
+						"unlockLevel": 8,
+						"description": "Performing a perfect parry increases weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds.<cf><cf>Additional perfect parries refresh this duration.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-skirmisher",
+					"name": "Skirmisher",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "Skirmisher",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "passives",
+						"description": "Maximum ammo capacity with all weapons is increased by <Emp>[{0}%]</>.<cf><cf>Auto-pickup radius for Shuriken, Arrows, and Kunai is increased by <sEmp>100%</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-skirmisher",
+						"candidateSkillName": "Skirmisher",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Skirmisher",
+						"category": "passives",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 14,
+						"description": "Maximum ammo capacity with all weapons is increased by <Emp>[{0}%]</>.<cf><cf>Auto-pickup radius for Shuriken, Arrows, and Kunai is increased by <sEmp>100%</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-demon-stance",
+					"name": "Demon Stance",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "DemonStance",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "passives",
+						"description": "Take no damage from enemy and environmental ground damage effects.<cf><cf>Take <Emp>[{0}%]</> reduced damage from all explosion and spray damage effects."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-demon-stance",
+						"candidateSkillName": "Demon Stance",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "DemonStance",
+						"category": "passives",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 14,
+						"description": "Take no damage from enemy and environmental ground damage effects.<cf><cf>Take <Emp>[{0}%]</> reduced damage from all explosion and spray damage effects.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-chi-kai-ri",
+					"name": "Chi kai ri",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "ChiKaiRi",
+					"treeOrder": 0,
+					"skillNumber": 8,
+					"effect": {
+						"type": "passives",
+						"description": "Apply <Emp>[{0}%]</> increased <sEmp>Stumble</> affliction with all weapons."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-chi-kai-ri",
+						"candidateSkillName": "Chi kai ri",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_ChiKaiRi_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_ChiKaiRi_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Chi kai ri"
+						],
+						"internalName": "ChiKaiRi",
+						"category": "passives",
+						"skillNumber": 8,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 20,
+						"description": "Apply <Emp>[{0}%]</> increased <sEmp>Stumble</> affliction with all weapons.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-sakki-jutsu",
+					"name": "Sakki-jutsu",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "Sakki-jutsu",
+					"treeOrder": 1,
+					"skillNumber": 9,
+					"effect": {
+						"type": "passives",
+						"description": "Performing a perfect parry <sEmp>Stumbles</> all enemies in a radius around you. <cf><cf>This radius is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-sakki-jutsu",
+						"candidateSkillName": "Sakki-jutsu",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_SakkiJutsu_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_SakkiJutsu_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Sakki-jutsu"
+						],
+						"internalName": "Sakki-jutsu",
+						"category": "passives",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 20,
+						"description": "Performing a perfect parry <sEmp>Stumbles</> all enemies in a radius around you. <cf><cf>This radius is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-ebb-and-flow",
+					"name": "Ebb and Flow",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "EbbAndFlow",
+					"treeOrder": 0,
+					"skillNumber": 10,
+					"effect": {
+						"type": "passives",
+						"description": "Ranged Cut <img id=\"Cut\"/> weapon damage is increased by <Emp>[{0}%]</>.<cf><cf>Next melee attack deals 100% increased damage and heals for <sEmp>10</> health. This effect has a <Emp>[{1}]</> second cooldown."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-ebb-and-flow",
+						"candidateSkillName": "Ebb and Flow",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_EbbAndFlow_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_EbbAndFlow_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Ebb and Flow"
+						],
+						"internalName": "EbbAndFlow",
+						"category": "passives",
+						"skillNumber": 10,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 26,
+						"description": "Ranged Cut <img id=\"Cut\"/> weapon damage is increased by <Emp>[{0}%]</>.<cf><cf>Next melee attack deals 100% increased damage and heals for <sEmp>10</> health. This effect has a <Emp>[{1}]</> second cooldown.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-kyuketsuki",
+					"name": "Kyuketsuki",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "Kyuketsuki",
+					"treeOrder": 1,
+					"skillNumber": 11,
+					"effect": {
+						"type": "passives",
+						"description": "Weapons deal <sEmp>100%</> increased <sEmp>Bleed</> affliction and deal <Emp>[{0}%]</> increased damage to <sEmp>Bleeding</> enemies.<cf><cf>Damaging a <sEmp>Bleeding</> enemy with your weapons heals you for <sEmp>3</> health over <sEmp>3</> seconds. Additional hits refresh this duration."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-kyuketsuki",
+						"candidateSkillName": "Kyuketsuki",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Kyuketsuki_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Kyuketsuki_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Kyuketsuki",
+						"category": "passives",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 26,
+						"description": "Weapons deal <sEmp>100%</> increased <sEmp>Bleed</> affliction and deal <Emp>[{0}%]</> increased damage to <sEmp>Bleeding</> enemies.<cf><cf>Damaging a <sEmp>Bleeding</> enemy with your weapons heals you for <sEmp>3</> health over <sEmp>3</> seconds. Additional hits refresh this duration.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-unyielding",
+					"name": "Unyielding",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "Unyielding",
+					"treeOrder": 2,
+					"skillNumber": 12,
+					"effect": {
+						"type": "passives",
+						"description": "Killing an enemy with a melee weapon restores <sEmp>3</> health and grants <Emp>[{0}%]</> increased melee weapon damage for <sEmp>5</> seconds.<cf><cf>Additional kills refresh this duration."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-unyielding",
+						"candidateSkillName": "Unyielding",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Unyielding_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Unyielding_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Unyielding",
+						"category": "passives",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 26,
+						"description": "Killing an enemy with a melee weapon restores <sEmp>3</> health and grants <Emp>[{0}%]</> increased melee weapon damage for <sEmp>5</> seconds.<cf><cf>Additional kills refresh this duration.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"throwable": [
+			[
+				{
+					"slug": "ninja-blunt-force",
+					"name": "Blunt Force",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "BluntForce",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "throwable",
+						"description": "Caltrop Canister now only explodes on impact.<cf><cf>Hitting an enemy directly with the Caltrop Canister applies <sEmp>Shock</> affliction and  <Emp>[{0}]</> Force <img id=\"Force\"/> damage before bursting and releasing caltrops as normal."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-blunt-force",
+						"candidateSkillName": "Blunt Force",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_BluntForce_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_BluntForce_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BluntForce",
+						"category": "throwable",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 4,
+						"description": "Caltrop Canister now only explodes on impact.<cf><cf>Hitting an enemy directly with the Caltrop Canister applies <sEmp>Shock</> affliction and  <Emp>[{0}]</> Force <img id=\"Force\"/> damage before bursting and releasing caltrops as normal.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-swift-current",
+					"name": "Swift Current",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "SwiftCurrent",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "throwable",
+						"description": "Caltrop explosions no longer deal self-damage.<cf><cf>Getting hit by caltrop explosions now increases movement speed by <Emp>[{0}%]</> for <sEmp>5</> seconds."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-swift-current",
+						"candidateSkillName": "Swift Current",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_SwiftCurrent_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_SwiftCurrent_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SwiftCurrent",
+						"category": "throwable",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 4,
+						"description": "Caltrop explosions no longer deal self-damage.<cf><cf>Getting hit by caltrop explosions now increases movement speed by <Emp>[{0}%]</> for <sEmp>5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-kekkai-jutsu",
+					"name": "Kekkai Jutsu",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "KekkaiJutsu",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "throwable",
+						"description": "Caltrop lifetime is increased to <Emp>[{0}]</> seconds.<cf><cf>Caltrops detonate early if an enemy gets near."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-kekkai-jutsu",
+						"candidateSkillName": "Kekkai Jutsu",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_KekkaiJutsu_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_KekkaiJutsu_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "KekkaiJutsu",
+						"category": "throwable",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 4,
+						"description": "Caltrop lifetime is increased to <Emp>[{0}]</> seconds.<cf><cf>Caltrops detonate early if an enemy gets near.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-capacity-tier2",
+					"name": "Capacity Tier2",
+					"category": "throwable",
+					"tierNumber": 2,
+					"unlockLevel": 10,
+					"internalName": "Capacity_Tier2",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-capacity-tier2",
+						"candidateSkillName": "Capacity Tier2",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier2",
+						"category": "throwable",
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 10,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-hard-rain",
+					"name": "Hard Rain",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "HardRain",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "throwable",
+						"description": "Increase number of caltrops by <Emp>[{0}]</> but decrease their explosion radius by <sEmp>33%</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-hard-rain",
+						"candidateSkillName": "Hard Rain",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HardRain",
+						"category": "throwable",
+						"skillNumber": 4,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 16,
+						"description": "Increase number of caltrops by <Emp>[{0}]</> but decrease their explosion radius by <sEmp>33%</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-thunderclap",
+					"name": "Thunderclap",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "Thunderclap",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "throwable",
+						"description": "Caltrop explosion radius is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-thunderclap",
+						"candidateSkillName": "Thunderclap",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Thunderclap_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Thunderclap_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Thunderclap",
+						"category": "throwable",
+						"skillNumber": 5,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 16,
+						"description": "Caltrop explosion radius is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-capacity-tier4",
+					"name": "Capacity Tier4",
+					"category": "throwable",
+					"tierNumber": 4,
+					"unlockLevel": 22,
+					"internalName": "Capacity_Tier4",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-capacity-tier4",
+						"candidateSkillName": "Capacity Tier4",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier4",
+						"category": "throwable",
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 22,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-devils-circuit",
+					"name": "Devil's Circuit",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "DevilsCircuit",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "throwable",
+						"description": "Caltrops deal <Emp>[{0}%]</> increased damage to enemies they are stuck to."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-devils-circuit",
+						"candidateSkillName": "Devil's Circuit",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_DevilsCircuit_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_DevilsCircuit_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Devil's Circuit"
+						],
+						"alternateSkillSlugs": [
+							"ninja-devil-s-circuit"
+						],
+						"internalName": "DevilsCircuit",
+						"category": "throwable",
+						"skillNumber": 6,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 28,
+						"description": "Caltrops deal <Emp>[{0}%]</> increased damage to enemies they are stuck to.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-raijin",
+					"name": "Raijin",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "Raijin",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "throwable",
+						"description": "Caltrops <sEmp>Shock</> enemies for <Emp>[{0}%]</> longer."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-raijin",
+						"candidateSkillName": "Raijin",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Raijin_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Raijin_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Raijin",
+						"category": "throwable",
+						"skillNumber": 7,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 28,
+						"description": "Caltrops <sEmp>Shock</> enemies for <Emp>[{0}%]</> longer.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-inazuma",
+					"name": "Inazuma",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "Inazuma",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "throwable",
+						"description": "After exploding, caltrops leave behind electrical fields with the same radius as their explosion.<cf><cf>Fields last for <sEmp>5</> seconds and apply <sEmp>Shock</> affliction and <Emp>[{0}]</> Electrical <img id=\"Electrical\"/> damage every <sEmp>0.5</> seconds to enemies within their radius."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-inazuma",
+						"candidateSkillName": "Inazuma",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_Inazuma_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_Inazuma_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Inazuma",
+						"category": "throwable",
+						"skillNumber": 8,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 28,
+						"description": "After exploding, caltrops leave behind electrical fields with the same radius as their explosion.<cf><cf>Fields last for <sEmp>5</> seconds and apply <sEmp>Shock</> affliction and <Emp>[{0}]</> Electrical <img id=\"Electrical\"/> damage every <sEmp>0.5</> seconds to enemies within their radius.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"gadget": [
+			[
+				{
+					"slug": "ninja-eagle-strike",
+					"name": "Eagle Strike",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "EagleStrike",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "gadget",
+						"description": "First weapon attack after grappling deals <Emp>[{0}%]</> increased damage."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-eagle-strike",
+						"candidateSkillName": "Eagle Strike",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_EagleStrike_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_EagleStrike_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "EagleStrike",
+						"category": "gadget",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 6,
+						"description": "First weapon attack after grappling deals <Emp>[{0}%]</> increased damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-shogekiha",
+					"name": "Shogekiha",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "Shogekiha",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "gadget",
+						"description": "Hebi-Ken's ending shockwave radius is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-shogekiha",
+						"candidateSkillName": "Shogekiha",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Shogekiha",
+						"category": "gadget",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 6,
+						"description": "Hebi-Ken's ending shockwave radius is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-shinobi-shozoku",
+					"name": "Shinobi Shozoku",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "ShinobiShozoku",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "gadget",
+						"description": "Grappling an enemy repairs <Emp>[{0}]</> armor integrity."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-shinobi-shozoku",
+						"candidateSkillName": "Shinobi Shozoku",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ShinobiShozoku",
+						"category": "gadget",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 6,
+						"description": "Grappling an enemy repairs <Emp>[{0}]</> armor integrity.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-dead-calm",
+					"name": "Dead Calm",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "DeadCalm",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "gadget",
+						"description": "While you have no Hebi-ken charges, deal <Emp>[{0}%]</> increased weapon damage."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-dead-calm",
+						"candidateSkillName": "Dead Calm",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "DeadCalm",
+						"category": "gadget",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 12,
+						"description": "While you have no Hebi-ken charges, deal <Emp>[{0}%]</> increased weapon damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-warrior-of-the-wind",
+					"name": "Warrior of the Wind",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "WarriorOfTheWind",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "gadget",
+						"description": "Grappling an enemy grants <Emp>[{0}%]</> increased movement speed for <sEmp>5</> seconds."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-warrior-of-the-wind",
+						"candidateSkillName": "Warrior of the Wind",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_WarriorOfTheWind_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_WarriorOfTheWind_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Warrior of the Wind"
+						],
+						"internalName": "WarriorOfTheWind",
+						"category": "gadget",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 12,
+						"description": "Grappling an enemy grants <Emp>[{0}%]</> increased movement speed for <sEmp>5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-strike-thrice",
+					"name": "Strike Thrice",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "StrikeThrice",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "gadget",
+						"description": "Every third use of Hebi-ken deals <Emp>[{0}%]</> increased pass through and finisher damage."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-strike-thrice",
+						"candidateSkillName": "Strike Thrice",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_StrikeThrice_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_StrikeThrice_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "StrikeThrice",
+						"category": "gadget",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 18,
+						"description": "Every third use of Hebi-ken deals <Emp>[{0}%]</> increased pass through and finisher damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-blood-hunt",
+					"name": "Blood Hunt",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "BloodHunt",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "gadget",
+						"description": "Killing enemies with pass through damage heals you for <Emp>[{0}]</> health."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-blood-hunt",
+						"candidateSkillName": "Blood Hunt",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_BloodHunt_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_BloodHunt_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BloodHunt",
+						"category": "gadget",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 18,
+						"description": "Killing enemies with pass through damage heals you for <Emp>[{0}]</> health.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-red-shadow",
+					"name": "Red Shadow",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "RedShadow",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "gadget",
+						"description": "Take <Emp>[{0}%]</> reduced damage for <sEmp>5</> seconds after grappling an enemy."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-red-shadow",
+						"candidateSkillName": "Red Shadow",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "RedShadow",
+						"category": "gadget",
+						"skillNumber": 8,
+						"tierNumber": 3,
+						"treeOrder": 2,
+						"unlockLevel": 18,
+						"description": "Take <Emp>[{0}%]</> reduced damage for <sEmp>5</> seconds after grappling an enemy.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-iron-castle",
+					"name": "Iron Castle",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "IronCastle",
+					"treeOrder": 0,
+					"skillNumber": 9,
+					"effect": {
+						"type": "gadget",
+						"description": "Performing a perfect parry grants <Emp>[{0}]</> gadget activation energy."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-iron-castle",
+						"candidateSkillName": "Iron Castle",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_IronCastle_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_IronCastle_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "IronCastle",
+						"category": "gadget",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 24,
+						"description": "Performing a perfect parry grants <Emp>[{0}]</> gadget activation energy.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-lightning-incarnate",
+					"name": "Lightning Incarnate",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "LightningIncarnate",
+					"treeOrder": 1,
+					"skillNumber": 10,
+					"effect": {
+						"type": "gadget",
+						"description": "Pass through damage radius is increased by <sEmp>25%</>.<cf><cf>Pass through damage type is changed to Electrical <img id=\"Electrical\"/> and damage is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-lightning-incarnate",
+						"candidateSkillName": "Lightning Incarnate",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_LightningIncarnate_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_LightningIncarnate_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "LightningIncarnate",
+						"category": "gadget",
+						"skillNumber": 10,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 24,
+						"description": "Pass through damage radius is increased by <sEmp>25%</>.<cf><cf>Pass through damage type is changed to Electrical <img id=\"Electrical\"/> and damage is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "ninja-violent-sorcerer",
+					"name": "Violent Sorcerer",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "ViolentSorcerer",
+					"treeOrder": 0,
+					"skillNumber": 11,
+					"effect": {
+						"type": "gadget",
+						"description": "Hebi-ken's finisher damage is increased by <Emp>[{0}%]</>. Killing an enemy with the finisher grants stacks of <Emp>VIOLENCE</> up to <sEmp>20</> max. <cf><cf><Emp>VIOLENCE:</> Finisher damage is increased by <sEmp>4%</> per stack."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-violent-sorcerer",
+						"candidateSkillName": "Violent Sorcerer",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ViolentSorcerer",
+						"category": "gadget",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 30,
+						"description": "Hebi-ken's finisher damage is increased by <Emp>[{0}%]</>. Killing an enemy with the finisher grants stacks of <Emp>VIOLENCE</> up to <sEmp>20</> max. <cf><cf><Emp>VIOLENCE:</> Finisher damage is increased by <sEmp>4%</> per stack.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-punishing-chain",
+					"name": "Punishing Chain",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "PunishingChain",
+					"treeOrder": 1,
+					"skillNumber": 12,
+					"effect": {
+						"type": "gadget",
+						"description": "Taking damage that reduces you to below half health instantly refreshes all charges of the Hebi-ken.<cf><cf>This has a <Emp>[{0}]</> second cooldown between triggers."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-punishing-chain",
+						"candidateSkillName": "Punishing Chain",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_PunishingChain_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_PunishingChain_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "PunishingChain",
+						"category": "gadget",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 30,
+						"description": "Taking damage that reduces you to below half health instantly refreshes all charges of the Hebi-ken.<cf><cf>This has a <Emp>[{0}]</> second cooldown between triggers.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "ninja-leopard-fist",
+					"name": "Leopard Fist",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "LeopardFist",
+					"treeOrder": 2,
+					"skillNumber": 13,
+					"effect": {
+						"type": "gadget",
+						"description": "Damaging an enemy with finisher increases their vulnerability to Ballistic <img id=\"Ballistic\"/>, Cut <img id=\"Cut\"/>, and Electrical <img id=\"Electrical\"/> damage by <Emp>[{0}%]</> for <sEmp>10</> seconds."
+					},
+					"source": {
+						"perkSlug": "ninja",
+						"candidateSkillSlug": "ninja-leopard-fist",
+						"candidateSkillName": "Leopard Fist",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Nin_LeopardFist_Preview.mp4",
+								"folder": "Ninja_Skills_Previews",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Ninja_Skills_Previews/Nin_LeopardFist_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "LeopardFist",
+						"category": "gadget",
+						"skillNumber": 13,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 30,
+						"description": "Damaging an enemy with finisher increases their vulnerability to Ballistic <img id=\"Ballistic\"/>, Cut <img id=\"Cut\"/>, and Electrical <img id=\"Electrical\"/> damage by <Emp>[{0}%]</> for <sEmp>10</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Nakata",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			]
+		]
+	},
+	"proficiency": [],
+	"unplacedSkillCandidates": []
 }

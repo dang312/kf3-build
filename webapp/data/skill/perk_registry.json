@@ -1,0 +1,54 @@
+{
+	"generatedAt": "2026-06-29T15:30:04.779Z",
+	"sourceCollection": "source/skill-candidates.json",
+	"perks": [
+		{
+			"slug": "commando",
+			"name": "Commando",
+			"character": "Foster",
+			"file": "character/commando.json",
+			"skillCount": 35,
+			"unplacedSkillCandidateCount": 0
+		},
+		{
+			"slug": "engineer",
+			"name": "Engineer",
+			"character": "Imran",
+			"file": "character/engineer.json",
+			"skillCount": 35,
+			"unplacedSkillCandidateCount": 0
+		},
+		{
+			"slug": "firebug",
+			"name": "Firebug",
+			"character": "Devlin",
+			"file": "character/firebug.json",
+			"skillCount": 35,
+			"unplacedSkillCandidateCount": 0
+		},
+		{
+			"slug": "medic",
+			"name": "Medic",
+			"character": "Obi",
+			"file": "character/medic.json",
+			"skillCount": 35,
+			"unplacedSkillCandidateCount": 1
+		},
+		{
+			"slug": "ninja",
+			"name": "Ninja",
+			"character": "Nakata",
+			"file": "character/ninja.json",
+			"skillCount": 35,
+			"unplacedSkillCandidateCount": 0
+		},
+		{
+			"slug": "sharpshooter",
+			"name": "Sharpshooter",
+			"character": "Luna",
+			"file": "character/sharpshooter.json",
+			"skillCount": 35,
+			"unplacedSkillCandidateCount": 0
+		}
+	]
+}

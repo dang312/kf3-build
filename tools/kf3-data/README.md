@@ -15,6 +15,16 @@ This reuses the current ignored extracts in `scratch/` and writes:
 - `scratch/skill-collection/skill-candidates.json`
 - `scratch/skill-collection/skill-candidates.md`
 
+## Promote the current collection into the webapp
+
+After reviewing or regenerating the collector output, copy it into tracked webapp data with:
+
+```sh
+node tools/kf3-data/promote-skill-candidates-to-webapp.mjs
+```
+
+This replaces `webapp/data/skill/character/*.json`, writes `webapp/data/skill/perk_registry.json`, and copies the full source collection/report into `webapp/data/skill/source/`. The per-perk skill files keep source metadata on each skill so later webapp work can trace preview files, locres keys, raw skill-tree assets, collection status, and collector notes.
+
 Current collection enrichment uses:
 
 - skill preview filenames from the local Nightfall install,

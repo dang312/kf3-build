@@ -1,74 +1,1658 @@
 {
-    "name": "Ninja",
-    "character": "",
-    "skillTable": {
-        "passives": [
-            [
-                {
-                    "name": "Yoroi",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum armor is increased by {{X}}.<br /><br />Stamina lost while blocking attacks is reduced by <b>50%</b>."
-                    },
-                    "values": {
-                        "X": [
-                            20,
-                            30,
-                            40,
-                            50
-                        ]
-                    }
-                },
-                {
-                    "name": "Kenko",
-                    "effect": {
-                        "type": "passive",
-                        "description": "Maximum health is increased by {{X}}.<br /><br />Performing a perfect parry will restore <b>10</b> health over 5 seconds. Additional perfect parries refresh this duration.",
-                        "values": {
-                            "X": [
-                                20,
-                                30,
-                                40,
-                                50
-                            ]
-                        }
-                    },
-                    "icon": "images/skills/kenko.png"
-                }
-            ]
-        ],
-        "throwable": [
-            []
-        ],
-        "gadget": [
-            []
-        ]
-    },
-    "proficiency": [
-        {
-            "name": "zed_time_movementspeed",
-            "description": "{{X}}% Zed Time Movement Speed",
-            "values": {
-                "X": [
-                    5,
-                    10,
-                    15,
-                    20,
-                    25
-                ]
-            }
-        },
-        {
-            "name": "zed_time_melee_attackspeed",
-            "description": "{{X}}% Zed Time Melee Attack Speed",
-            "values": {
-                "X": [
-                    40,
-                    45,
-                    50,
-                    55
-                ]
-            }
-        }
-    ]
+	"slug": "engineer",
+	"name": "Engineer",
+	"character": "Imran",
+	"dataStatus": "candidate-extracted",
+	"source": {
+		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
+		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
+		"collectionSummary": {
+			"packageCount": 6,
+			"skillPreviewCount": 149,
+			"previewCandidateSkillCount": 148,
+			"candidateSkillCount": 211,
+			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithTier": 210,
+			"candidateSkillsWithUnlockLevel": 210,
+			"locresSkillRecords": 198,
+			"rawSkillTreeAssets": 18,
+			"rawSkillTreeSkillReferences": 210,
+			"duplicateCandidateSkillSlugs": [
+				{
+					"candidateSkillSlug": "commando-hothead",
+					"count": 2
+				}
+			],
+			"perkCount": 6,
+			"perkSkillCounts": {
+				"commando": 35,
+				"engineer": 35,
+				"firebug": 35,
+				"medic": 36,
+				"ninja": 35,
+				"sharpshooter": 35
+			},
+			"fmodelFilesScanned": 0,
+			"fmodelFilesSkipped": 0,
+			"fmodelMatchesRecorded": 0
+		},
+		"levelRequirements": {
+			"passives": [
+				2,
+				8,
+				14,
+				20,
+				26
+			],
+			"throwable": [
+				4,
+				10,
+				16,
+				22,
+				28
+			],
+			"gadget": [
+				6,
+				12,
+				18,
+				24,
+				30
+			]
+		},
+		"notes": [
+			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
+			"Each skill.source preserves the original collected candidate record, including locres keys, raw skill-tree asset paths, preview files, collection status, and notes.",
+			"Descriptions still contain game markup and unresolved locres placeholders such as {0}; value extraction is a later normalization step."
+		]
+	},
+	"skillTable": {
+		"passives": [
+			[
+				{
+					"slug": "engineer-repairman",
+					"name": "Repairman",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "Repairman",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "passives",
+						"description": "Using a tool repairs armor integrity up to a maximum of <Emp>[{0}]</> each round. Different tools repair different amounts of armor integrity when used."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-repairman",
+						"candidateSkillName": "Repairman",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Repairman",
+						"category": "passives",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 2,
+						"description": "Using a tool repairs armor integrity up to a maximum of <Emp>[{0}]</> each round. Different tools repair different amounts of armor integrity when used.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-tool-up",
+					"name": "Tool Up",
+					"category": "passives",
+					"tierNumber": 1,
+					"unlockLevel": 2,
+					"internalName": "ToolUp",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "passives",
+						"description": "Killing enemies grants stacks of <Emp>TOOL UP</>. Different tools gain stacks at different rates. Swapping tools at the trader resets all stacks. <cf><cf><Emp>TOOL UP:</> At <Emp>[{0}]</> stacks, consume all stacks to refill <sEmp>1</> tool ammo. "
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-tool-up",
+						"candidateSkillName": "Tool Up",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ToolUp",
+						"category": "passives",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 2,
+						"description": "Killing enemies grants stacks of <Emp>TOOL UP</>. Different tools gain stacks at different rates. Swapping tools at the trader resets all stacks. <cf><cf><Emp>TOOL UP:</> At <Emp>[{0}]</> stacks, consume all stacks to refill <sEmp>1</> tool ammo. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-hole-punch",
+					"name": "Hole Punch",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "HolePunch",
+					"treeOrder": 0,
+					"skillNumber": 3,
+					"effect": {
+						"type": "passives",
+						"description": "Weapon penetration power is increased by <Emp>[{0}]</>. Does not apply to spray and beam-type weapons."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-hole-punch",
+						"candidateSkillName": "Hole Punch",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_HolePunch_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_HolePunch_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HolePunch",
+						"category": "passives",
+						"skillNumber": 3,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 8,
+						"description": "Weapon penetration power is increased by <Emp>[{0}]</>. Does not apply to spray and beam-type weapons.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-major-damage",
+					"name": "Major Damage",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "MajorDamage",
+					"treeOrder": 1,
+					"skillNumber": 4,
+					"effect": {
+						"type": "passives",
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage and <Emp>[{1}%]</> increased weapon <sEmp>Stumble</> to nearby enemies."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-major-damage",
+						"candidateSkillName": "Major Damage",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_MajorDamage_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_MajorDamage_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "MajorDamage",
+						"category": "passives",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 8,
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage and <Emp>[{1}%]</> increased weapon <sEmp>Stumble</> to nearby enemies.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-first-contact",
+					"name": "First Contact",
+					"category": "passives",
+					"tierNumber": 2,
+					"unlockLevel": 8,
+					"internalName": "FirstContact",
+					"treeOrder": 2,
+					"skillNumber": 5,
+					"effect": {
+						"type": "passives",
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemies the first time you deal damage to them."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-first-contact",
+						"candidateSkillName": "First Contact",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_FirstContact_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_FirstContact_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "FirstContact",
+						"category": "passives",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 2,
+						"unlockLevel": 8,
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemies the first time you deal damage to them.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-bleed-for-speed",
+					"name": "Bleed for Speed",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "BleedForSpeed",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "passives",
+						"description": "Killing enemies grants <Emp>[{0}%]</> increased movement speed for <sEmp>2.5</> seconds."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-bleed-for-speed",
+						"candidateSkillName": "Bleed for Speed",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_BleedForSpeed_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_BleedForSpeed_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Bleed for Speed"
+						],
+						"internalName": "BleedForSpeed",
+						"category": "passives",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 14,
+						"description": "Killing enemies grants <Emp>[{0}%]</> increased movement speed for <sEmp>2.5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-man-of-steel",
+					"name": "Man Of Steel",
+					"category": "passives",
+					"tierNumber": 3,
+					"unlockLevel": 14,
+					"internalName": "ManOfSteel",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "passives",
+						"description": "Maximum armor integrity is increased by <Emp>[{0}]%</>.<cf><cf>While you have armor, small enemies will be <sEmp>Stumbled</> when they attempt to grab you."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-man-of-steel",
+						"candidateSkillName": "Man Of Steel",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_ManOfSteel_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_ManOfSteel_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ManOfSteel",
+						"category": "passives",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 14,
+						"description": "Maximum armor integrity is increased by <Emp>[{0}]%</>.<cf><cf>While you have armor, small enemies will be <sEmp>Stumbled</> when they attempt to grab you.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-scatter-plot",
+					"name": "Scatter Plot",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "ScatterPlot",
+					"treeOrder": 0,
+					"skillNumber": 8,
+					"effect": {
+						"type": "passives",
+						"description": "Shotguns have <Emp>[+{0}]</> pellet count and <sEmp>+25%</> weapon spread."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-scatter-plot",
+						"candidateSkillName": "Scatter Plot",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ScatterPlot",
+						"category": "passives",
+						"skillNumber": 8,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 20,
+						"description": "Shotguns have <Emp>[+{0}]</> pellet count and <sEmp>+25%</> weapon spread.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-full-blast",
+					"name": "Full Blast",
+					"category": "passives",
+					"tierNumber": 4,
+					"unlockLevel": 20,
+					"internalName": "FullBlast",
+					"treeOrder": 1,
+					"skillNumber": 9,
+					"effect": {
+						"type": "passives",
+						"description": "Radius for explosive weapons is increased by <Emp>[{0}%]</>. Self-damage from explosive weapons is reduced by <sEmp>80%</>.<cf><cf>Stream size for beam and spray weapons is increased by <Emp>[{1}%]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-full-blast",
+						"candidateSkillName": "Full Blast",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_FullBlast_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_FullBlast_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "FullBlast",
+						"category": "passives",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 20,
+						"description": "Radius for explosive weapons is increased by <Emp>[{0}%]</>. Self-damage from explosive weapons is reduced by <sEmp>80%</>.<cf><cf>Stream size for beam and spray weapons is increased by <Emp>[{1}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-rally-beacon",
+					"name": "Rally Beacon",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "RallyBeacon",
+					"treeOrder": 0,
+					"skillNumber": 10,
+					"effect": {
+						"type": "passives",
+						"description": "Killing enemies grants stacks of <Emp>RALLY</>. <cf><cf><Emp>RALLY:</> At <Emp>[{0}]</> stacks, consume all stacks to place a Rally Beacon. Rally Beacons last for <sEmp>20</> seconds and cause all allies within their radius to deal <sEmp>25%</> increased weapon damage."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-rally-beacon",
+						"candidateSkillName": "Rally Beacon",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_RallyBeacon_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_RallyBeacon_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "RallyBeacon",
+						"category": "passives",
+						"skillNumber": 10,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 26,
+						"description": "Killing enemies grants stacks of <Emp>RALLY</>. <cf><cf><Emp>RALLY:</> At <Emp>[{0}]</> stacks, consume all stacks to place a Rally Beacon. Rally Beacons last for <sEmp>20</> seconds and cause all allies within their radius to deal <sEmp>25%</> increased weapon damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-inner-rage",
+					"name": "Inner Rage",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "InnerRage",
+					"treeOrder": 1,
+					"skillNumber": 11,
+					"effect": {
+						"type": "passives",
+						"description": "Taking damage increases weapon damage by <Emp>[{0}%]</> and bash damage by <Emp>[{1}%]</> for <sEmp>5</> seconds."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-inner-rage",
+						"candidateSkillName": "Inner Rage",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_InnerRage_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_InnerRage_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "InnerRage",
+						"category": "passives",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 26,
+						"description": "Taking damage increases weapon damage by <Emp>[{0}%]</> and bash damage by <Emp>[{1}%]</> for <sEmp>5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-chain-reaction",
+					"name": "Chain Reaction",
+					"category": "passives",
+					"tierNumber": 5,
+					"unlockLevel": 26,
+					"internalName": "ChainReaction",
+					"treeOrder": 2,
+					"skillNumber": 12,
+					"effect": {
+						"type": "passives",
+						"description": "Killing an enemy with Heat <img id=\"Heat\"/> damage or explosions has a <Emp>[{0}%]</> chance to cause that enemy to explode, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-chain-reaction",
+						"candidateSkillName": "Chain Reaction",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_ChainReaction_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_ChainReaction_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ChainReaction",
+						"category": "passives",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 26,
+						"description": "Killing an enemy with Heat <img id=\"Heat\"/> damage or explosions has a <Emp>[{0}%]</> chance to cause that enemy to explode, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"throwable": [
+			[
+				{
+					"slug": "engineer-chaos-theory",
+					"name": "Chaos Theory",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "ChaosTheory",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "throwable",
+						"description": "Bouncing Betty fragment projectiles gain <Emp>[+{0}]</> penetration and last for an additional <sEmp>0.5</> seconds."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-chaos-theory",
+						"candidateSkillName": "Chaos Theory",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ChaosTheory",
+						"category": "throwable",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 4,
+						"description": "Bouncing Betty fragment projectiles gain <Emp>[+{0}]</> penetration and last for an additional <sEmp>0.5</> seconds.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-proximity-mine",
+					"name": "Proximity Mine",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "ProximityMine",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "throwable",
+						"description": "Bouncing Betty's lifetime is set to <Emp>[{0}]</> seconds and will only explode if an enemy moves close to it."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-proximity-mine",
+						"candidateSkillName": "Proximity Mine",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_ProximityMine_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_ProximityMine_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ProximityMine",
+						"category": "throwable",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 4,
+						"description": "Bouncing Betty's lifetime is set to <Emp>[{0}]</> seconds and will only explode if an enemy moves close to it.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-grounded",
+					"name": "Grounded",
+					"category": "throwable",
+					"tierNumber": 1,
+					"unlockLevel": 4,
+					"internalName": "Grounded",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "throwable",
+						"description": "Bouncing Betty fragmentation component's explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-grounded",
+						"candidateSkillName": "Grounded",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_Grounded_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_Grounded_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Grounded",
+						"category": "throwable",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 4,
+						"description": "Bouncing Betty fragmentation component's explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-capacity-tier2",
+					"name": "Capacity Tier2",
+					"category": "throwable",
+					"tierNumber": 2,
+					"unlockLevel": 10,
+					"internalName": "Capacity_Tier2",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-capacity-tier2",
+						"candidateSkillName": "Capacity Tier2",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier2",
+						"category": "throwable",
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 10,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-dismember-the-day",
+					"name": "Dismember the Day",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "DismemberTheDay",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "throwable",
+						"description": "Increase amount of fragment projectiles by <Emp>[{0}]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-dismember-the-day",
+						"candidateSkillName": "Dismember the Day",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "DismemberTheDay",
+						"category": "throwable",
+						"skillNumber": 4,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 16,
+						"description": "Increase amount of fragment projectiles by <Emp>[{0}]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-super-shredder",
+					"name": "Super Shredder",
+					"category": "throwable",
+					"tierNumber": 3,
+					"unlockLevel": 16,
+					"internalName": "ShredEnd",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "throwable",
+						"description": "Bouncing Betty fragmentation component's explosion deals <Emp>[{0}%]</> increased damage."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-super-shredder",
+						"candidateSkillName": "Super Shredder",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateSkillSlugs": [
+							"engineer-shred-end"
+						],
+						"internalName": "ShredEnd",
+						"category": "throwable",
+						"skillNumber": 5,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 16,
+						"description": "Bouncing Betty fragmentation component's explosion deals <Emp>[{0}%]</> increased damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-capacity-tier4",
+					"name": "Capacity Tier4",
+					"category": "throwable",
+					"tierNumber": 4,
+					"unlockLevel": 22,
+					"internalName": "Capacity_Tier4",
+					"treeOrder": 0,
+					"effect": {
+						"type": "throwable",
+						"description": ""
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-capacity-tier4",
+						"candidateSkillName": "Capacity Tier4",
+						"collectionStatus": "raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset."
+						],
+						"internalName": "Capacity_Tier4",
+						"category": "throwable",
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 22,
+						"gameSources": {
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-heated-exchange",
+					"name": "Heated Exchange",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "HeatedExchange",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "throwable",
+						"description": "Fragment projectiles deal Heat <img id=\"Heat\"/> damage instead of Ballistic <img id=\"Ballistic\"/>.<cf><cf>Fragment projectile damage is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-heated-exchange",
+						"candidateSkillName": "Heated Exchange",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_HeatedExchange_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_HeatedExchange_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HeatedExchange",
+						"category": "throwable",
+						"skillNumber": 6,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 28,
+						"description": "Fragment projectiles deal Heat <img id=\"Heat\"/> damage instead of Ballistic <img id=\"Ballistic\"/>.<cf><cf>Fragment projectile damage is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-scrap-heap",
+					"name": "Scrap Heap",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "ScrapHeap",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "throwable",
+						"description": "Bouncing Betty leaves behind scrap that lasts for <Emp>[{0}]</> seconds.<cf><cf>Interacting with scrap will collect it to restore <sEmp>1</> Bouncing Betty ammo."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-scrap-heap",
+						"candidateSkillName": "Scrap Heap",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_ScrapHeap_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_ScrapHeap_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ScrapHeap",
+						"category": "throwable",
+						"skillNumber": 7,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 28,
+						"description": "Bouncing Betty leaves behind scrap that lasts for <Emp>[{0}]</> seconds.<cf><cf>Interacting with scrap will collect it to restore <sEmp>1</> Bouncing Betty ammo.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-second-time-around",
+					"name": "Second Time Around",
+					"category": "throwable",
+					"tierNumber": 5,
+					"unlockLevel": 28,
+					"internalName": "SecondTimeAround",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "throwable",
+						"description": "Bouncing Betty launches a second fragmentation component after a short delay but deals <Emp>[{0}%]</> reduced damage."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-second-time-around",
+						"candidateSkillName": "Second Time Around",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_SecondTimeAround_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_SecondTimeAround_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SecondTimeAround",
+						"category": "throwable",
+						"skillNumber": 8,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 28,
+						"description": "Bouncing Betty launches a second fragmentation component after a short delay but deals <Emp>[{0}%]</> reduced damage.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+						}
+					}
+				}
+			]
+		],
+		"gadget": [
+			[
+				{
+					"slug": "engineer-stabilize",
+					"name": "Stabilize",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "Stabilize",
+					"treeOrder": 0,
+					"skillNumber": 1,
+					"effect": {
+						"type": "gadget",
+						"description": "While <Emp>BUNKERED</>, you move <sEmp>30%</> slower but soundwave projectile damage is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-stabilize",
+						"candidateSkillName": "Stabilize",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Stabilize",
+						"category": "gadget",
+						"skillNumber": 1,
+						"tierNumber": 1,
+						"treeOrder": 0,
+						"unlockLevel": 6,
+						"description": "While <Emp>BUNKERED</>, you move <sEmp>30%</> slower but soundwave projectile damage is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-mobilize",
+					"name": "Mobilize",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "Mobilize",
+					"treeOrder": 1,
+					"skillNumber": 2,
+					"effect": {
+						"type": "gadget",
+						"description": "Movement speed while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</> base movement speed."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-mobilize",
+						"candidateSkillName": "Mobilize",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_Mobilize_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_Mobilize_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Mobilize",
+						"category": "gadget",
+						"skillNumber": 2,
+						"tierNumber": 1,
+						"treeOrder": 1,
+						"unlockLevel": 6,
+						"description": "Movement speed while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</> base movement speed.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-fortify",
+					"name": "Fortify",
+					"category": "gadget",
+					"tierNumber": 1,
+					"unlockLevel": 6,
+					"internalName": "Fortify",
+					"treeOrder": 2,
+					"skillNumber": 3,
+					"effect": {
+						"type": "gadget",
+						"description": "Activating Sonic Storm repairs <Emp>[{0}]</> armor integrity."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-fortify",
+						"candidateSkillName": "Fortify",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
+						"previewFiles": [],
+						"fmodelMatches": [],
+						"notes": [
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Fortify",
+						"category": "gadget",
+						"skillNumber": 3,
+						"tierNumber": 1,
+						"treeOrder": 2,
+						"unlockLevel": 6,
+						"description": "Activating Sonic Storm repairs <Emp>[{0}]</> armor integrity.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-wall-of-sound",
+					"name": "Wall of Sound",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "WallofSound",
+					"treeOrder": 0,
+					"skillNumber": 4,
+					"effect": {
+						"type": "gadget",
+						"description": "Soundwave projectile size is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-wall-of-sound",
+						"candidateSkillName": "Wall of Sound",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_WallOfSound_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_WallOfSound_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Wall of Sound"
+						],
+						"alternateSkillSlugs": [
+							"engineer-wallof-sound"
+						],
+						"internalName": "WallofSound",
+						"category": "gadget",
+						"skillNumber": 4,
+						"tierNumber": 2,
+						"treeOrder": 0,
+						"unlockLevel": 12,
+						"description": "Soundwave projectile size is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-high-frequency",
+					"name": "High Frequency",
+					"category": "gadget",
+					"tierNumber": 2,
+					"unlockLevel": 12,
+					"internalName": "HighFrequency",
+					"treeOrder": 1,
+					"skillNumber": 5,
+					"effect": {
+						"type": "gadget",
+						"description": "Soundwave projectile size and damage is decreased by <sEmp>25%</>, but fire rate is increased and ammo is increased by <Emp>[{0}]</>.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-high-frequency",
+						"candidateSkillName": "High Frequency",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_HighFrequency_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_HighFrequency_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "HighFrequency",
+						"category": "gadget",
+						"skillNumber": 5,
+						"tierNumber": 2,
+						"treeOrder": 1,
+						"unlockLevel": 12,
+						"description": "Soundwave projectile size and damage is decreased by <sEmp>25%</>, but fire rate is increased and ammo is increased by <Emp>[{0}]</>.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-bone-conductor",
+					"name": "Bone Conductor",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "BoneConductor",
+					"treeOrder": 0,
+					"skillNumber": 6,
+					"effect": {
+						"type": "gadget",
+						"description": "Soundwave projectile penetration is increased by <Emp>[{0}]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-bone-conductor",
+						"candidateSkillName": "Bone Conductor",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_BoneConductor_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_BoneConductor_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "BoneConductor",
+						"category": "gadget",
+						"skillNumber": 6,
+						"tierNumber": 3,
+						"treeOrder": 0,
+						"unlockLevel": 18,
+						"description": "Soundwave projectile penetration is increased by <Emp>[{0}]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-clear-the-area",
+					"name": "Clear the Area",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "ClearTheArea",
+					"treeOrder": 1,
+					"skillNumber": 7,
+					"effect": {
+						"type": "gadget",
+						"description": "Equip explosion radius is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-clear-the-area",
+						"candidateSkillName": "Clear the Area",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_ClearTheArea_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_ClearTheArea_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"Clear the Area"
+						],
+						"internalName": "ClearTheArea",
+						"category": "gadget",
+						"skillNumber": 7,
+						"tierNumber": 3,
+						"treeOrder": 1,
+						"unlockLevel": 18,
+						"description": "Equip explosion radius is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-juggernaut",
+					"name": "Juggernaut",
+					"category": "gadget",
+					"tierNumber": 3,
+					"unlockLevel": 18,
+					"internalName": "Juggernaut",
+					"treeOrder": 2,
+					"skillNumber": 8,
+					"effect": {
+						"type": "gadget",
+						"description": "Damage resistance while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</>. <cf><cf>While <Emp>BUNKERED</>, enemies that melee you are <sEmp>Stumbled</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-juggernaut",
+						"candidateSkillName": "Juggernaut",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_Juggernaut_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_Juggernaut_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Juggernaut",
+						"category": "gadget",
+						"skillNumber": 8,
+						"tierNumber": 3,
+						"treeOrder": 2,
+						"unlockLevel": 18,
+						"description": "Damage resistance while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</>. <cf><cf>While <Emp>BUNKERED</>, enemies that melee you are <sEmp>Stumbled</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-reforge",
+					"name": "Reforge",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "Reforge",
+					"treeOrder": 0,
+					"skillNumber": 9,
+					"effect": {
+						"type": "gadget",
+						"description": "Using a tool restores gadget activation energy up to a maximum of <Emp>[{0}]</> each round. Different tools restore different amounts of gadget energy when used."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-reforge",
+						"candidateSkillName": "Reforge",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_Reforge_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_Reforge_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "Reforge",
+						"category": "gadget",
+						"skillNumber": 9,
+						"tierNumber": 4,
+						"treeOrder": 0,
+						"unlockLevel": 24,
+						"description": "Using a tool restores gadget activation energy up to a maximum of <Emp>[{0}]</> each round. Different tools restore different amounts of gadget energy when used.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-sonic-salvo",
+					"name": "Sonic Salvo",
+					"category": "gadget",
+					"tierNumber": 4,
+					"unlockLevel": 24,
+					"internalName": "SonicSalvo",
+					"treeOrder": 1,
+					"skillNumber": 10,
+					"effect": {
+						"type": "gadget",
+						"description": "Sonic Storm's ammo is increased by <Emp>[{0}]</> and maximum duration is increased by <Emp>[{1}]</> seconds.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-sonic-salvo",
+						"candidateSkillName": "Sonic Salvo",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_SonicSalvo_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_SonicSalvo_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "SonicSalvo",
+						"category": "gadget",
+						"skillNumber": 10,
+						"tierNumber": 4,
+						"treeOrder": 1,
+						"unlockLevel": 24,
+						"description": "Sonic Storm's ammo is increased by <Emp>[{0}]</> and maximum duration is increased by <Emp>[{1}]</> seconds.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			],
+			[
+				{
+					"slug": "engineer-take-charge",
+					"name": "Take Charge",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "TakeCharge",
+					"treeOrder": 0,
+					"skillNumber": 11,
+					"effect": {
+						"type": "gadget",
+						"description": "Sonic Storm's fire mode is changed from semi-auto to charge fire.<cf><cf>Fire button can be held down to charge Sonic Storm. After charging for at least <sEmp>0.5</> seconds, soundwave projectile's damage is increased by <Emp>[{0}%]</>."
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-take-charge",
+						"candidateSkillName": "Take Charge",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_TakeCharge_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_TakeCharge_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "TakeCharge",
+						"category": "gadget",
+						"skillNumber": 11,
+						"tierNumber": 5,
+						"treeOrder": 0,
+						"unlockLevel": 30,
+						"description": "Sonic Storm's fire mode is changed from semi-auto to charge fire.<cf><cf>Fire button can be held down to charge Sonic Storm. After charging for at least <sEmp>0.5</> seconds, soundwave projectile's damage is increased by <Emp>[{0}%]</>.",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-state-of-confusion",
+					"name": "State of Confusion",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "StateofConfusion",
+					"treeOrder": 1,
+					"skillNumber": 12,
+					"effect": {
+						"type": "gadget",
+						"description": "Soundwave projectiles now apply <Emp>[{0}]</> <sEmp>Confuse</> affliction. "
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-state-of-confusion",
+						"candidateSkillName": "State of Confusion",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_StateOfConfusion_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_StateOfConfusion_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"alternateNames": [
+							"State of Confusion"
+						],
+						"alternateSkillSlugs": [
+							"engineer-stateof-confusion"
+						],
+						"internalName": "StateofConfusion",
+						"category": "gadget",
+						"skillNumber": 12,
+						"tierNumber": 5,
+						"treeOrder": 1,
+						"unlockLevel": 30,
+						"description": "Soundwave projectiles now apply <Emp>[{0}]</> <sEmp>Confuse</> affliction. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				},
+				{
+					"slug": "engineer-reverb-pedal",
+					"name": "Reverb Pedal",
+					"category": "gadget",
+					"tierNumber": 5,
+					"unlockLevel": 30,
+					"internalName": "ReverbPedal",
+					"treeOrder": 2,
+					"skillNumber": 13,
+					"effect": {
+						"type": "gadget",
+						"description": "Firing Sonic Storm generates a sound explosion that deals <Emp>[{0}]</> damage to enemies that are close. "
+					},
+					"source": {
+						"perkSlug": "engineer",
+						"candidateSkillSlug": "engineer-reverb-pedal",
+						"candidateSkillName": "Reverb Pedal",
+						"collectionStatus": "preview+locres-description+raw-skill-tree-tier",
+						"previewFiles": [
+							{
+								"fileName": "Eng_ReverbPedal_Preview.mp4",
+								"folder": "Engineer_Skills_Movies",
+								"relativePath": "Nightfall/Content/Movies/SkillPreviews/Engineer_Skills_Movies/Eng_ReverbPedal_Preview.mp4"
+							}
+						],
+						"fmodelMatches": [],
+						"notes": [
+							"Candidate discovered from local skill preview filename. Preview files do not prove category, tier, effect text, values, or unlock level by themselves.",
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
+						],
+						"internalName": "ReverbPedal",
+						"category": "gadget",
+						"skillNumber": 13,
+						"tierNumber": 5,
+						"treeOrder": 2,
+						"unlockLevel": 30,
+						"description": "Firing Sonic Storm generates a sound explosion that deals <Emp>[{0}]</> damage to enemies that are close. ",
+						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Imran",
+							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+						}
+					}
+				}
+			]
+		]
+	},
+	"proficiency": [],
+	"unplacedSkillCandidates": []
 }
