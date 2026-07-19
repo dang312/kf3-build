@@ -1,3 +1,6 @@
+# Local agent review artifacts
+.pi/
+
 # Logs
 logs
 *.log

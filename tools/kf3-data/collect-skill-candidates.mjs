@@ -277,9 +277,12 @@ function createCandidateMap(skillPreviews) {
 }
 
 function getOrCreateCandidate(candidateMap, { perkSlug, candidateSkillSlug, candidateSkillName }) {
+	const shouldMatchByName = candidateSkillSlug ? !isCapacitySkillSlug(candidateSkillSlug) : true;
 	const existing =
 		candidateMap.get(candidateSkillSlug) ??
-		findCandidateByComparableName(candidateMap, perkSlug, candidateSkillName);
+		(shouldMatchByName
+			? findCandidateByComparableName(candidateMap, perkSlug, candidateSkillName)
+			: undefined);
 	if (existing) {
 		if (candidateSkillSlug && existing.candidateSkillSlug !== candidateSkillSlug) {
 			existing.alternateSkillSlugs.add(candidateSkillSlug);
@@ -304,6 +307,10 @@ function getOrCreateCandidate(candidateMap, { perkSlug, candidateSkillSlug, cand
 	};
 	candidateMap.set(candidateSkillSlug, candidate);
 	return candidate;
+}
+
+function isCapacitySkillSlug(candidateSkillSlug) {
+	return /^.+-capacity-tier\d+$/i.test(candidateSkillSlug);
 }
 
 function findCandidateByComparableName(candidateMap, perkSlug, candidateSkillName) {
@@ -356,7 +363,7 @@ async function maybeLoadLocres(locresGameCsv, candidateMap, warnings) {
 	}
 
 	for (const record of records) {
-		const candidateSkillSlug = `${record.perkSlug}-${toKebabCase(record.name)}`;
+		const candidateSkillSlug = record.candidateSkillSlug ?? `${record.perkSlug}-${toKebabCase(record.name)}`;
 		const candidate = getOrCreateCandidate(candidateMap, {
 			perkSlug: record.perkSlug,
 			candidateSkillSlug,
@@ -364,7 +371,10 @@ async function maybeLoadLocres(locresGameCsv, candidateMap, warnings) {
 		});
 		candidate.candidateSkillName = record.name;
 		candidate.category ??= record.category;
-		candidate.skillNumber ??= record.skillNumber;
+		candidate.internalName ??= record.internalName;
+		if (record.skillNumber !== undefined) {
+			candidate.skillNumber ??= record.skillNumber;
+		}
 		candidate.description = record.description;
 		candidate.gameSources.locresNameKey = record.nameKey;
 		candidate.gameSources.locresDescriptionKey = record.descriptionKey;
@@ -379,8 +389,10 @@ async function maybeLoadLocres(locresGameCsv, candidateMap, warnings) {
 function parseSkillLocresCsv(text) {
 	const rows = parseCsvRecords(text);
 	const entries = new Map();
+	const capacityEntries = new Map();
 	const warnings = [];
 	const keyPattern = /^[^:]+::(Passive|Throwable|Gadget)(\d+)_Skill(Name|Description)_([A-Za-z]+)$/;
+	const capacityKeyPattern = /^[^:]+::ThrowableCapacity_Skill(Name|Description)_([A-Za-z]+)$/;
 
 	for (const row of rows) {
 		if (row.length < 2) {
@@ -390,26 +402,50 @@ function parseSkillLocresCsv(text) {
 		const key = row[0];
 		const value = row[1] ?? '';
 		const match = keyPattern.exec(key);
-		if (!match) {
+		if (match) {
+			const [, locresCategory, skillNumberText, field, specialist] = match;
+			const perkSlug = SPECIALIST_TO_PERK.get(specialist);
+			const category = LOCRES_CATEGORY_TO_SKILL_CATEGORY.get(locresCategory);
+			if (!perkSlug || !category) {
+				warnings.push(`Skipped locres skill row with unknown specialist/category: ${key}`);
+				continue;
+			}
+
+			const skillNumber = Number.parseInt(skillNumberText, 10);
+			const entryKey = `${perkSlug}|${category}|${skillNumber}`;
+			const entry = entries.get(entryKey) ?? {
+				perkSlug,
+				category,
+				skillNumber
+			};
+
+			if (field === 'Name') {
+				entry.name = value;
+				entry.nameKey = key;
+			} else {
+				entry.description = value;
+				entry.descriptionKey = key;
+			}
+			entries.set(entryKey, entry);
 			continue;
 		}
 
-		const [, locresCategory, skillNumberText, field, specialist] = match;
+		const capacityMatch = capacityKeyPattern.exec(key);
+		if (!capacityMatch) {
+			continue;
+		}
+
+		const [, field, specialist] = capacityMatch;
 		const perkSlug = SPECIALIST_TO_PERK.get(specialist);
-		const category = LOCRES_CATEGORY_TO_SKILL_CATEGORY.get(locresCategory);
-		if (!perkSlug || !category) {
-			warnings.push(`Skipped locres skill row with unknown specialist/category: ${key}`);
+		if (!perkSlug) {
+			warnings.push(`Skipped capacity locres row with unknown specialist: ${key}`);
 			continue;
 		}
 
-		const skillNumber = Number.parseInt(skillNumberText, 10);
-		const entryKey = `${perkSlug}|${category}|${skillNumber}`;
-		const entry = entries.get(entryKey) ?? {
+		const entry = capacityEntries.get(perkSlug) ?? {
 			perkSlug,
-			category,
-			skillNumber
+			category: 'throwable'
 		};
-
 		if (field === 'Name') {
 			entry.name = value;
 			entry.nameKey = key;
@@ -417,7 +453,7 @@ function parseSkillLocresCsv(text) {
 			entry.description = value;
 			entry.descriptionKey = key;
 		}
-		entries.set(entryKey, entry);
+		capacityEntries.set(perkSlug, entry);
 	}
 
 	const records = [];
@@ -429,6 +465,20 @@ function parseSkillLocresCsv(text) {
 			continue;
 		}
 		records.push(entry);
+	}
+
+	for (const entry of capacityEntries.values()) {
+		if (!entry.name || !entry.description) {
+			warnings.push(`Incomplete ThrowableCapacity locres skill entry for ${entry.perkSlug}.`);
+			continue;
+		}
+		for (const tier of [2, 4]) {
+			records.push({
+				...entry,
+				internalName: `Capacity_Tier${tier}`,
+				candidateSkillSlug: `${entry.perkSlug}-capacity-tier${tier}`
+			});
+		}
 	}
 
 	return {
@@ -486,7 +536,8 @@ function compareLocresRecords(left, right) {
 	return (
 		left.perkSlug.localeCompare(right.perkSlug) ||
 		categorySort(left.category, right.category) ||
-		left.skillNumber - right.skillNumber
+		compareOptionalNumber(left.skillNumber, right.skillNumber) ||
+		(left.internalName ?? '').localeCompare(right.internalName ?? '')
 	);
 }
 

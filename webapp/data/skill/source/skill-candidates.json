@@ -1,5 +1,5 @@
 {
-	"generatedAt": "2026-06-29T15:30:04.779Z",
+	"generatedAt": "2026-06-29T19:05:59.378Z",
 	"inputs": {
 		"gameRoot": "/mnt/c/Program Files (x86)/Steam/steamapps/common/Nightfall",
 		"locresGameCsv": "scratch/locres-game-en/Game.csv",
@@ -11,10 +11,10 @@
 		"skillPreviewCount": 149,
 		"previewCandidateSkillCount": 148,
 		"candidateSkillCount": 211,
-		"candidateSkillsWithDescriptions": 198,
+		"candidateSkillsWithDescriptions": 210,
 		"candidateSkillsWithTier": 210,
 		"candidateSkillsWithUnlockLevel": 210,
-		"locresSkillRecords": 198,
+		"locresSkillRecords": 210,
 		"rawSkillTreeAssets": 18,
 		"rawSkillTreeSkillReferences": 210,
 		"duplicateCandidateSkillSlugs": [
@@ -37,29 +37,13 @@
 		"fmodelMatchesRecorded": 0
 	},
 	"levelRequirements": {
-		"passives": [
-			2,
-			8,
-			14,
-			20,
-			26
-		],
-		"throwable": [
-			4,
-			10,
-			16,
-			22,
-			28
-		],
-		"gadget": [
-			6,
-			12,
-			18,
-			24,
-			30
-		]
+		"passives": [2, 8, 14, 20, 26],
+		"throwable": [4, 10, 16, 22, 28],
+		"gadget": [6, 12, 18, 24, 30]
 	},
-	"warnings": [],
+	"warnings": [
+		"FModel export root not found: scratch/fmodel-export. Skipping FModel text/JSON match scanning."
+	],
 	"packages": [
 		{
 			"name": "global.ucas",
@@ -379,9 +363,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"commando-limb-reaper"
-					],
+					"alternateSkillSlugs": ["commando-limb-reaper"],
 					"internalName": "LimbReaper",
 					"category": "passives",
 					"skillNumber": 10,
@@ -446,9 +428,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"commando-a-real-rager"
-					],
+					"alternateSkillSlugs": ["commando-a-real-rager"],
 					"internalName": "ARealRager",
 					"category": "passives",
 					"skillNumber": 12,
@@ -545,9 +525,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Think Fast!"
-					],
+					"alternateNames": ["Think Fast!"],
 					"internalName": "ThinkFast!",
 					"category": "throwable",
 					"skillNumber": 3,
@@ -565,19 +543,24 @@
 				{
 					"perkSlug": "commando",
 					"candidateSkillSlug": "commando-capacity-tier2",
-					"candidateSkillName": "Capacity Tier2",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier2"],
 					"internalName": "Capacity_Tier2",
 					"category": "throwable",
 					"tierNumber": 2,
 					"treeOrder": 0,
 					"unlockLevel": 10,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Foster",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Foster",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
 					}
@@ -649,19 +632,24 @@
 				{
 					"perkSlug": "commando",
 					"candidateSkillSlug": "commando-capacity-tier4",
-					"candidateSkillName": "Capacity Tier4",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier4"],
 					"internalName": "Capacity_Tier4",
 					"category": "throwable",
 					"tierNumber": 4,
 					"treeOrder": 0,
 					"unlockLevel": 22,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Foster",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Foster",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
 					}
@@ -741,9 +729,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Money-Spinner"
-					],
+					"alternateNames": ["Money-Spinner"],
 					"internalName": "MoneySpinner",
 					"category": "throwable",
 					"skillNumber": 8,
@@ -1465,9 +1451,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"commando-limb-reaper"
-								],
+								"alternateSkillSlugs": ["commando-limb-reaper"],
 								"internalName": "LimbReaper",
 								"category": "passives",
 								"skillNumber": 10,
@@ -1532,9 +1516,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"commando-a-real-rager"
-								],
+								"alternateSkillSlugs": ["commando-a-real-rager"],
 								"internalName": "ARealRager",
 								"category": "passives",
 								"skillNumber": 12,
@@ -1640,9 +1622,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Think Fast!"
-								],
+								"alternateNames": ["Think Fast!"],
 								"internalName": "ThinkFast!",
 								"category": "throwable",
 								"skillNumber": 3,
@@ -1667,19 +1647,24 @@
 							{
 								"perkSlug": "commando",
 								"candidateSkillSlug": "commando-capacity-tier2",
-								"candidateSkillName": "Capacity Tier2",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier2"],
 								"internalName": "Capacity_Tier2",
 								"category": "throwable",
 								"tierNumber": 2,
 								"treeOrder": 0,
 								"unlockLevel": 10,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Foster",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Foster",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
 								}
@@ -1765,19 +1750,24 @@
 							{
 								"perkSlug": "commando",
 								"candidateSkillSlug": "commando-capacity-tier4",
-								"candidateSkillName": "Capacity Tier4",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier4"],
 								"internalName": "Capacity_Tier4",
 								"category": "throwable",
 								"tierNumber": 4,
 								"treeOrder": 0,
 								"unlockLevel": 22,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Foster",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Foster",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Commando/Skills/SPEC_Foster_GrenadeSkillTree.uasset"
 								}
@@ -1864,9 +1854,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Money-Spinner"
-								],
+								"alternateNames": ["Money-Spinner"],
 								"internalName": "MoneySpinner",
 								"category": "throwable",
 								"skillNumber": 8,
@@ -2478,9 +2466,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Bleed for Speed"
-					],
+					"alternateNames": ["Bleed for Speed"],
 					"internalName": "BleedForSpeed",
 					"category": "passives",
 					"skillNumber": 6,
@@ -2772,19 +2758,24 @@
 				{
 					"perkSlug": "engineer",
 					"candidateSkillSlug": "engineer-capacity-tier2",
-					"candidateSkillName": "Capacity Tier2",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier2"],
 					"internalName": "Capacity_Tier2",
 					"category": "throwable",
 					"tierNumber": 2,
 					"treeOrder": 0,
 					"unlockLevel": 10,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Imran",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Imran",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
 					}
@@ -2825,9 +2816,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"engineer-shred-end"
-					],
+					"alternateSkillSlugs": ["engineer-shred-end"],
 					"internalName": "ShredEnd",
 					"category": "throwable",
 					"skillNumber": 5,
@@ -2845,19 +2834,24 @@
 				{
 					"perkSlug": "engineer",
 					"candidateSkillSlug": "engineer-capacity-tier4",
-					"candidateSkillName": "Capacity Tier4",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier4"],
 					"internalName": "Capacity_Tier4",
 					"category": "throwable",
 					"tierNumber": 4,
 					"treeOrder": 0,
 					"unlockLevel": 22,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Imran",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Imran",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
 					}
@@ -3058,12 +3052,8 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Wall of Sound"
-					],
-					"alternateSkillSlugs": [
-						"engineer-wallof-sound"
-					],
+					"alternateNames": ["Wall of Sound"],
+					"alternateSkillSlugs": ["engineer-wallof-sound"],
 					"internalName": "WallofSound",
 					"category": "gadget",
 					"skillNumber": 4,
@@ -3160,9 +3150,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Clear the Area"
-					],
+					"alternateNames": ["Clear the Area"],
 					"internalName": "ClearTheArea",
 					"category": "gadget",
 					"skillNumber": 7,
@@ -3323,12 +3311,8 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"State of Confusion"
-					],
-					"alternateSkillSlugs": [
-						"engineer-stateof-confusion"
-					],
+					"alternateNames": ["State of Confusion"],
+					"alternateSkillSlugs": ["engineer-stateof-confusion"],
 					"internalName": "StateofConfusion",
 					"category": "gadget",
 					"skillNumber": 12,
@@ -3561,9 +3545,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Bleed for Speed"
-								],
+								"alternateNames": ["Bleed for Speed"],
 								"internalName": "BleedForSpeed",
 								"category": "passives",
 								"skillNumber": 6,
@@ -3885,19 +3867,24 @@
 							{
 								"perkSlug": "engineer",
 								"candidateSkillSlug": "engineer-capacity-tier2",
-								"candidateSkillName": "Capacity Tier2",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier2"],
 								"internalName": "Capacity_Tier2",
 								"category": "throwable",
 								"tierNumber": 2,
 								"treeOrder": 0,
 								"unlockLevel": 10,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Imran",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Imran",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
 								}
@@ -3945,9 +3932,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"engineer-shred-end"
-								],
+								"alternateSkillSlugs": ["engineer-shred-end"],
 								"internalName": "ShredEnd",
 								"category": "throwable",
 								"skillNumber": 5,
@@ -3972,19 +3957,24 @@
 							{
 								"perkSlug": "engineer",
 								"candidateSkillSlug": "engineer-capacity-tier4",
-								"candidateSkillName": "Capacity Tier4",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier4"],
 								"internalName": "Capacity_Tier4",
 								"category": "throwable",
 								"tierNumber": 4,
 								"treeOrder": 0,
 								"unlockLevel": 22,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Imran",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Imran",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
 								}
@@ -4208,12 +4198,8 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Wall of Sound"
-								],
-								"alternateSkillSlugs": [
-									"engineer-wallof-sound"
-								],
+								"alternateNames": ["Wall of Sound"],
+								"alternateSkillSlugs": ["engineer-wallof-sound"],
 								"internalName": "WallofSound",
 								"category": "gadget",
 								"skillNumber": 4,
@@ -4317,9 +4303,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Clear the Area"
-								],
+								"alternateNames": ["Clear the Area"],
 								"internalName": "ClearTheArea",
 								"category": "gadget",
 								"skillNumber": 7,
@@ -4494,12 +4478,8 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"State of Confusion"
-								],
-								"alternateSkillSlugs": [
-									"engineer-stateof-confusion"
-								],
+								"alternateNames": ["State of Confusion"],
+								"alternateSkillSlugs": ["engineer-stateof-confusion"],
 								"internalName": "StateofConfusion",
 								"category": "gadget",
 								"skillNumber": 12,
@@ -4597,9 +4577,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Too Hot to Handle"
-					],
+					"alternateNames": ["Too Hot to Handle"],
 					"internalName": "TooHotToHandle",
 					"category": "passives",
 					"skillNumber": 2,
@@ -5019,19 +4997,24 @@
 				{
 					"perkSlug": "firebug",
 					"candidateSkillSlug": "firebug-capacity-tier2",
-					"candidateSkillName": "Capacity Tier2",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier2"],
 					"internalName": "Capacity_Tier2",
 					"category": "throwable",
 					"tierNumber": 2,
 					"treeOrder": 0,
 					"unlockLevel": 10,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Devlin",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Devlin",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
 					}
@@ -5089,19 +5072,24 @@
 				{
 					"perkSlug": "firebug",
 					"candidateSkillSlug": "firebug-capacity-tier4",
-					"candidateSkillName": "Capacity Tier4",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier4"],
 					"internalName": "Capacity_Tier4",
 					"category": "throwable",
 					"tierNumber": 4,
 					"treeOrder": 0,
 					"unlockLevel": 22,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Devlin",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Devlin",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
 					}
@@ -5188,9 +5176,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Up in Flames"
-					],
+					"alternateNames": ["Up in Flames"],
 					"internalName": "UpInFlames",
 					"category": "throwable",
 					"skillNumber": 8,
@@ -5255,9 +5241,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Ready for Action"
-					],
+					"alternateNames": ["Ready for Action"],
 					"internalName": "ReadyForAction",
 					"category": "gadget",
 					"skillNumber": 2,
@@ -5443,9 +5427,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"In the Public Eye"
-					],
+					"alternateNames": ["In the Public Eye"],
 					"internalName": "InThePublicEye",
 					"category": "gadget",
 					"skillNumber": 8,
@@ -5542,9 +5524,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"firebug-double-feature"
-					],
+					"alternateSkillSlugs": ["firebug-double-feature"],
 					"internalName": "DoubleFeature",
 					"category": "gadget",
 					"skillNumber": 11,
@@ -5577,9 +5557,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"firebug-flammable-material"
-					],
+					"alternateSkillSlugs": ["firebug-flammable-material"],
 					"internalName": "FlammableMaterial",
 					"category": "gadget",
 					"skillNumber": 12,
@@ -5612,9 +5590,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"From the Ashes"
-					],
+					"alternateNames": ["From the Ashes"],
 					"internalName": "FromTheAshes",
 					"category": "gadget",
 					"skillNumber": 13,
@@ -5680,9 +5656,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Too Hot to Handle"
-								],
+								"alternateNames": ["Too Hot to Handle"],
 								"internalName": "TooHotToHandle",
 								"category": "passives",
 								"skillNumber": 2,
@@ -6146,19 +6120,24 @@
 							{
 								"perkSlug": "firebug",
 								"candidateSkillSlug": "firebug-capacity-tier2",
-								"candidateSkillName": "Capacity Tier2",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier2"],
 								"internalName": "Capacity_Tier2",
 								"category": "throwable",
 								"tierNumber": 2,
 								"treeOrder": 0,
 								"unlockLevel": 10,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Devlin",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Devlin",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
 								}
@@ -6230,19 +6209,24 @@
 							{
 								"perkSlug": "firebug",
 								"candidateSkillSlug": "firebug-capacity-tier4",
-								"candidateSkillName": "Capacity Tier4",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier4"],
 								"internalName": "Capacity_Tier4",
 								"category": "throwable",
 								"tierNumber": 4,
 								"treeOrder": 0,
 								"unlockLevel": 22,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Devlin",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Devlin",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
 								}
@@ -6336,9 +6320,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Up in Flames"
-								],
+								"alternateNames": ["Up in Flames"],
 								"internalName": "UpInFlames",
 								"category": "throwable",
 								"skillNumber": 8,
@@ -6412,9 +6394,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Ready for Action"
-								],
+								"alternateNames": ["Ready for Action"],
 								"internalName": "ReadyForAction",
 								"category": "gadget",
 								"skillNumber": 2,
@@ -6614,9 +6594,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"In the Public Eye"
-								],
+								"alternateNames": ["In the Public Eye"],
 								"internalName": "InThePublicEye",
 								"category": "gadget",
 								"skillNumber": 8,
@@ -6727,9 +6705,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"firebug-double-feature"
-								],
+								"alternateSkillSlugs": ["firebug-double-feature"],
 								"internalName": "DoubleFeature",
 								"category": "gadget",
 								"skillNumber": 11,
@@ -6762,9 +6738,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"firebug-flammable-material"
-								],
+								"alternateSkillSlugs": ["firebug-flammable-material"],
 								"internalName": "FlammableMaterial",
 								"category": "gadget",
 								"skillNumber": 12,
@@ -6797,9 +6771,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"From the Ashes"
-								],
+								"alternateNames": ["From the Ashes"],
 								"internalName": "FromTheAshes",
 								"category": "gadget",
 								"skillNumber": 13,
@@ -6833,9 +6805,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"medic-doctors-bag"
-					],
+					"alternateSkillSlugs": ["medic-doctors-bag"],
 					"internalName": "DoctorsBag",
 					"category": "passives",
 					"skillNumber": 1,
@@ -6943,9 +6913,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"medic-stronger-perscription"
-					],
+					"alternateSkillSlugs": ["medic-stronger-perscription"],
 					"internalName": "StrongerPerscription",
 					"category": "passives",
 					"skillNumber": 5,
@@ -7124,9 +7092,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Heal and Deal"
-					],
+					"alternateNames": ["Heal and Deal"],
 					"internalName": "HealAndDeal",
 					"category": "passives",
 					"skillNumber": 11,
@@ -7191,9 +7157,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Cull the Weak"
-					],
+					"alternateNames": ["Cull the Weak"],
 					"internalName": "CullTheWeak",
 					"category": "throwable",
 					"skillNumber": 1,
@@ -7275,19 +7239,24 @@
 				{
 					"perkSlug": "medic",
 					"candidateSkillSlug": "medic-capacity-tier2",
-					"candidateSkillName": "Capacity Tier2",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier2"],
 					"internalName": "Capacity_Tier2",
 					"category": "throwable",
 					"tierNumber": 2,
 					"treeOrder": 0,
 					"unlockLevel": 10,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Obi",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Obi",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
 					}
@@ -7345,19 +7314,24 @@
 				{
 					"perkSlug": "medic",
 					"candidateSkillSlug": "medic-capacity-tier4",
-					"candidateSkillName": "Capacity Tier4",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier4"],
 					"internalName": "Capacity_Tier4",
 					"category": "throwable",
 					"tierNumber": 4,
 					"treeOrder": 0,
 					"unlockLevel": 22,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Obi",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Obi",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
 					}
@@ -7868,9 +7842,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"medic-doctors-bag"
-								],
+								"alternateSkillSlugs": ["medic-doctors-bag"],
 								"internalName": "DoctorsBag",
 								"category": "passives",
 								"skillNumber": 1,
@@ -7985,9 +7957,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"medic-stronger-perscription"
-								],
+								"alternateSkillSlugs": ["medic-stronger-perscription"],
 								"internalName": "StrongerPerscription",
 								"category": "passives",
 								"skillNumber": 5,
@@ -8187,9 +8157,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Heal and Deal"
-								],
+								"alternateNames": ["Heal and Deal"],
 								"internalName": "HealAndDeal",
 								"category": "passives",
 								"skillNumber": 11,
@@ -8263,9 +8231,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Cull the Weak"
-								],
+								"alternateNames": ["Cull the Weak"],
 								"internalName": "CullTheWeak",
 								"category": "throwable",
 								"skillNumber": 1,
@@ -8354,19 +8320,24 @@
 							{
 								"perkSlug": "medic",
 								"candidateSkillSlug": "medic-capacity-tier2",
-								"candidateSkillName": "Capacity Tier2",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier2"],
 								"internalName": "Capacity_Tier2",
 								"category": "throwable",
 								"tierNumber": 2,
 								"treeOrder": 0,
 								"unlockLevel": 10,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Obi",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Obi",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
 								}
@@ -8438,19 +8409,24 @@
 							{
 								"perkSlug": "medic",
 								"candidateSkillSlug": "medic-capacity-tier4",
-								"candidateSkillName": "Capacity Tier4",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier4"],
 								"internalName": "Capacity_Tier4",
 								"category": "throwable",
 								"tierNumber": 4,
 								"treeOrder": 0,
 								"unlockLevel": 22,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Obi",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Obi",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
 								}
@@ -9116,9 +9092,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Kuji-kiri"
-					],
+					"alternateNames": ["Kuji-kiri"],
 					"internalName": "Kuji-kiri",
 					"category": "passives",
 					"skillNumber": 5,
@@ -9201,9 +9175,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Chi kai ri"
-					],
+					"alternateNames": ["Chi kai ri"],
 					"internalName": "ChiKaiRi",
 					"category": "passives",
 					"skillNumber": 8,
@@ -9236,9 +9208,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Sakki-jutsu"
-					],
+					"alternateNames": ["Sakki-jutsu"],
 					"internalName": "Sakki-jutsu",
 					"category": "passives",
 					"skillNumber": 9,
@@ -9271,9 +9241,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Ebb and Flow"
-					],
+					"alternateNames": ["Ebb and Flow"],
 					"internalName": "EbbAndFlow",
 					"category": "passives",
 					"skillNumber": 10,
@@ -9451,19 +9419,24 @@
 				{
 					"perkSlug": "ninja",
 					"candidateSkillSlug": "ninja-capacity-tier2",
-					"candidateSkillName": "Capacity Tier2",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier2"],
 					"internalName": "Capacity_Tier2",
 					"category": "throwable",
 					"tierNumber": 2,
 					"treeOrder": 0,
 					"unlockLevel": 10,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Nakata",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Nakata",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
 					}
@@ -9528,19 +9501,24 @@
 				{
 					"perkSlug": "ninja",
 					"candidateSkillSlug": "ninja-capacity-tier4",
-					"candidateSkillName": "Capacity Tier4",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier4"],
 					"internalName": "Capacity_Tier4",
 					"category": "throwable",
 					"tierNumber": 4,
 					"treeOrder": 0,
 					"unlockLevel": 22,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Nakata",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Nakata",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
 					}
@@ -9563,12 +9541,8 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Devil's Circuit"
-					],
-					"alternateSkillSlugs": [
-						"ninja-devil-s-circuit"
-					],
+					"alternateNames": ["Devil's Circuit"],
+					"alternateSkillSlugs": ["ninja-devil-s-circuit"],
 					"internalName": "DevilsCircuit",
 					"category": "throwable",
 					"skillNumber": 6,
@@ -9772,9 +9746,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Warrior of the Wind"
-					],
+					"alternateNames": ["Warrior of the Wind"],
 					"internalName": "WarriorOfTheWind",
 					"category": "gadget",
 					"skillNumber": 5,
@@ -10185,9 +10157,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Kuji-kiri"
-								],
+								"alternateNames": ["Kuji-kiri"],
 								"internalName": "Kuji-kiri",
 								"category": "passives",
 								"skillNumber": 5,
@@ -10284,9 +10254,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Chi kai ri"
-								],
+								"alternateNames": ["Chi kai ri"],
 								"internalName": "ChiKaiRi",
 								"category": "passives",
 								"skillNumber": 8,
@@ -10319,9 +10287,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Sakki-jutsu"
-								],
+								"alternateNames": ["Sakki-jutsu"],
 								"internalName": "Sakki-jutsu",
 								"category": "passives",
 								"skillNumber": 9,
@@ -10361,9 +10327,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Ebb and Flow"
-								],
+								"alternateNames": ["Ebb and Flow"],
 								"internalName": "EbbAndFlow",
 								"category": "passives",
 								"skillNumber": 10,
@@ -10557,19 +10521,24 @@
 							{
 								"perkSlug": "ninja",
 								"candidateSkillSlug": "ninja-capacity-tier2",
-								"candidateSkillName": "Capacity Tier2",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier2"],
 								"internalName": "Capacity_Tier2",
 								"category": "throwable",
 								"tierNumber": 2,
 								"treeOrder": 0,
 								"unlockLevel": 10,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Nakata",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Nakata",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
 								}
@@ -10648,19 +10617,24 @@
 							{
 								"perkSlug": "ninja",
 								"candidateSkillSlug": "ninja-capacity-tier4",
-								"candidateSkillName": "Capacity Tier4",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier4"],
 								"internalName": "Capacity_Tier4",
 								"category": "throwable",
 								"tierNumber": 4,
 								"treeOrder": 0,
 								"unlockLevel": 22,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Nakata",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Nakata",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
 								}
@@ -10690,12 +10664,8 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Devil's Circuit"
-								],
-								"alternateSkillSlugs": [
-									"ninja-devil-s-circuit"
-								],
+								"alternateNames": ["Devil's Circuit"],
+								"alternateSkillSlugs": ["ninja-devil-s-circuit"],
 								"internalName": "DevilsCircuit",
 								"category": "throwable",
 								"skillNumber": 6,
@@ -10915,9 +10885,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Warrior of the Wind"
-								],
+								"alternateNames": ["Warrior of the Wind"],
 								"internalName": "WarriorOfTheWind",
 								"category": "gadget",
 								"skillNumber": 5,
@@ -11559,9 +11527,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Rack 'Em Up"
-					],
+					"alternateNames": ["Rack 'Em Up"],
 					"internalName": "RackEmUp",
 					"category": "passives",
 					"skillNumber": 12,
@@ -11675,19 +11641,24 @@
 				{
 					"perkSlug": "sharpshooter",
 					"candidateSkillSlug": "sharpshooter-capacity-tier2",
-					"candidateSkillName": "Capacity Tier2",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier2"],
 					"internalName": "Capacity_Tier2",
 					"category": "throwable",
 					"tierNumber": 2,
 					"treeOrder": 0,
 					"unlockLevel": 10,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Luna",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Luna",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
 					}
@@ -11759,19 +11730,24 @@
 				{
 					"perkSlug": "sharpshooter",
 					"candidateSkillSlug": "sharpshooter-capacity-tier4",
-					"candidateSkillName": "Capacity Tier4",
-					"collectionStatus": "raw-skill-tree-tier",
+					"candidateSkillName": "Capacity Increase",
+					"collectionStatus": "locres-description+raw-skill-tree-tier",
 					"previewFiles": [],
 					"fmodelMatches": [],
 					"notes": [
-						"Category and one-based tier position recovered from raw skill tree asset."
+						"Category and one-based tier position recovered from raw skill tree asset.",
+						"Name and detailed effect text recovered from English Game.locres."
 					],
+					"alternateNames": ["Capacity Tier4"],
 					"internalName": "Capacity_Tier4",
 					"category": "throwable",
 					"tierNumber": 4,
 					"treeOrder": 0,
 					"unlockLevel": 22,
+					"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 					"gameSources": {
+						"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Luna",
+						"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Luna",
 						"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 						"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
 					}
@@ -11997,12 +11973,8 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Fight or Flight"
-					],
-					"alternateSkillSlugs": [
-						"sharpshooter-fight-or-flight"
-					],
+					"alternateNames": ["Fight or Flight"],
+					"alternateSkillSlugs": ["sharpshooter-fight-or-flight"],
 					"internalName": "FightorFlight",
 					"category": "gadget",
 					"skillNumber": 5,
@@ -12099,9 +12071,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Cold-Blooded"
-					],
+					"alternateNames": ["Cold-Blooded"],
 					"internalName": "ColdBlooded",
 					"category": "gadget",
 					"skillNumber": 8,
@@ -12134,12 +12104,8 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateNames": [
-						"Arm's Length"
-					],
-					"alternateSkillSlugs": [
-						"sharpshooter-arm-s-length"
-					],
+					"alternateNames": ["Arm's Length"],
+					"alternateSkillSlugs": ["sharpshooter-arm-s-length"],
 					"internalName": "ArmsLength",
 					"category": "gadget",
 					"skillNumber": 9,
@@ -12204,9 +12170,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"sharpshooter-queen-bee"
-					],
+					"alternateSkillSlugs": ["sharpshooter-queen-bee"],
 					"internalName": "QueenBee",
 					"category": "gadget",
 					"skillNumber": 11,
@@ -12271,9 +12235,7 @@
 						"Category and one-based tier position recovered from raw skill tree asset.",
 						"Name and detailed effect text recovered from English Game.locres."
 					],
-					"alternateSkillSlugs": [
-						"sharpshooter-frosted-tips"
-					],
+					"alternateSkillSlugs": ["sharpshooter-frosted-tips"],
 					"internalName": "FrostedTips",
 					"category": "gadget",
 					"skillNumber": 13,
@@ -12680,9 +12642,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Rack 'Em Up"
-								],
+								"alternateNames": ["Rack 'Em Up"],
 								"internalName": "RackEmUp",
 								"category": "passives",
 								"skillNumber": 12,
@@ -12812,19 +12772,24 @@
 							{
 								"perkSlug": "sharpshooter",
 								"candidateSkillSlug": "sharpshooter-capacity-tier2",
-								"candidateSkillName": "Capacity Tier2",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier2"],
 								"internalName": "Capacity_Tier2",
 								"category": "throwable",
 								"tierNumber": 2,
 								"treeOrder": 0,
 								"unlockLevel": 10,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Luna",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Luna",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
 								}
@@ -12910,19 +12875,24 @@
 							{
 								"perkSlug": "sharpshooter",
 								"candidateSkillSlug": "sharpshooter-capacity-tier4",
-								"candidateSkillName": "Capacity Tier4",
-								"collectionStatus": "raw-skill-tree-tier",
+								"candidateSkillName": "Capacity Increase",
+								"collectionStatus": "locres-description+raw-skill-tree-tier",
 								"previewFiles": [],
 								"fmodelMatches": [],
 								"notes": [
-									"Category and one-based tier position recovered from raw skill tree asset."
+									"Category and one-based tier position recovered from raw skill tree asset.",
+									"Name and detailed effect text recovered from English Game.locres."
 								],
+								"alternateNames": ["Capacity Tier4"],
 								"internalName": "Capacity_Tier4",
 								"category": "throwable",
 								"tierNumber": 4,
 								"treeOrder": 0,
 								"unlockLevel": 22,
+								"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 								"gameSources": {
+									"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Luna",
+									"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Luna",
 									"levelRequirementSource": "webapp/data/skill/level_requirement.json",
 									"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
 								}
@@ -13171,12 +13141,8 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Fight or Flight"
-								],
-								"alternateSkillSlugs": [
-									"sharpshooter-fight-or-flight"
-								],
+								"alternateNames": ["Fight or Flight"],
+								"alternateSkillSlugs": ["sharpshooter-fight-or-flight"],
 								"internalName": "FightorFlight",
 								"category": "gadget",
 								"skillNumber": 5,
@@ -13280,9 +13246,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Cold-Blooded"
-								],
+								"alternateNames": ["Cold-Blooded"],
 								"internalName": "ColdBlooded",
 								"category": "gadget",
 								"skillNumber": 8,
@@ -13322,12 +13286,8 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateNames": [
-									"Arm's Length"
-								],
-								"alternateSkillSlugs": [
-									"sharpshooter-arm-s-length"
-								],
+								"alternateNames": ["Arm's Length"],
+								"alternateSkillSlugs": ["sharpshooter-arm-s-length"],
 								"internalName": "ArmsLength",
 								"category": "gadget",
 								"skillNumber": 9,
@@ -13399,9 +13359,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"sharpshooter-queen-bee"
-								],
+								"alternateSkillSlugs": ["sharpshooter-queen-bee"],
 								"internalName": "QueenBee",
 								"category": "gadget",
 								"skillNumber": 11,
@@ -13466,9 +13424,7 @@
 									"Category and one-based tier position recovered from raw skill tree asset.",
 									"Name and detailed effect text recovered from English Game.locres."
 								],
-								"alternateSkillSlugs": [
-									"sharpshooter-frosted-tips"
-								],
+								"alternateSkillSlugs": ["sharpshooter-frosted-tips"],
 								"internalName": "FrostedTips",
 								"category": "gadget",
 								"skillNumber": 13,

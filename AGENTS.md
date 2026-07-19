@@ -101,7 +101,8 @@ Use consistent names in code and UI:
 - **SkillSlug**: globally unique, hand-authored stable identifier for a `SkillOption` across all perk JSON files. Use skill slugs in selections and shareable build state; do not store selected skills by array index, derive identity from display names, or require `(perk, skillSlug)` pairs for uniqueness.
 - **SkillSlugMigrationMap**: central compatibility map that resolves legacy global skill slugs to current global skill slugs when decoding saved or shared build states. Do not scatter slug aliases across individual skill JSON files.
 - **Proficiency**: a non-selectable per-perk progression/stat entry from the data. Show it separately from skill choices until verified game rules say it affects build summaries.
-- **SkillSelection**: one selected-skill entry that assigns a `SkillSlug` to a `SkillSlot`; serialize it with explicit `category`, `tierNumber`, and `skillSlug` fields.
+- **SkillRank**: nonnegative whole number of upgrade points spent in a selected `SkillOption`; use it to resolve effect values. A rank of zero means the skill remains equipped with its local-game-data base effect and no upgrade points spent.
+- **SkillSelection**: one selected-skill entry that assigns a `SkillSlug` and nonnegative `SkillRank` to a `SkillSlot`; serialize it with explicit `category`, `tierNumber`, `skillSlug`, and `rank` fields. A selected rank-zero skill satisfies that row’s prerequisite for the next tier.
 - **SkillSelections**: serializable array of `SkillSelection` entries, not a flat slug list and not an object whose nesting hides the slot fields.
 - **BuildState**: canonical serializable build data: selected perk slug, perk level, skill selections, and later loadout choices.
 - **BuildSummary**: computed read-only summary of selected skills, resolved values, derived operational budget, and warnings. Use **Build Summary** in UI copy; avoid **Outcome** in product copy.
@@ -124,7 +125,7 @@ type OperationalBudget = number;
 type OperationalBudgetFormula = {
   type: string; // Known formula identifier implemented by budget helpers; never eval executable strings.
   parameters: Record<string, number>;
-  verificationStatus: 'provisional' | 'verified';
+  verificationStatus: "provisional" | "verified";
   sourceNote?: string;
 };
 
@@ -132,7 +133,7 @@ type SkillSlug = string;
 
 type SkillSlugMigrationMap = Record<SkillSlug, SkillSlug>;
 
-type SkillCategory = 'passives' | 'throwable' | 'gadget';
+type SkillCategory = "passives" | "throwable" | "gadget";
 
 type SkillTierNumber = number; // One-based; matches UI-facing tier numbering.
 
@@ -141,8 +142,11 @@ type SkillSlot = {
   tierNumber: SkillTierNumber;
 };
 
+type SkillRank = number; // Nonnegative whole number of points spent in an equipped skill.
+
 type SkillSelection = SkillSlot & {
   skillSlug: SkillSlug;
+  rank: SkillRank;
 };
 
 type SkillSelections = SkillSelection[];
@@ -172,6 +176,7 @@ type SkillOption = {
     values?: Record<string, number[]>;
   };
   values?: Record<string, number[]>;
+  rankCap?: SkillRank; // Per-skill upgrade-point cap from local game data; 0 means no upgrade ranks and no rank meter. Do not treat the game UI’s three-rank display as universal.
 };
 
 type ProficiencyEntry = {
@@ -218,7 +223,7 @@ Notes:
 - Build summary computation must be deterministic and based only on `BuildState` + normalized skill/budget data.
 - `BuildState` must store the selected perk by `PerkSlug`, not by display name or raw file path.
 - `BuildState` must store selected skills by `SkillSlug`, not by skill option indexes.
-- `BuildState.skillSelections` must be an array of `SkillSelection` entries with explicit `category`, `tierNumber`, and `skillSlug` fields; do not store it as a flat `SkillSlug[]` or as nested object keys that hide the slot fields.
+- `BuildState.skillSelections` must be an array of `SkillSelection` entries with explicit `category`, `tierNumber`, `skillSlug`, and nonnegative `rank` fields; do not store it as a flat `SkillSlug[]` or as nested object keys that hide the slot fields.
 - Canonical `BuildState` validation must reject duplicate `SkillSelection` entries for the same `SkillSlot`.
 - UI selection actions must replace the existing entry for a `SkillSlot` rather than appending duplicates.
 - URL/share-state decoding must reject duplicate slot entries as invalid shared build data; do not silently repair ambiguity by choosing one selected skill for that slot.
@@ -234,7 +239,7 @@ Put simulator logic under `webapp/src/lib/skills/`:
 - `budget.ts` — pure functions that compute `OperationalBudget` from `PerkSkillData` + `PerkLevel`.
 - `selection.ts` — pure functions for selecting, clearing, locking, and validating selections.
 - `build-summary.ts` — pure functions that turn selections into build summaries.
-- `format.ts` — placeholder interpolation and safe rendering helpers.
+- `format.ts` — rank-aware placeholder interpolation and safe rendering helpers.
 
 Put reusable UI under `webapp/src/lib/components/`:
 
@@ -248,6 +253,13 @@ Put reusable UI under `webapp/src/lib/components/`:
 Keep Svelte route files thin. They should compose data, state, and components, not contain most business rules.
 
 ## UI/UX expectations
+
+### Visual approval workflow
+
+- Every generated UI mock or visual reference requires browser-based approval before implementation, even when there is only one candidate.
+- A single-candidate picker must show Direction A (the candidate), Direction B (the current default implementation or approved reference), and Direction C (not approved). A multi-candidate picker uses Directions A/B for the candidates and Direction C for rejection. Feedback is available on every option and required for Direction C.
+- Serve the picker with `/home/dang312/.pi/agent/extensions/ui-review-callback/ui-review-picker.py` and launch its local URL in the browser. Do not only paste an image or URL into the chat.
+- After revision feedback, regenerate the mock, update the picker, clear the consumed callback file, and re-open the browser until an A/B choice is submitted with no feedback.
 
 - Design for quick comparison of options in the same tier.
 - Always show unlock level for each tier.

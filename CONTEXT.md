@@ -13,7 +13,7 @@ The canonical serializable representation of a build: selected perk slug, perk l
 _Avoid_: UI state, derived summary, user profile
 
 **BuildSummary**:
-The read-only explanation computed from a build and current data, including selected skills, resolved values, derived starting money, and warnings.
+The read-only explanation computed from a build and current data, including equipped skills, rank-resolved values including an equipped skill’s base effect at rank zero, derived starting money, and warnings. Rank zero is labeled as the base effect with no upgrade points spent.
 _Avoid_: Outcome, result, report
 
 **Perk**:
@@ -40,6 +40,18 @@ _Avoid_: User-entered budget override, unrelated economy system, match progressi
 One of the three skill trees every perk has: passives, throwable, or gadget. Game assets may say Passive/PASSIVES, Throwable/THROWABLE, and Gadget/GADGET; normalized app code uses `passives`, `throwable`, and `gadget`.
 _Avoid_: Arbitrary section, custom group, optional fourth tree
 
+**SkillTreeView**:
+The in-game-like skill selection presentation: three compact skill-category columns, level-labeled tier rows, icon-first skill nodes, and separate detail readout for the focused or selected skill.
+_Avoid_: Full text card list as the default skill tree, build summary, share state
+
+**SkillDetailPanel**:
+The focused readout for one skill option, showing its name, category, unlock level, effect text, resolved values, source details, and a selected skill’s one-rank refund action. It does not own canonical build state; it requests a refund through the selection rules.
+_Avoid_: Build summary, selected skill list, canonical build state
+
+**ExpandedDetailsMode**:
+An optional presentation mode that shows detailed skill descriptions inline for comparison and accessibility. It does not change the build or selection rules.
+_Avoid_: Different build state, alternate simulator rules
+
 **SkillTier**:
 A level-gated row of skill options within a skill category.
 _Avoid_: Skill level, rank, row index
@@ -56,8 +68,16 @@ _Avoid_: Flat selected skill list, implicit selection position
 One selectable skill choice in a skill tier.
 _Avoid_: Selected skill, array item, display name as identity
 
+**SkillIcon**:
+The one visual emblem for a skill option in the in-game-like skill tree view. It helps recognition but is never the skill's identity; missing icons are allowed during development and must not block selecting or sharing a skill.
+_Avoid_: Skill identity, selected skill, proof of verified effect text, shared icon as domain relationship
+
+**SkillRank**:
+The nonnegative whole number of upgrade points currently spent in one selected skill. It resolves that skill’s effect values; zero means the skill remains equipped with its base effect and no upgrade points spent. A refund immediately reduces the rank by one and never clears the selected skill or later-tier selections.
+_Avoid_: Perk level, skill tier number, proficiency
+
 **SkillSelection**:
-One selected-skill entry that assigns a skill slug to a skill slot. It carries the category, one-based tier number, and selected skill slug explicitly. A valid build has at most one skill selection per skill slot.
+One equipped-skill entry that assigns a skill slug and nonnegative SkillRank to a skill slot. It carries the category, one-based tier number, selected skill slug, and rank explicitly. A valid build has at most one skill selection per skill slot; an equipped rank-zero skill satisfies that row’s prerequisite for the next tier.
 _Avoid_: Flat skill slug, hidden slot fields, duplicate slot selection, object nesting as selection identity
 
 **SkillSelections**:

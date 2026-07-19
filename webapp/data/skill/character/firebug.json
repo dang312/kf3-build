@@ -4,7 +4,7 @@
 	"character": "Devlin",
 	"dataStatus": "candidate-extracted",
 	"source": {
-		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionGeneratedAt": "2026-06-29T19:05:59.378Z",
 		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
 		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
 		"collectionSummary": {
@@ -12,10 +12,10 @@
 			"skillPreviewCount": 149,
 			"previewCandidateSkillCount": 148,
 			"candidateSkillCount": 211,
-			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithDescriptions": 210,
 			"candidateSkillsWithTier": 210,
 			"candidateSkillsWithUnlockLevel": 210,
-			"locresSkillRecords": 198,
+			"locresSkillRecords": 210,
 			"rawSkillTreeAssets": 18,
 			"rawSkillTreeSkillReferences": 210,
 			"duplicateCandidateSkillSlugs": [
@@ -38,27 +38,9 @@
 			"fmodelMatchesRecorded": 0
 		},
 		"levelRequirements": {
-			"passives": [
-				2,
-				8,
-				14,
-				20,
-				26
-			],
-			"throwable": [
-				4,
-				10,
-				16,
-				22,
-				28
-			],
-			"gadget": [
-				6,
-				12,
-				18,
-				24,
-				30
-			]
+			"passives": [2, 8, 14, 20, 26],
+			"throwable": [4, 10, 16, 22, 28],
+			"gadget": [6, 12, 18, 24, 30]
 		},
 		"notes": [
 			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
@@ -80,7 +62,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "passives",
-						"description": "Take <Emp>[{0}%]</> less damage from <sEmp>Burning</> enemies."
+						"description": "Take <Emp>[{0}%]</> less damage from <sEmp>Burning</> enemies.",
+						"values": {
+							"0": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -104,9 +89,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_Firewall.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FirewallDamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "firewall",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_Firewall.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-firewall.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-firewall.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c52438264f9d9e86f76d17999562d723e0742849e99f3b032abb0afdde97da4f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-firewall.webp"
 				},
 				{
 					"slug": "firebug-too-hot-to-handle",
@@ -119,7 +134,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "passives",
-						"description": "Retaliate with a small burst of flame that applies <sEmp>Burn</> and <sEmp>150</> Heat <img id=\"Heat\"/> damage against enemy melee attacks.<cf><cf>This skill has a <Emp>[{0}]</> second cooldown between triggers."
+						"description": "Retaliate with a small burst of flame that applies <sEmp>Burn</> and <sEmp>150</> Heat <img id=\"Heat\"/> damage against enemy melee attacks.<cf><cf>This skill has a <Emp>[{0}]</> second cooldown between triggers.",
+						"values": {
+							"0": [16, 16, 14, 12]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -139,9 +157,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Too Hot to Handle"
-						],
+						"alternateNames": ["Too Hot to Handle"],
 						"internalName": "TooHotToHandle",
 						"category": "passives",
 						"skillNumber": 2,
@@ -153,9 +169,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_TooHotToHandle.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "TooHotToHandleCooldown",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "toohottohandle",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_TooHotToHandle.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-too-hot-to-handle.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-too-hot-to-handle.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6cfeaf53001f2ffd05a70054be1f8bb6e7c7798b8841b6ca53c31734c9990ff5"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-too-hot-to-handle.webp"
 				}
 			],
 			[
@@ -170,7 +216,11 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "passives",
-						"description": "Heat <img id=\"Heat\"/> weapons apply <Emp>[{0}%]</> increased <sEmp>Burn</> affliction and cause enemies to <sEmp>Burn</> for <Emp>[{1}%]</> longer."
+						"description": "Heat <img id=\"Heat\"/> weapons apply <Emp>[{0}%]</> increased <sEmp>Burn</> affliction and cause enemies to <sEmp>Burn</> for <Emp>[{1}%]</> longer.",
+						"values": {
+							"0": [60, 60, 80, 100],
+							"1": [100, 100, 150, 200]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -201,9 +251,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_HeatExposure.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HeatExposureBurnPowerIncrease, HeatExposureDurationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "heatexposure",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_HeatExposure.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-heat-exposure.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-heat-exposure.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9b6f927cd5a13f4a674af503f25563c45fef191bcbb374ffa3a91f8a033ba9c0"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-heat-exposure.webp"
 				},
 				{
 					"slug": "firebug-focus-fire",
@@ -216,7 +296,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased direct weapon damage with Heat <img id=\"Heat\"/> weapons."
+						"description": "Deal <Emp>[{0}%]</> increased direct weapon damage with Heat <img id=\"Heat\"/> weapons.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -240,9 +323,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_FocusFire.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FocusFireDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "focusfire",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_FocusFire.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-focus-fire.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-focus-fire.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "84073c0f3bdb5ab0f568d0fc4ffa3929d25741860faa682dedc8514ccb2a5b1f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-focus-fire.webp"
 				},
 				{
 					"slug": "firebug-scorched-earth",
@@ -255,7 +368,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "passives",
-						"description": "Ground fire effects caused by weapons deal <Emp>[{0}%]</> increased damage."
+						"description": "Ground fire effects caused by weapons deal <Emp>[{0}%]</> increased damage.",
+						"values": {
+							"0": [100, 100, 150, 200]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -286,9 +402,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_ScorchedEarth.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ScorchedEarthDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "scorchedearth",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_ScorchedEarth.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-scorched-earth.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-scorched-earth.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "771a4e71cded5fecc83673461697cd9914e6782086a7ccb0333e52e1051e555f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-scorched-earth.webp"
 				}
 			],
 			[
@@ -303,7 +449,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "passives",
-						"description": "Max ammo capacity is increased by <Emp>[{0}%]</>."
+						"description": "Max ammo capacity is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [30, 30, 40, 50]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -327,9 +476,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_FuelToBurn.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FuelToBurnCapacityIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fueltoburn",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_FuelToBurn.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-fuel-to-burn.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-fuel-to-burn.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6b63252090ebef15cc0e5ede2966e0997ed2ed12b7bb4b0604062562ad435b08"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-fuel-to-burn.webp"
 				},
 				{
 					"slug": "firebug-slow-cook",
@@ -342,7 +521,11 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "passives",
-						"description": "Ground fire effects caused by weapons are <Emp>[{0}%]</> bigger and apply <Emp>[{1}]</> <sEmp>Enfeeble</> affliction per tick."
+						"description": "Ground fire effects caused by weapons are <Emp>[{0}%]</> bigger and apply <Emp>[{1}]</> <sEmp>Enfeeble</> affliction per tick.",
+						"values": {
+							"0": [15, 15, 20, 25],
+							"1": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -373,9 +556,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_SlowCook.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SlowCookRadiusIncrease, SlowCookSlow",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "slowcook",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_SlowCook.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-slow-cook.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-slow-cook.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "419a8b05239d42bc41187da79e389d92eda6724672096907d183e3ad2529e76c"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-slow-cook.webp"
 				}
 			],
 			[
@@ -390,7 +603,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "passives",
-						"description": "Killing nearby enemies grants stacks of <Emp>RED ZONE</>, granting more stacks for larger enemies. <cf><cf><Emp>RED ZONE:</> At 5 stacks, all stacks can be consumed to repair <Emp>[{0}]</> armor integrity."
+						"description": "Killing nearby enemies grants stacks of <Emp>RED ZONE</>, granting more stacks for larger enemies. <cf><cf><Emp>RED ZONE:</> At 5 stacks, all stacks can be consumed to repair <Emp>[{0}]</> armor integrity.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -421,9 +637,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_RedZone.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "RedZoneArmorGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "redzone",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_RedZone.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-red-zone.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-red-zone.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "5b1b9cf2e432bd03313a6b1ecacd8982b3cad65da89e698c43ec95ecbeae93b1"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-red-zone.webp"
 				},
 				{
 					"slug": "firebug-hotfoot",
@@ -467,9 +713,36 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_Hotfoot.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "hotfoot",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_Hotfoot.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-hotfoot.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-hotfoot.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "183679deecfa4ddb17814d2a1c075079e095da50fb52009b6baff0dd70fbf2d4"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-hotfoot.webp"
 				}
 			],
 			[
@@ -484,7 +757,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "passives",
-						"description": "Weapon reload speed is increased by <Emp>[{0}%]</>.<cf><cf>Reloading weapon damages nearby enemies, applying <sEmp>Panic</> and <sEmp>75</> Heat <img id=\"Heat\"/> damage. <sEmp>Burning</> enemies take triple damage, but are extinguished."
+						"description": "Weapon reload speed is increased by <Emp>[{0}%]</>.<cf><cf>Reloading weapon damages nearby enemies, applying <sEmp>Panic</> and <sEmp>75</> Heat <img id=\"Heat\"/> damage. <sEmp>Burning</> enemies take triple damage, but are extinguished.",
+						"values": {
+							"0": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -515,9 +791,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_Extinguisher.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ExtinguisherReloadSpeedIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "extinguisher",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_Extinguisher.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-extinguisher.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-extinguisher.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c4ed6dd15e19f94776c93d418b9fe346d432c9de85fa6cff8801796832e145e4"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-extinguisher.webp"
 				},
 				{
 					"slug": "firebug-barbecue-bash",
@@ -530,7 +836,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "passives",
-						"description": "Bashes deal <Emp>[{0}]</> bonus damage. This bonus is doubled against <sEmp>Burning</> enemies."
+						"description": "Bashes deal <Emp>[{0}]</> bonus damage. This bonus is doubled against <sEmp>Burning</> enemies.",
+						"values": {
+							"0": [100, 100, 150, 200]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -561,9 +870,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_BarbecueBash.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BarbecueBashFlatDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "barbecuebash",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_BarbecueBash.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-barbecue-bash.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-barbecue-bash.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "b9e2d3c92b4c8e59763c653e4e191b7bca5903c59bb80fd2bcc5bd6650d5a954"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-barbecue-bash.webp"
 				},
 				{
 					"slug": "firebug-explosive-reaction",
@@ -576,7 +915,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "passives",
-						"description": "Enemies killed by Heat <img id=\"Heat\"/> weapons have a <Emp>[{0}%]</> chance to explode on death, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage and creating a ground fire."
+						"description": "Enemies killed by Heat <img id=\"Heat\"/> weapons have a <Emp>[{0}%]</> chance to explode on death, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage and creating a ground fire.",
+						"values": {
+							"0": [20, 20, 23, 26]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -607,9 +949,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_ExplosiveReaction.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ExplosiveReactionTriggerChance",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "explosivereaction",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Passive/Fire_Skill_ExplosiveReaction.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-explosive-reaction.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-explosive-reaction.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c1593caa7de6d63eeac995febe6e44e9de8e866f12b3dfb653c385d052fa4c15"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-explosive-reaction.webp"
 				}
 			]
 		],
@@ -626,7 +998,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "throwable",
-						"description": "Enemies hit by the initial Molotov explosion will <sEmp>Panic</> for <Emp>[{0}%]</> longer."
+						"description": "Enemies hit by the initial Molotov explosion will <sEmp>Panic</> for <Emp>[{0}%]</> longer.",
+						"values": {
+							"0": [30, 30, 40, 50]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -657,9 +1032,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_CocktailParty.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "CocktailPartyPanicIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "cocktailparty",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_CocktailParty.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-cocktail-party.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-cocktail-party.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c3be9c2d1a3844381905b45a5e44e0e5ec084df6038a2a9f72883490a43e284b"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-cocktail-party.webp"
 				},
 				{
 					"slug": "firebug-boom-out",
@@ -672,7 +1077,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "throwable",
-						"description": "Increase Molotov explosion radius by <Emp>[{0}%]</>."
+						"description": "Increase Molotov explosion radius by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -703,9 +1111,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_BoomOut.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BoomOutRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "boomout",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_BoomOut.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-boom-out.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-boom-out.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "809772b48f2b78081ba1f5f5fcb40009fcab0ca993ef9b7663e2bcc413290961"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-boom-out.webp"
 				},
 				{
 					"slug": "firebug-firecracker",
@@ -718,7 +1156,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "throwable",
-						"description": "Hitting an enemy directly with Molotov applies <sEmp>Panic</> and deals <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage."
+						"description": "Hitting an enemy directly with Molotov applies <sEmp>Panic</> and deals <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage.",
+						"values": {
+							"0": [200, 200, 250, 300]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -749,15 +1190,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_Firecracker.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FirecrackerDamage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "firecracker",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_Firecracker.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-firecracker.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-firecracker.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "cb122da9a746d348a3b4e7e99ad8f8897f2114820dfdffe25016896f45496941"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-firecracker.webp"
 				}
 			],
 			[
 				{
 					"slug": "firebug-capacity-tier2",
-					"name": "Capacity Tier2",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 2,
 					"unlockLevel": 10,
@@ -765,28 +1236,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "firebug",
 						"candidateSkillSlug": "firebug-capacity-tier2",
-						"candidateSkillName": "Capacity Tier2",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier2"],
 						"internalName": "Capacity_Tier2",
 						"category": "throwable",
 						"tierNumber": 2,
 						"treeOrder": 0,
 						"unlockLevel": 10,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_CapacityUp01.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup01",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_CapacityUp01.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-capacity-tier2.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-capacity-tier2.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "385eacfc9d393adb2fd77d2e11ce6065e0e71f12da125afafabe26a89f815c2b"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-capacity-tier2.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -801,7 +1305,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "throwable",
-						"description": "Molotov ground fire duration is extended by <Emp>[{0}]</> seconds."
+						"description": "Molotov ground fire duration is extended by <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -825,9 +1332,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_ExtendedEdition.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ExtendedEditionGroundFireDurationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "extendededition",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_ExtendedEdition.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-extended-edition.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-extended-edition.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "aaddb778bd5a5b25b70c47d7ddf0a6ceac1e1e4ec8a913fcf0676ef9578632bc"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-extended-edition.webp"
 				},
 				{
 					"slug": "firebug-out-with-a-bang",
@@ -840,7 +1377,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "throwable",
-						"description": "Molotov explosion damage is increased by <Emp>[{0}%]</>."
+						"description": "Molotov explosion damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [100, 100, 125, 150]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -864,15 +1404,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_OutWithABang.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "OutWithABangDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "outwithabang",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_OutWithABang.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-out-with-a-bang.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-out-with-a-bang.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "b0cfb1acee1d0dd525720cc06653b3c2785f4186b4068b738d832f09bd2864fb"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-out-with-a-bang.webp"
 				}
 			],
 			[
 				{
 					"slug": "firebug-capacity-tier4",
-					"name": "Capacity Tier4",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 4,
 					"unlockLevel": 22,
@@ -880,28 +1450,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "firebug",
 						"candidateSkillSlug": "firebug-capacity-tier4",
-						"candidateSkillName": "Capacity Tier4",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier4"],
 						"internalName": "Capacity_Tier4",
 						"category": "throwable",
 						"tierNumber": 4,
 						"treeOrder": 0,
 						"unlockLevel": 22,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Devlin",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_CapacityUp02.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup02",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_CapacityUp02.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-capacity-tier4.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-capacity-tier4.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d7b497209d4906672d0209e660e1d9d57022a1a04a45401532dda9cdbc907abe"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-capacity-tier4.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -916,7 +1519,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "throwable",
-						"description": "Molotov ground fires apply <Emp>[{0}]</> <sEmp>Enfeeble</> affliction per second."
+						"description": "Molotov ground fires apply <Emp>[{0}]</> <sEmp>Enfeeble</> affliction per second.",
+						"values": {
+							"0": [50, 50, 75, 100]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -947,9 +1553,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_Asphyxiate.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "AsphyxiateEnfeeble",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "asphyxiate",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_Asphyxiate.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-asphyxiate.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-asphyxiate.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d71e98e350b735ff61491f0ae09540f11cd1b7d12114d292b98d4b40c0548e76"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-asphyxiate.webp"
 				},
 				{
 					"slug": "firebug-hot-mess",
@@ -962,7 +1598,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "throwable",
-						"description": "Molotov secondary projectiles explode when they land, dealing <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage in addition to spawning ground fire."
+						"description": "Molotov secondary projectiles explode when they land, dealing <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage in addition to spawning ground fire.",
+						"values": {
+							"0": [150, 150, 200, 250]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -993,9 +1632,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_HotMess.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HotMessDamage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "hotmess",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_HotMess.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-hot-mess.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-hot-mess.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "875320390b85a1a03098c4547852fccbbc71dc88609b445e3f1b52a33b9f2498"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-hot-mess.webp"
 				},
 				{
 					"slug": "firebug-up-in-flames",
@@ -1008,7 +1677,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "throwable",
-						"description": "Increase number of secondary Molotov projectiles spawned by <Emp>[{0}]</>.<cf><cf>Secondary Molotov projectiles are now launched upwards."
+						"description": "Increase number of secondary Molotov projectiles spawned by <Emp>[{0}]</>.<cf><cf>Secondary Molotov projectiles are now launched upwards.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1028,9 +1700,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Up in Flames"
-						],
+						"alternateNames": ["Up in Flames"],
 						"internalName": "UpInFlames",
 						"category": "throwable",
 						"skillNumber": 8,
@@ -1042,9 +1712,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_UpInFlames.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "UpInFlamesProjectileIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "upinflames",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Throwable/Fire_Skill_UpInFlames.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-up-in-flames.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-up-in-flames.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "930e5215691a96eb626375d1c68c363ee1064cc7b5b317b4070bcd6f68d4623a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-up-in-flames.webp"
 				}
 			]
 		],
@@ -1061,7 +1761,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "gadget",
-						"description": "Nearby enemies take <Emp>[{0}%]</> increased damage from Wildfire's blast wave."
+						"description": "Nearby enemies take <Emp>[{0}%]</> increased damage from Wildfire's blast wave.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1092,9 +1795,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_FrontRowSeats.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FrontRowSeatsDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "frontrowseats",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_FrontRowSeats.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-front-row-seats.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-front-row-seats.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3362b03857cb96529cac51002853ce3141ee9575c9b35d59663ae8192516d5ce"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-front-row-seats.webp"
 				},
 				{
 					"slug": "firebug-ready-for-action",
@@ -1107,7 +1840,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "gadget",
-						"description": "Using Wildfire reloads weapon and increases weapon damage by <Emp>[{0}%]</> for <sEmp>10</> seconds."
+						"description": "Using Wildfire reloads weapon and increases weapon damage by <Emp>[{0}%]</> for <sEmp>10</> seconds.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1127,9 +1863,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Ready for Action"
-						],
+						"alternateNames": ["Ready for Action"],
 						"internalName": "ReadyForAction",
 						"category": "gadget",
 						"skillNumber": 2,
@@ -1141,9 +1875,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_ReadyForAction.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ReadyForActionDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "readyforaction",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_ReadyForAction.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-ready-for-action.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-ready-for-action.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "cf6cf465437df8479704b0150745987f3d71895f907bcc5eda65d0fbaff4c14d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-ready-for-action.webp"
 				},
 				{
 					"slug": "firebug-heat-therapy",
@@ -1156,7 +1920,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "gadget",
-						"description": "Using Wildfire heals you for <Emp>[{0}]</> health"
+						"description": "Using Wildfire heals you for <Emp>[{0}]</> health",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1187,9 +1954,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_HeatTherapy.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HeatTherapyHealing",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "heattherapy",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_HeatTherapy.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-heat-therapy.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-heat-therapy.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2f3d2cca61ad8c929955073d02909e8c4031f57ab1246e01d470f21c44f856bc"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-heat-therapy.webp"
 				}
 			],
 			[
@@ -1204,7 +2001,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "gadget",
-						"description": "Ground fires created by Wildfire have <sEmp>25%</> increased radius and deal <Emp>[{0}%]</> increased damage."
+						"description": "Ground fires created by Wildfire have <sEmp>25%</> increased radius and deal <Emp>[{0}%]</> increased damage.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1228,9 +2028,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_Footlights.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FootlightsDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "footlights",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_Footlights.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-footlights.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-footlights.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "7258db7074f596eb0186b15d41eb0f9e913010fd8863fc4c6a7439e692945178"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-footlights.webp"
 				},
 				{
 					"slug": "firebug-speedy-exit",
@@ -1243,7 +2073,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "gadget",
-						"description": "Using Wildfire grants <Emp>[{0}%]</> increased movement speed for <sEmp>10</> seconds."
+						"description": "Using Wildfire grants <Emp>[{0}%]</> increased movement speed for <sEmp>10</> seconds.",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1274,9 +2107,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_SpeedyExit.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SpeedyExitMovementSpeedIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "speedyexit",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_SpeedyExit.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-speedy-exit.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-speedy-exit.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "f89eceaa884d63c4cca973d286f5de2e332c39a764faa2dddf8c4f5ed95f5331"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-speedy-exit.webp"
 				}
 			],
 			[
@@ -1291,7 +2154,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "gadget",
-						"description": "Using Wildfire sends out a cone of <sEmp>3</>  fireballs in target direction. Fireballs apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage to enemies they hit."
+						"description": "Using Wildfire sends out a cone of <sEmp>3</>  fireballs in target direction. Fireballs apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <Emp>[{0}]</> Heat <img id=\"Heat\"/> damage to enemies they hit.",
+						"values": {
+							"0": [350, 350, 400, 450]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1322,9 +2188,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_TriplePlay.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "TriplePlayDamage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "tripleplay",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_TriplePlay.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-triple-play.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-triple-play.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "844b81ea0858bfa54dae97931ff4f1312d9f199dee57242a89fbd96846676425"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-triple-play.webp"
 				},
 				{
 					"slug": "firebug-red-carpet",
@@ -1337,7 +2233,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "gadget",
-						"description": "Ground fires created by Wildfire last for an additional <Emp>[{0}]</> seconds.<cf><cf>Standing in ground fire created by Wildfire grants <sEmp>20%</> increased Heat <img id=\"Heat\"/> weapon damage."
+						"description": "Ground fires created by Wildfire last for an additional <Emp>[{0}]</> seconds.<cf><cf>Standing in ground fire created by Wildfire grants <sEmp>20%</> increased Heat <img id=\"Heat\"/> weapon damage.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1368,9 +2267,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_RedCarpet.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "RedCarpentAdditionalDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "redcarpet",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_RedCarpet.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-red-carpet.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-red-carpet.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "14657f4b50677c1200eeb15a1b01f9dd5198b8ae564869d7d395f52c84dcb78c"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-red-carpet.webp"
 				},
 				{
 					"slug": "firebug-in-the-public-eye",
@@ -1383,7 +2312,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "gadget",
-						"description": "Firing Wildfire causes all nearby enemies to concentrate on you and causes you to take <Emp>[{0}%]</> reduced damage for <sEmp>10</> seconds."
+						"description": "Firing Wildfire causes all nearby enemies to concentrate on you and causes you to take <Emp>[{0}%]</> reduced damage for <sEmp>10</> seconds.",
+						"values": {
+							"0": [-15, -15, -20, -25]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1403,9 +2335,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"In the Public Eye"
-						],
+						"alternateNames": ["In the Public Eye"],
 						"internalName": "InThePublicEye",
 						"category": "gadget",
 						"skillNumber": 8,
@@ -1417,9 +2347,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_InThePublicEye.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PublicEyeDamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "inthepubliceye",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_InThePublicEye.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-in-the-public-eye.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-in-the-public-eye.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "20b298c5feca7591ecd357a50f310382a0122dad32b775a7cce862bd5a5d9380"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-in-the-public-eye.webp"
 				}
 			],
 			[
@@ -1434,7 +2394,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "gadget",
-						"description": "Killing nearby enemies grants <Emp>[{0}]</> gadget activation energy.<cf><cf>Gadget kills do not count towards this."
+						"description": "Killing nearby enemies grants <Emp>[{0}]</> gadget activation energy.<cf><cf>Gadget kills do not count towards this.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1465,9 +2428,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_HotStreak.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HotStreakCooldownReduction",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "hotstreak",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_HotStreak.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-hot-streak.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-hot-streak.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "45d904d7aac9e46a1140c3f9f59d0a8ec69c063c7b51cd2828a32abad52dff06"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-hot-streak.webp"
 				},
 				{
 					"slug": "firebug-blast-zone",
@@ -1480,7 +2473,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "gadget",
-						"description": "Wildfire's blast wave radius is increased by <Emp>[{0}%]</>."
+						"description": "Wildfire's blast wave radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [30, 30, 40, 50]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1511,9 +2507,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_BlastZone.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BlastZoneRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "blastzone",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_BlastZone.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-blast-zone.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-blast-zone.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "7bf9550ce3df5b76d1993473ef349d3f4fa7c7a40d9afbe4374f422ef6c7a2cf"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-blast-zone.webp"
 				}
 			],
 			[
@@ -1528,7 +2554,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "gadget",
-						"description": "Using Wildfire causes you to ignite for <Emp>[{0}]</> seconds.<cf><cf>While on fire, apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <sEmp>25</> Heat <img id=\"Heat\"/> damage per second to all enemies close to you."
+						"description": "Using Wildfire causes you to ignite for <Emp>[{0}]</> seconds.<cf><cf>While on fire, apply <sEmp>Burn</> affliction, <sEmp>Panic</> affliction, and <sEmp>25</> Heat <img id=\"Heat\"/> damage per second to all enemies close to you.",
+						"values": {
+							"0": [8, 8, 12, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1548,9 +2577,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"firebug-double-feature"
-						],
+						"alternateSkillSlugs": ["firebug-double-feature"],
 						"internalName": "DoubleFeature",
 						"category": "gadget",
 						"skillNumber": 11,
@@ -1562,9 +2589,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_FlammableMaterial.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FlammableMaterialDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "flammablematerial",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_FlammableMaterial.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-flammable-material.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-flammable-material.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "94d08f4835878805797c286cd87752a725a38883a0ffba3eb4c837898e879d6f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-flammable-material.webp"
 				},
 				{
 					"slug": "firebug-double-feature",
@@ -1577,7 +2634,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "gadget",
-						"description": "After discharging, Wildfire will discharge a second time after a short delay.<cf><cf>Wildfire's blast wave damage is decreased by <Emp>[{0}%]</>. "
+						"description": "After discharging, Wildfire will discharge a second time after a short delay.<cf><cf>Wildfire's blast wave damage is decreased by <Emp>[{0}%]</>. ",
+						"values": {
+							"0": [-30, -30, -20, -10]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1597,9 +2657,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"firebug-flammable-material"
-						],
+						"alternateSkillSlugs": ["firebug-flammable-material"],
 						"internalName": "FlammableMaterial",
 						"category": "gadget",
 						"skillNumber": 12,
@@ -1611,9 +2669,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_DoubleFeature.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "DoubleFeatureDamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "doublefeature",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_DoubleFeature.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-double-feature.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-double-feature.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "78b24c469919ddfb9633dbb6f110254b87f4706c8b7c4e99df0f45f6bba3e08f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-double-feature.webp"
 				},
 				{
 					"slug": "firebug-from-the-ashes",
@@ -1626,7 +2714,10 @@
 					"skillNumber": 13,
 					"effect": {
 						"type": "gadget",
-						"description": "Once per match, while downed, you may activate Wildfire to get back up, repair <Emp>[{0}]</> Armor integrity, and become invulnerable for <sEmp>4</> seconds. "
+						"description": "Once per match, while downed, you may activate Wildfire to get back up, repair <Emp>[{0}]</> Armor integrity, and become invulnerable for <sEmp>4</> seconds. ",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "firebug",
@@ -1646,9 +2737,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"From the Ashes"
-						],
+						"alternateNames": ["From the Ashes"],
 						"internalName": "FromTheAshes",
 						"category": "gadget",
 						"skillNumber": 13,
@@ -1660,9 +2749,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Devlin",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Devlin",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Firebug/Skills/SPEC_Devlin_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_FromTheAshes.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FromTheAshesArmorGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fromtheashes",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/FirebugSkillIcons/Gadget/Fire_Skill_FromTheAshes.uasset",
+							"publicPath": "/skill-icons/firebug/firebug-from-the-ashes.webp",
+							"outputPath": "webapp/static/skill-icons/firebug/firebug-from-the-ashes.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "f7ea5aa9c7ba10ac2895f0b8baa6be5459ae7b8dbc9179fbbee3c17ce1440a61"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/firebug/firebug-from-the-ashes.webp"
 				}
 			]
 		]

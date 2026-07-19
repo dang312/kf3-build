@@ -4,7 +4,7 @@
 	"character": "Nakata",
 	"dataStatus": "candidate-extracted",
 	"source": {
-		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionGeneratedAt": "2026-06-29T19:05:59.378Z",
 		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
 		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
 		"collectionSummary": {
@@ -12,10 +12,10 @@
 			"skillPreviewCount": 149,
 			"previewCandidateSkillCount": 148,
 			"candidateSkillCount": 211,
-			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithDescriptions": 210,
 			"candidateSkillsWithTier": 210,
 			"candidateSkillsWithUnlockLevel": 210,
-			"locresSkillRecords": 198,
+			"locresSkillRecords": 210,
 			"rawSkillTreeAssets": 18,
 			"rawSkillTreeSkillReferences": 210,
 			"duplicateCandidateSkillSlugs": [
@@ -38,27 +38,9 @@
 			"fmodelMatchesRecorded": 0
 		},
 		"levelRequirements": {
-			"passives": [
-				2,
-				8,
-				14,
-				20,
-				26
-			],
-			"throwable": [
-				4,
-				10,
-				16,
-				22,
-				28
-			],
-			"gadget": [
-				6,
-				12,
-				18,
-				24,
-				30
-			]
+			"passives": [2, 8, 14, 20, 26],
+			"throwable": [4, 10, 16, 22, 28],
+			"gadget": [6, 12, 18, 24, 30]
 		},
 		"notes": [
 			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
@@ -80,7 +62,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "passives",
-						"description": "Maximum armor is increased by <Emp>[{0}]</>. <cf><cf>Stamina lost while blocking attacks is reduced by <sEmp>50%</>."
+						"description": "Maximum armor is increased by <Emp>[{0}]</>. <cf><cf>Stamina lost while blocking attacks is reduced by <sEmp>50%</>.",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -104,9 +89,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Yoroi.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive1ArmorIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "yoroi",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Yoroi.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-yoroi.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-yoroi.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "dcde63d694d43c7f0f4f8f6c7f8430de1538cb103b2eb73e49abdc046a7429a4"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-yoroi.webp"
 				},
 				{
 					"slug": "ninja-kenko",
@@ -119,7 +134,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "passives",
-						"description": "Maximum health is increased by <Emp>[{0}]</>. <cf><cf>Performing a perfect parry will restore <sEmp>10</> health over <sEmp>5</> seconds. Additional perfect parries refresh this duration."
+						"description": "Maximum health is increased by <Emp>[{0}]</>. <cf><cf>Performing a perfect parry will restore <sEmp>10</> health over <sEmp>5</> seconds. Additional perfect parries refresh this duration.",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -150,9 +168,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kenko.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive2HealthIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "kenko",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kenko.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-kenko.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-kenko.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8605a5ab749f30636bd03891936a617029b7055485897fdae0bbcab556ba491a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-kenko.webp"
 				}
 			],
 			[
@@ -167,7 +215,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased weapon damage when hitting enemies in the head. "
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage when hitting enemies in the head. ",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -198,9 +249,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kaishakunin.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive3DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "kaishakunin",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kaishakunin.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-kaishakunin.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-kaishakunin.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "bdb29f07ceb6adb928d19966c2e2c91c22a0dd3bbe53d375979ccba4bf033deb"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-kaishakunin.webp"
 				},
 				{
 					"slug": "ninja-roaring-tiger",
@@ -213,7 +294,11 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased weapon damage with heavy melee attacks.<cf><cf>Deal <Emp>[{1}%]</> increased Cut <img id=\"Cut\"/> weapon damage with ranged weapons while aiming down sights."
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage with heavy melee attacks.<cf><cf>Deal <Emp>[{1}%]</> increased Cut <img id=\"Cut\"/> weapon damage with ranged weapons while aiming down sights.",
+						"values": {
+							"0": [10, 10, 13, 16],
+							"1": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -244,9 +329,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_RoaringTiger.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passve4MeleeDamageIncrease, Passive4RangedDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "roaringtiger",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_RoaringTiger.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-roaring-tiger.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-roaring-tiger.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "04f5d1858b78545a4fc01ae04f0e37f4993a97320b64e5484a2b1b4ca984073c"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-roaring-tiger.webp"
 				},
 				{
 					"slug": "ninja-kuji-kiri",
@@ -259,7 +374,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "passives",
-						"description": "Performing a perfect parry increases weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds.<cf><cf>Additional perfect parries refresh this duration."
+						"description": "Performing a perfect parry increases weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds.<cf><cf>Additional perfect parries refresh this duration.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -279,9 +397,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Kuji-kiri"
-						],
+						"alternateNames": ["Kuji-kiri"],
 						"internalName": "Kuji-kiri",
 						"category": "passives",
 						"skillNumber": 5,
@@ -293,9 +409,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kujikiri.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive5DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "kujikiri",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kujikiri.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-kuji-kiri.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-kuji-kiri.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "0272abae49ccae6061ddf78829a3b753a88a41a6f1ec89ba755430aea445bb66"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-kuji-kiri.webp"
 				}
 			],
 			[
@@ -310,7 +456,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "passives",
-						"description": "Maximum ammo capacity with all weapons is increased by <Emp>[{0}%]</>.<cf><cf>Auto-pickup radius for Shuriken, Arrows, and Kunai is increased by <sEmp>100%</>."
+						"description": "Maximum ammo capacity with all weapons is increased by <Emp>[{0}%]</>.<cf><cf>Auto-pickup radius for Shuriken, Arrows, and Kunai is increased by <sEmp>100%</>.",
+						"values": {
+							"0": [35, 35, 40, 45]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -334,9 +483,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Skirmisher.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive6AmmoIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "skirmisher",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Skirmisher.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-skirmisher.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-skirmisher.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9b5eb9452b796d63782e8c3fb41fdae4a7833b051cd56d99a48978384cb65576"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-skirmisher.webp"
 				},
 				{
 					"slug": "ninja-demon-stance",
@@ -349,7 +528,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "passives",
-						"description": "Take no damage from enemy and environmental ground damage effects.<cf><cf>Take <Emp>[{0}%]</> reduced damage from all explosion and spray damage effects."
+						"description": "Take no damage from enemy and environmental ground damage effects.<cf><cf>Take <Emp>[{0}%]</> reduced damage from all explosion and spray damage effects.",
+						"values": {
+							"0": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -373,9 +555,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_DemonStance.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive7DamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "demonstance",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_DemonStance.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-demon-stance.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-demon-stance.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9b6799d76fbbb11d8123e28f14042dad13efb13ca565e6760a45d39003432e1d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-demon-stance.webp"
 				}
 			],
 			[
@@ -390,7 +602,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "passives",
-						"description": "Apply <Emp>[{0}%]</> increased <sEmp>Stumble</> affliction with all weapons."
+						"description": "Apply <Emp>[{0}%]</> increased <sEmp>Stumble</> affliction with all weapons.",
+						"values": {
+							"0": [75, 75, 100, 125]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -410,9 +625,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Chi kai ri"
-						],
+						"alternateNames": ["Chi kai ri"],
 						"internalName": "ChiKaiRi",
 						"category": "passives",
 						"skillNumber": 8,
@@ -424,9 +637,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_ChiKaiRi.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive8StumbleIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "chikairi",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_ChiKaiRi.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-chi-kai-ri.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-chi-kai-ri.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "1d30138d1d045f2a293b737dd276ef7253a3d18d3bf7411cd80fcebd0bd20639"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-chi-kai-ri.webp"
 				},
 				{
 					"slug": "ninja-sakki-jutsu",
@@ -459,9 +702,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Sakki-jutsu"
-						],
+						"alternateNames": ["Sakki-jutsu"],
 						"internalName": "Sakki-jutsu",
 						"category": "passives",
 						"skillNumber": 9,
@@ -473,9 +714,36 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_SakkiJutsu.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "sakkijutsu",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_SakkiJutsu.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-sakki-jutsu.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-sakki-jutsu.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "1557e0ee04c5e1e8e6226549e8eb1f835203c9656ba33f12b8c4bd65d3f5710f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-sakki-jutsu.webp"
 				}
 			],
 			[
@@ -490,7 +758,11 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "passives",
-						"description": "Ranged Cut <img id=\"Cut\"/> weapon damage is increased by <Emp>[{0}%]</>.<cf><cf>Next melee attack deals 100% increased damage and heals for <sEmp>10</> health. This effect has a <Emp>[{1}]</> second cooldown."
+						"description": "Ranged Cut <img id=\"Cut\"/> weapon damage is increased by <Emp>[{0}%]</>.<cf><cf>Next melee attack deals 100% increased damage and heals for <sEmp>10</> health. This effect has a <Emp>[{1}]</> second cooldown.",
+						"values": {
+							"0": [15, 15, 20, 25],
+							"1": [16, 16, 14, 12]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -510,9 +782,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Ebb and Flow"
-						],
+						"alternateNames": ["Ebb and Flow"],
 						"internalName": "EbbAndFlow",
 						"category": "passives",
 						"skillNumber": 10,
@@ -524,9 +794,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_EbbandFlow.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive10RangedDamageIncrease, Passive10MeleeCooldown",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "ebbandflow",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_EbbandFlow.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-ebb-and-flow.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-ebb-and-flow.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "5a11f50255c6eeb7108b48126e80df482d4fa5d758f167234684132a414ac9dd"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-ebb-and-flow.webp"
 				},
 				{
 					"slug": "ninja-kyuketsuki",
@@ -539,7 +839,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "passives",
-						"description": "Weapons deal <sEmp>100%</> increased <sEmp>Bleed</> affliction and deal <Emp>[{0}%]</> increased damage to <sEmp>Bleeding</> enemies.<cf><cf>Damaging a <sEmp>Bleeding</> enemy with your weapons heals you for <sEmp>3</> health over <sEmp>3</> seconds. Additional hits refresh this duration."
+						"description": "Weapons deal <sEmp>100%</> increased <sEmp>Bleed</> affliction and deal <Emp>[{0}%]</> increased damage to <sEmp>Bleeding</> enemies.<cf><cf>Damaging a <sEmp>Bleeding</> enemy with your weapons heals you for <sEmp>3</> health over <sEmp>3</> seconds. Additional hits refresh this duration.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -570,9 +873,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kyuketsuki.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive12DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "kyuketsuki",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Passive/Nin_Skill_Kyuketsuki.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-kyuketsuki.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-kyuketsuki.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8f4c4e441b29cb19735a0ffcae71ea29bac5cef7768dbf8dbe51eba26d0fe1cb"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-kyuketsuki.webp"
 				},
 				{
 					"slug": "ninja-unyielding",
@@ -585,7 +918,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "passives",
-						"description": "Killing an enemy with a melee weapon restores <sEmp>3</> health and grants <Emp>[{0}%]</> increased melee weapon damage for <sEmp>5</> seconds.<cf><cf>Additional kills refresh this duration."
+						"description": "Killing an enemy with a melee weapon restores <sEmp>3</> health and grants <Emp>[{0}%]</> increased melee weapon damage for <sEmp>5</> seconds.<cf><cf>Additional kills refresh this duration.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -616,7 +952,17 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_PassiveSkillTree.uasset",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Passive11DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "missing",
+							"confidence": "none",
+							"searchedIconKeys": ["unyielding"],
+							"candidateAssetCount": 12,
+							"note": "No high-confidence SpecialistSkillIcons asset matched this skill during icon generation."
 						}
 					}
 				}
@@ -635,7 +981,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "throwable",
-						"description": "Caltrop Canister now only explodes on impact.<cf><cf>Hitting an enemy directly with the Caltrop Canister applies <sEmp>Shock</> affliction and  <Emp>[{0}]</> Force <img id=\"Force\"/> damage before bursting and releasing caltrops as normal."
+						"description": "Caltrop Canister now only explodes on impact.<cf><cf>Hitting an enemy directly with the Caltrop Canister applies <sEmp>Shock</> affliction and  <Emp>[{0}]</> Force <img id=\"Force\"/> damage before bursting and releasing caltrops as normal.",
+						"values": {
+							"0": [200, 200, 250, 300]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -666,9 +1015,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_BluntForce.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable1Damage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "bluntforce",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_BluntForce.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-blunt-force.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-blunt-force.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6b4803d053d92c9002a4e77f8ae09bd1cd2a2097d5d2be9befa1d7a80f0d2ff9"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-blunt-force.webp"
 				},
 				{
 					"slug": "ninja-swift-current",
@@ -681,7 +1060,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "throwable",
-						"description": "Caltrop explosions no longer deal self-damage.<cf><cf>Getting hit by caltrop explosions now increases movement speed by <Emp>[{0}%]</> for <sEmp>5</> seconds."
+						"description": "Caltrop explosions no longer deal self-damage.<cf><cf>Getting hit by caltrop explosions now increases movement speed by <Emp>[{0}%]</> for <sEmp>5</> seconds.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -712,9 +1094,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_SwiftCurrent.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable2MovementSpeedIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "swiftcurrent",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_SwiftCurrent.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-swift-current.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-swift-current.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8faf25e607945f8e6c3dc7422e94505411a031bf5e7af75fccccd6bc80354bd7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-swift-current.webp"
 				},
 				{
 					"slug": "ninja-kekkai-jutsu",
@@ -727,7 +1139,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "throwable",
-						"description": "Caltrop lifetime is increased to <Emp>[{0}]</> seconds.<cf><cf>Caltrops detonate early if an enemy gets near."
+						"description": "Caltrop lifetime is increased to <Emp>[{0}]</> seconds.<cf><cf>Caltrops detonate early if an enemy gets near.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -758,15 +1173,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_KekkaiJutsu.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable3Lifetime",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "kekkaijutsu",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_KekkaiJutsu.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-kekkai-jutsu.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-kekkai-jutsu.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3733f89f720b99e315e4604fa5029bed90af40f2e44a0b07ca52006854ada304"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-kekkai-jutsu.webp"
 				}
 			],
 			[
 				{
 					"slug": "ninja-capacity-tier2",
-					"name": "Capacity Tier2",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 2,
 					"unlockLevel": 10,
@@ -774,28 +1219,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "ninja",
 						"candidateSkillSlug": "ninja-capacity-tier2",
-						"candidateSkillName": "Capacity Tier2",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier2"],
 						"internalName": "Capacity_Tier2",
 						"category": "throwable",
 						"tierNumber": 2,
 						"treeOrder": 0,
 						"unlockLevel": 10,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_CapacityUp01.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup01",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_CapacityUp01.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-capacity-tier2.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-capacity-tier2.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c0e54187e745cc529649eae622eae8a849aa678f576bd0004f441085ee9b1525"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-capacity-tier2.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -810,7 +1288,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "throwable",
-						"description": "Increase number of caltrops by <Emp>[{0}]</> but decrease their explosion radius by <sEmp>33%</>."
+						"description": "Increase number of caltrops by <Emp>[{0}]</> but decrease their explosion radius by <sEmp>33%</>.",
+						"values": {
+							"0": [2, 2, 3, 4]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -834,9 +1315,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_HardRain.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable4ExtraCaltrops",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "hardrain",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_HardRain.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-hard-rain.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-hard-rain.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "cbe2456435372605e2031ac048b24dd239ee6eb7afc4e241591f5bb084ff9806"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-hard-rain.webp"
 				},
 				{
 					"slug": "ninja-thunderclap",
@@ -849,7 +1360,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "throwable",
-						"description": "Caltrop explosion radius is increased by <Emp>[{0}%]</>."
+						"description": "Caltrop explosion radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [30, 30, 40, 50]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -880,15 +1394,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_Thunderclap.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable5RadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "thunderclap",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_Thunderclap.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-thunderclap.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-thunderclap.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d634af4f9c9ef8b1c760a92e59eaa068b731901803ea4b1e23c1166827ab8664"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-thunderclap.webp"
 				}
 			],
 			[
 				{
 					"slug": "ninja-capacity-tier4",
-					"name": "Capacity Tier4",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 4,
 					"unlockLevel": 22,
@@ -896,28 +1440,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "ninja",
 						"candidateSkillSlug": "ninja-capacity-tier4",
-						"candidateSkillName": "Capacity Tier4",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier4"],
 						"internalName": "Capacity_Tier4",
 						"category": "throwable",
 						"tierNumber": 4,
 						"treeOrder": 0,
 						"unlockLevel": 22,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Nakata",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_CapacityUp02.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup02",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_CapacityUp02.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-capacity-tier4.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-capacity-tier4.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "0ec372b2a5aeada981d9aed00d71aaa0281ace128b9f310d653e7264754c47fa"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-capacity-tier4.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -932,7 +1509,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "throwable",
-						"description": "Caltrops deal <Emp>[{0}%]</> increased damage to enemies they are stuck to."
+						"description": "Caltrops deal <Emp>[{0}%]</> increased damage to enemies they are stuck to.",
+						"values": {
+							"0": [55, 55, 70, 85]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -952,12 +1532,8 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Devil's Circuit"
-						],
-						"alternateSkillSlugs": [
-							"ninja-devil-s-circuit"
-						],
+						"alternateNames": ["Devil's Circuit"],
+						"alternateSkillSlugs": ["ninja-devil-s-circuit"],
 						"internalName": "DevilsCircuit",
 						"category": "throwable",
 						"skillNumber": 6,
@@ -969,9 +1545,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_DevilsCircuit.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable6DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "devilscircuit",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_DevilsCircuit.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-devils-circuit.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-devils-circuit.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "613a64c60504548a8d29b0a1828c0659385e880130e2f3f549cf9f43f605bdc2"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-devils-circuit.webp"
 				},
 				{
 					"slug": "ninja-raijin",
@@ -984,7 +1590,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "throwable",
-						"description": "Caltrops <sEmp>Shock</> enemies for <Emp>[{0}%]</> longer."
+						"description": "Caltrops <sEmp>Shock</> enemies for <Emp>[{0}%]</> longer.",
+						"values": {
+							"0": [40, 40, 60, 80]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1015,9 +1624,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_Raijin.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable7ExtraShockDuration",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "raijin",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Nin_Skill_Raijin.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-raijin.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-raijin.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3fb9990df6a5fcc52556e8b1724a37ce407f8123f22f10adf4e74a030b7372f3"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-raijin.webp"
 				},
 				{
 					"slug": "ninja-inazuma",
@@ -1030,7 +1669,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "throwable",
-						"description": "After exploding, caltrops leave behind electrical fields with the same radius as their explosion.<cf><cf>Fields last for <sEmp>5</> seconds and apply <sEmp>Shock</> affliction and <Emp>[{0}]</> Electrical <img id=\"Electrical\"/> damage every <sEmp>0.5</> seconds to enemies within their radius."
+						"description": "After exploding, caltrops leave behind electrical fields with the same radius as their explosion.<cf><cf>Fields last for <sEmp>5</> seconds and apply <sEmp>Shock</> affliction and <Emp>[{0}]</> Electrical <img id=\"Electrical\"/> damage every <sEmp>0.5</> seconds to enemies within their radius.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1061,9 +1703,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Inazuma.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Throwable8DamageOverTime",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "inazuma",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Throwable/Inazuma.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-inazuma.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-inazuma.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "cf88166e8d20a2abc907b0bc6bfc9101915c75dc347a0173671e8002d4528580"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-inazuma.webp"
 				}
 			]
 		],
@@ -1080,7 +1752,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "gadget",
-						"description": "First weapon attack after grappling deals <Emp>[{0}%]</> increased damage."
+						"description": "First weapon attack after grappling deals <Emp>[{0}%]</> increased damage.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1111,9 +1786,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_EagleStrike.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget1DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "eaglestrike",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_EagleStrike.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-eagle-strike.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-eagle-strike.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3dc92bb1915e3e160ea1a48073f5b329b5f2ebb28aa386ee4eae035ab5e77588"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-eagle-strike.webp"
 				},
 				{
 					"slug": "ninja-shogekiha",
@@ -1126,7 +1831,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "gadget",
-						"description": "Hebi-Ken's ending shockwave radius is increased by <Emp>[{0}%]</>."
+						"description": "Hebi-Ken's ending shockwave radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [50, 50, 60, 70]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1150,9 +1858,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_Shogekiha.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget2RadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "shogekiha",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_Shogekiha.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-shogekiha.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-shogekiha.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "27e1e9b768bbf495c8ab5574dcf9f84a0791b83820d1591dc6a7bdc69faf76bb"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-shogekiha.webp"
 				},
 				{
 					"slug": "ninja-shinobi-shozoku",
@@ -1165,7 +1903,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "gadget",
-						"description": "Grappling an enemy repairs <Emp>[{0}]</> armor integrity."
+						"description": "Grappling an enemy repairs <Emp>[{0}]</> armor integrity.",
+						"values": {
+							"0": [5, 5, 6, 7]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1189,9 +1930,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_ShinobiShozoku.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget3ArmorGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "shinobishozoku",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_ShinobiShozoku.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-shinobi-shozoku.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-shinobi-shozoku.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "89545d5c8aafd426f8c46a22d17303d20230b67f016f6bcf5dde7bf263aadee3"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-shinobi-shozoku.webp"
 				}
 			],
 			[
@@ -1206,7 +1977,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "gadget",
-						"description": "While you have no Hebi-ken charges, deal <Emp>[{0}%]</> increased weapon damage."
+						"description": "While you have no Hebi-ken charges, deal <Emp>[{0}%]</> increased weapon damage.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1230,9 +2004,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_DeadCalm.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget4DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "deadcalm",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_DeadCalm.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-dead-calm.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-dead-calm.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "03e20e4525269e77bb673a55b05a2425fd005e9616b584f8520bfcc98060c516"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-dead-calm.webp"
 				},
 				{
 					"slug": "ninja-warrior-of-the-wind",
@@ -1245,7 +2049,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "gadget",
-						"description": "Grappling an enemy grants <Emp>[{0}%]</> increased movement speed for <sEmp>5</> seconds."
+						"description": "Grappling an enemy grants <Emp>[{0}%]</> increased movement speed for <sEmp>5</> seconds.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1265,9 +2072,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Warrior of the Wind"
-						],
+						"alternateNames": ["Warrior of the Wind"],
 						"internalName": "WarriorOfTheWind",
 						"category": "gadget",
 						"skillNumber": 5,
@@ -1279,9 +2084,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_WarrioroftheWind.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget5MovementSpeedIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "warriorofthewind",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_WarrioroftheWind.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-warrior-of-the-wind.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-warrior-of-the-wind.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "be18570a5f435322abc112fde5a0a754998efadfb1e652e99c7b4f312b6f766d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-warrior-of-the-wind.webp"
 				}
 			],
 			[
@@ -1296,7 +2131,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "gadget",
-						"description": "Every third use of Hebi-ken deals <Emp>[{0}%]</> increased pass through and finisher damage."
+						"description": "Every third use of Hebi-ken deals <Emp>[{0}%]</> increased pass through and finisher damage.",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1327,9 +2165,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_StrikeThrice.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget6DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "strikethrice",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_StrikeThrice.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-strike-thrice.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-strike-thrice.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "eeb02486edd1ef07a60df6fce73c173e2dce7dac279aaafa862896a9f22bb4b9"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-strike-thrice.webp"
 				},
 				{
 					"slug": "ninja-blood-hunt",
@@ -1342,7 +2210,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "gadget",
-						"description": "Killing enemies with pass through damage heals you for <Emp>[{0}]</> health."
+						"description": "Killing enemies with pass through damage heals you for <Emp>[{0}]</> health.",
+						"values": {
+							"0": [2, 2, 3, 4]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1373,9 +2244,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_BloodHunt.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget7HealthGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "bloodhunt",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_BloodHunt.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-blood-hunt.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-blood-hunt.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "770be20a24f6a2a1f46051c1d278c05b20a0138f0a07531a6b56237226fb0238"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-blood-hunt.webp"
 				},
 				{
 					"slug": "ninja-red-shadow",
@@ -1388,7 +2289,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "gadget",
-						"description": "Take <Emp>[{0}%]</> reduced damage for <sEmp>5</> seconds after grappling an enemy."
+						"description": "Take <Emp>[{0}%]</> reduced damage for <sEmp>5</> seconds after grappling an enemy.",
+						"values": {
+							"0": [-15, -15, -20, -25]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1412,9 +2316,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_RedShadow.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget8DamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "redshadow",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_RedShadow.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-red-shadow.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-red-shadow.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "ef1cb080edea7badb1bca3348fe579933f670649e7d99d24d8840aa8d828a464"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-red-shadow.webp"
 				}
 			],
 			[
@@ -1429,7 +2363,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "gadget",
-						"description": "Performing a perfect parry grants <Emp>[{0}]</> gadget activation energy."
+						"description": "Performing a perfect parry grants <Emp>[{0}]</> gadget activation energy.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1460,9 +2397,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_IronCastle.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget9GadgetCooldownReduction",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "ironcastle",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_IronCastle.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-iron-castle.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-iron-castle.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "5c8a08e874cc3b2b787d7645e4528d794a51d68716467af2e31323bc32b011d3"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-iron-castle.webp"
 				},
 				{
 					"slug": "ninja-lightning-incarnate",
@@ -1475,7 +2442,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "gadget",
-						"description": "Pass through damage radius is increased by <sEmp>25%</>.<cf><cf>Pass through damage type is changed to Electrical <img id=\"Electrical\"/> and damage is increased by <Emp>[{0}%]</>."
+						"description": "Pass through damage radius is increased by <sEmp>25%</>.<cf><cf>Pass through damage type is changed to Electrical <img id=\"Electrical\"/> and damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [100, 100, 150, 200]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1506,9 +2476,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_LightningIncarnate.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget10DamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "lightningincarnate",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_LightningIncarnate.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-lightning-incarnate.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-lightning-incarnate.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3af1e3fffa2ac04ce9058e5a55c280b47e138b0b4c3bc8851d541d70598a9ef9"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-lightning-incarnate.webp"
 				}
 			],
 			[
@@ -1547,9 +2547,36 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_ViolentSorceror.uasset",
+							"iconCollectionMethod": "known-icon-alias"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "known-icon-alias",
+							"matchedIconKey": "violentsorceror",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_ViolentSorceror.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-violent-sorcerer.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-violent-sorcerer.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c898be488d24b035910c251ccf192cb88774782e7d0d0fea72851f2092eabe9f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-violent-sorcerer.webp"
 				},
 				{
 					"slug": "ninja-punishing-chain",
@@ -1562,7 +2589,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "gadget",
-						"description": "Taking damage that reduces you to below half health instantly refreshes all charges of the Hebi-ken.<cf><cf>This has a <Emp>[{0}]</> second cooldown between triggers."
+						"description": "Taking damage that reduces you to below half health instantly refreshes all charges of the Hebi-ken.<cf><cf>This has a <Emp>[{0}]</> second cooldown between triggers.",
+						"values": {
+							"0": [150, 150, 120, 90]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1593,9 +2623,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_PunishingChain.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget12CooldownDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "punishingchain",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_PunishingChain.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-punishing-chain.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-punishing-chain.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6ead9abdc101cba5eada446cef7b52bdfad0e561b923084ecc11729e99a75ff7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-punishing-chain.webp"
 				},
 				{
 					"slug": "ninja-leopard-fist",
@@ -1608,7 +2668,10 @@
 					"skillNumber": 13,
 					"effect": {
 						"type": "gadget",
-						"description": "Damaging an enemy with finisher increases their vulnerability to Ballistic <img id=\"Ballistic\"/>, Cut <img id=\"Cut\"/>, and Electrical <img id=\"Electrical\"/> damage by <Emp>[{0}%]</> for <sEmp>10</> seconds."
+						"description": "Damaging an enemy with finisher increases their vulnerability to Ballistic <img id=\"Ballistic\"/>, Cut <img id=\"Cut\"/>, and Electrical <img id=\"Electrical\"/> damage by <Emp>[{0}%]</> for <sEmp>10</> seconds.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "ninja",
@@ -1639,9 +2702,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Nakata",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Nakata",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Ninja/Skills/SPEC_Ninja_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_LeopardFist.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "Gadget13DamageTakenIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "leopardfist",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/NinjaSkillIcons/Gadget/Nin_Skill_LeopardFist.uasset",
+							"publicPath": "/skill-icons/ninja/ninja-leopard-fist.webp",
+							"outputPath": "webapp/static/skill-icons/ninja/ninja-leopard-fist.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "44b624b4abbd698ddc75e2fbf0f019cf8ecd80e40f50a8c7803a90598913932a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/ninja/ninja-leopard-fist.webp"
 				}
 			]
 		]

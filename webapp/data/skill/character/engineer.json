@@ -4,7 +4,7 @@
 	"character": "Imran",
 	"dataStatus": "candidate-extracted",
 	"source": {
-		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionGeneratedAt": "2026-06-29T19:05:59.378Z",
 		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
 		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
 		"collectionSummary": {
@@ -12,10 +12,10 @@
 			"skillPreviewCount": 149,
 			"previewCandidateSkillCount": 148,
 			"candidateSkillCount": 211,
-			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithDescriptions": 210,
 			"candidateSkillsWithTier": 210,
 			"candidateSkillsWithUnlockLevel": 210,
-			"locresSkillRecords": 198,
+			"locresSkillRecords": 210,
 			"rawSkillTreeAssets": 18,
 			"rawSkillTreeSkillReferences": 210,
 			"duplicateCandidateSkillSlugs": [
@@ -38,27 +38,9 @@
 			"fmodelMatchesRecorded": 0
 		},
 		"levelRequirements": {
-			"passives": [
-				2,
-				8,
-				14,
-				20,
-				26
-			],
-			"throwable": [
-				4,
-				10,
-				16,
-				22,
-				28
-			],
-			"gadget": [
-				6,
-				12,
-				18,
-				24,
-				30
-			]
+			"passives": [2, 8, 14, 20, 26],
+			"throwable": [4, 10, 16, 22, 28],
+			"gadget": [6, 12, 18, 24, 30]
 		},
 		"notes": [
 			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
@@ -80,7 +62,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "passives",
-						"description": "Using a tool repairs armor integrity up to a maximum of <Emp>[{0}]</> each round. Different tools repair different amounts of armor integrity when used."
+						"description": "Using a tool repairs armor integrity up to a maximum of <Emp>[{0}]</> each round. Different tools repair different amounts of armor integrity when used.",
+						"values": {
+							"0": [20, 20, 24, 28]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -104,9 +89,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_Repairman.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "RepairmanArmorGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "repairman",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_Repairman.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-repairman.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-repairman.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "feb25c67b2c196800bb553242a1df9a885a377dc3993f503a7713812f0d4c7d3"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-repairman.webp"
 				},
 				{
 					"slug": "engineer-tool-up",
@@ -119,7 +134,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "passives",
-						"description": "Killing enemies grants stacks of <Emp>TOOL UP</>. Different tools gain stacks at different rates. Swapping tools at the trader resets all stacks. <cf><cf><Emp>TOOL UP:</> At <Emp>[{0}]</> stacks, consume all stacks to refill <sEmp>1</> tool ammo. "
+						"description": "Killing enemies grants stacks of <Emp>TOOL UP</>. Different tools gain stacks at different rates. Swapping tools at the trader resets all stacks. <cf><cf><Emp>TOOL UP:</> At <Emp>[{0}]</> stacks, consume all stacks to refill <sEmp>1</> tool ammo. ",
+						"values": {
+							"0": [100, 100, 96, 92]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -143,9 +161,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ToolUp.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ToolUpStacksToTrigger",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "toolup",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ToolUp.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-tool-up.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-tool-up.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "db5b84e11027e04acc240e143ee9ec8588a16f1b6fb793b68b9266f3552c1dd0"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-tool-up.webp"
 				}
 			],
 			[
@@ -160,7 +208,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "passives",
-						"description": "Weapon penetration power is increased by <Emp>[{0}]</>. Does not apply to spray and beam-type weapons."
+						"description": "Weapon penetration power is increased by <Emp>[{0}]</>. Does not apply to spray and beam-type weapons.",
+						"values": {
+							"0": [5, 5, 10, 15]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -191,9 +242,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_HolePunch.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HolePunchPenetration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "holepunch",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_HolePunch.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-hole-punch.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-hole-punch.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d7b4e4a28c5edaf94ed249d3b94af5939d95b1de56c7f8ec54888adc3f6cfd54"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-hole-punch.webp"
 				},
 				{
 					"slug": "engineer-major-damage",
@@ -206,7 +287,11 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased weapon damage and <Emp>[{1}%]</> increased weapon <sEmp>Stumble</> to nearby enemies."
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage and <Emp>[{1}%]</> increased weapon <sEmp>Stumble</> to nearby enemies.",
+						"values": {
+							"0": [10, 10, 15, 20],
+							"1": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -237,9 +322,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_MajorDamage.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "MajorDamageIncrease, MajorDamageStumbleIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "majordamage",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_MajorDamage.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-major-damage.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-major-damage.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "043304ac759d76cfcf61cd7b0b35edfd5d118ab9777850c70a898b105f8b1b1b"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-major-damage.webp"
 				},
 				{
 					"slug": "engineer-first-contact",
@@ -252,7 +367,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemies the first time you deal damage to them."
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemies the first time you deal damage to them.",
+						"values": {
+							"0": [20, 20, 25, 30]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -283,9 +401,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_FirstContact.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FirstContactDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "firstcontact",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_FirstContact.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-first-contact.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-first-contact.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "61ebea1c136752d066d280579c74965c37491948d50f1fde00ec6ecf17af2a24"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-first-contact.webp"
 				}
 			],
 			[
@@ -300,7 +448,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "passives",
-						"description": "Killing enemies grants <Emp>[{0}%]</> increased movement speed for <sEmp>2.5</> seconds."
+						"description": "Killing enemies grants <Emp>[{0}%]</> increased movement speed for <sEmp>2.5</> seconds.",
+						"values": {
+							"0": [20, 20, 25, 30]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -320,9 +471,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Bleed for Speed"
-						],
+						"alternateNames": ["Bleed for Speed"],
 						"internalName": "BleedForSpeed",
 						"category": "passives",
 						"skillNumber": 6,
@@ -334,9 +483,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_BleedForSpeed.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BleedForSpeedMovementSpeed",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "bleedforspeed",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_BleedForSpeed.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-bleed-for-speed.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-bleed-for-speed.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "f1167f82dd427d796c20120e875a19d3509c65fdb07d878b564a32f179fa3d0c"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-bleed-for-speed.webp"
 				},
 				{
 					"slug": "engineer-man-of-steel",
@@ -349,7 +528,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "passives",
-						"description": "Maximum armor integrity is increased by <Emp>[{0}]%</>.<cf><cf>While you have armor, small enemies will be <sEmp>Stumbled</> when they attempt to grab you."
+						"description": "Maximum armor integrity is increased by <Emp>[{0}]%</>.<cf><cf>While you have armor, small enemies will be <sEmp>Stumbled</> when they attempt to grab you.",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -380,9 +562,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ManOfSteel.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ManOfSteel",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "manofsteel",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ManOfSteel.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-man-of-steel.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-man-of-steel.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "e8833682a0b5d76056fdcffc7ff46cb39b5222744c9749ced088336f6579ec49"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-man-of-steel.webp"
 				}
 			],
 			[
@@ -397,7 +609,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "passives",
-						"description": "Shotguns have <Emp>[+{0}]</> pellet count and <sEmp>+25%</> weapon spread."
+						"description": "Shotguns have <Emp>[+{0}]</> pellet count and <sEmp>+25%</> weapon spread.",
+						"values": {
+							"0": [2, 2, 3, 4]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -421,9 +636,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ScatterPlot.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ScatterPlot",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "scatterplot",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ScatterPlot.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-scatter-plot.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-scatter-plot.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "56801fa3b3cd07dae833017dbbb6b2e74de55f0f3a4219aae0d731dde72f4d0d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-scatter-plot.webp"
 				},
 				{
 					"slug": "engineer-full-blast",
@@ -436,7 +681,11 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "passives",
-						"description": "Radius for explosive weapons is increased by <Emp>[{0}%]</>. Self-damage from explosive weapons is reduced by <sEmp>80%</>.<cf><cf>Stream size for beam and spray weapons is increased by <Emp>[{1}%]</>."
+						"description": "Radius for explosive weapons is increased by <Emp>[{0}%]</>. Self-damage from explosive weapons is reduced by <sEmp>80%</>.<cf><cf>Stream size for beam and spray weapons is increased by <Emp>[{1}%]</>.",
+						"values": {
+							"0": [30, 30, 40, 50],
+							"1": [20, 20, 40, 60]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -467,9 +716,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_FullBlast.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FullBlastRadiusIncrease, FullBlastSizeIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::Percent, ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fullblast",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_FullBlast.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-full-blast.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-full-blast.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9da0c4c757aab893439fac1e4ab04ece007ed7d78d88d302661fd81f7fc3fd03"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-full-blast.webp"
 				}
 			],
 			[
@@ -484,7 +763,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "passives",
-						"description": "Killing enemies grants stacks of <Emp>RALLY</>. <cf><cf><Emp>RALLY:</> At <Emp>[{0}]</> stacks, consume all stacks to place a Rally Beacon. Rally Beacons last for <sEmp>20</> seconds and cause all allies within their radius to deal <sEmp>25%</> increased weapon damage."
+						"description": "Killing enemies grants stacks of <Emp>RALLY</>. <cf><cf><Emp>RALLY:</> At <Emp>[{0}]</> stacks, consume all stacks to place a Rally Beacon. Rally Beacons last for <sEmp>20</> seconds and cause all allies within their radius to deal <sEmp>25%</> increased weapon damage.",
+						"values": {
+							"0": [24, 24, 21, 18]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -515,9 +797,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_RallyBeacon.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "RallyBeaconStacksToTrigger",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "rallybeacon",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_RallyBeacon.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-rally-beacon.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-rally-beacon.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "0430af051fab15bda32075f69e0a4c6a267a42e443022b2be3d196129ce51513"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-rally-beacon.webp"
 				},
 				{
 					"slug": "engineer-inner-rage",
@@ -530,7 +842,11 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "passives",
-						"description": "Taking damage increases weapon damage by <Emp>[{0}%]</> and bash damage by <Emp>[{1}%]</> for <sEmp>5</> seconds."
+						"description": "Taking damage increases weapon damage by <Emp>[{0}%]</> and bash damage by <Emp>[{1}%]</> for <sEmp>5</> seconds.",
+						"values": {
+							"0": [20, 20, 25, 30],
+							"1": [50, 50, 60, 70]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -561,9 +877,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_InnerRage.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "InnerRageDamageIncrase, InnerRageBashDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "innerrage",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_InnerRage.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-inner-rage.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-inner-rage.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2e6be54d9c89796fc6c770fc723054ec2ee6c8f8534fecfd3da63b8c78115d64"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-inner-rage.webp"
 				},
 				{
 					"slug": "engineer-chain-reaction",
@@ -576,7 +922,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "passives",
-						"description": "Killing an enemy with Heat <img id=\"Heat\"/> damage or explosions has a <Emp>[{0}%]</> chance to cause that enemy to explode, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage."
+						"description": "Killing an enemy with Heat <img id=\"Heat\"/> damage or explosions has a <Emp>[{0}%]</> chance to cause that enemy to explode, dealing <sEmp>250</> Heat <img id=\"Heat\"/> damage.",
+						"values": {
+							"0": [20, 20, 23, 26]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -607,9 +956,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ChainReaction.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ChainReactionChance",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "chainreaction",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Passive/Eng_Skill_ChainReaction.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-chain-reaction.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-chain-reaction.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "7239713bc43b1228f240f8d20d76991b5f62db9d0c8d4142d82c1c53155d8bed"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-chain-reaction.webp"
 				}
 			]
 		],
@@ -626,7 +1005,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "throwable",
-						"description": "Bouncing Betty fragment projectiles gain <Emp>[+{0}]</> penetration and last for an additional <sEmp>0.5</> seconds."
+						"description": "Bouncing Betty fragment projectiles gain <Emp>[+{0}]</> penetration and last for an additional <sEmp>0.5</> seconds.",
+						"values": {
+							"0": [5, 5, 10, 15]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -650,9 +1032,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_ChaosTheory.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ChaosTheoryPenetationPower",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "chaostheory",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_ChaosTheory.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-chaos-theory.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-chaos-theory.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9500ed9534bb66ea63fe85d0631cef228c02feac5d7d98ca4e5d76a041121ac0"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-chaos-theory.webp"
 				},
 				{
 					"slug": "engineer-proximity-mine",
@@ -665,7 +1077,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "throwable",
-						"description": "Bouncing Betty's lifetime is set to <Emp>[{0}]</> seconds and will only explode if an enemy moves close to it."
+						"description": "Bouncing Betty's lifetime is set to <Emp>[{0}]</> seconds and will only explode if an enemy moves close to it.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -696,9 +1111,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_ProximityMine.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ProximityMineTime",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "proximitymine",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_ProximityMine.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-proximity-mine.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-proximity-mine.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a8866813444ada073cb8ac498bbc0c33307d8ea19c17d82244059b3272b7555d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-proximity-mine.webp"
 				},
 				{
 					"slug": "engineer-grounded",
@@ -711,7 +1156,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "throwable",
-						"description": "Bouncing Betty fragmentation component's explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction."
+						"description": "Bouncing Betty fragmentation component's explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction.",
+						"values": {
+							"0": [120, 120, 150, 180]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -742,15 +1190,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_Grounded.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "GroundedKnockdown",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "grounded",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_Grounded.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-grounded.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-grounded.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "293498e6d95e23a5f61a94dc5969a5a2147c5c02b9e2231cf612fa4d765c97af"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-grounded.webp"
 				}
 			],
 			[
 				{
 					"slug": "engineer-capacity-tier2",
-					"name": "Capacity Tier2",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 2,
 					"unlockLevel": 10,
@@ -758,28 +1236,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "engineer",
 						"candidateSkillSlug": "engineer-capacity-tier2",
-						"candidateSkillName": "Capacity Tier2",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier2"],
 						"internalName": "Capacity_Tier2",
 						"category": "throwable",
 						"tierNumber": 2,
 						"treeOrder": 0,
 						"unlockLevel": 10,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_CapacityUp.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_CapacityUp.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-capacity-tier2.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-capacity-tier2.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c42455069be05f841a38027c9b54e15505fc8241f3eabdbeb5c14347d7b80014"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-capacity-tier2.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -794,7 +1305,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "throwable",
-						"description": "Increase amount of fragment projectiles by <Emp>[{0}]</>."
+						"description": "Increase amount of fragment projectiles by <Emp>[{0}]</>.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -818,9 +1332,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_DismemberTheDay.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "DismemberTheDayProjectileIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "dismembertheday",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_DismemberTheDay.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-dismember-the-day.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-dismember-the-day.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "013c1712c95b093e6aff2942d2a63d686f2dca2e0986516015676818206a822d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-dismember-the-day.webp"
 				},
 				{
 					"slug": "engineer-super-shredder",
@@ -846,9 +1390,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"engineer-shred-end"
-						],
+						"alternateSkillSlugs": ["engineer-shred-end"],
 						"internalName": "ShredEnd",
 						"category": "throwable",
 						"skillNumber": 5,
@@ -860,15 +1402,42 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_SuperShredder.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "supershredder",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_SuperShredder.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-super-shredder.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-super-shredder.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "73420ef655e92190954be358a355bbffad00bec01f8131dfd9f74d7af5010064"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-super-shredder.webp"
 				}
 			],
 			[
 				{
 					"slug": "engineer-capacity-tier4",
-					"name": "Capacity Tier4",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 4,
 					"unlockLevel": 22,
@@ -876,28 +1445,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "engineer",
 						"candidateSkillSlug": "engineer-capacity-tier4",
-						"candidateSkillName": "Capacity Tier4",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier4"],
 						"internalName": "Capacity_Tier4",
 						"category": "throwable",
 						"tierNumber": 4,
 						"treeOrder": 0,
 						"unlockLevel": 22,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Imran",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_CapacityUp2.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup2",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_CapacityUp2.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-capacity-tier4.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-capacity-tier4.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "5af1bf5287d1101b135907495b23e37bd2eae8615de26b978bfc2a763c7d8749"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-capacity-tier4.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -912,7 +1514,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "throwable",
-						"description": "Fragment projectiles deal Heat <img id=\"Heat\"/> damage instead of Ballistic <img id=\"Ballistic\"/>.<cf><cf>Fragment projectile damage is increased by <Emp>[{0}%]</>."
+						"description": "Fragment projectiles deal Heat <img id=\"Heat\"/> damage instead of Ballistic <img id=\"Ballistic\"/>.<cf><cf>Fragment projectile damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [55, 55, 70, 85]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -943,9 +1548,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_HeatedExchange.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HeatedExchangeDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "heatedexchange",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_HeatedExchange.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-heated-exchange.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-heated-exchange.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "bce4f8f07897be891858ca5f1baed91f8b369651a72f27743526981f396e4882"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-heated-exchange.webp"
 				},
 				{
 					"slug": "engineer-scrap-heap",
@@ -958,7 +1593,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "throwable",
-						"description": "Bouncing Betty leaves behind scrap that lasts for <Emp>[{0}]</> seconds.<cf><cf>Interacting with scrap will collect it to restore <sEmp>1</> Bouncing Betty ammo."
+						"description": "Bouncing Betty leaves behind scrap that lasts for <Emp>[{0}]</> seconds.<cf><cf>Interacting with scrap will collect it to restore <sEmp>1</> Bouncing Betty ammo.",
+						"values": {
+							"0": [5, 5, 10, 15]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -989,9 +1627,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_ScrapHeap.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ScrapHeapSeconds",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "scrapheap",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_ScrapHeap.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-scrap-heap.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-scrap-heap.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "32917805315a1676bf43aaa11035b5b468c046ce01c2110871ef965f06ca5bdc"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-scrap-heap.webp"
 				},
 				{
 					"slug": "engineer-second-time-around",
@@ -1004,7 +1672,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "throwable",
-						"description": "Bouncing Betty launches a second fragmentation component after a short delay but deals <Emp>[{0}%]</> reduced damage."
+						"description": "Bouncing Betty launches a second fragmentation component after a short delay but deals <Emp>[{0}%]</> reduced damage.",
+						"values": {
+							"0": [-30, -30, -20, -10]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1035,9 +1706,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_SecondTimeAround.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SecondTimeAroundDamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "secondtimearound",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Throwable/Eng_Skill_SecondTimeAround.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-second-time-around.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-second-time-around.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c9016982059e7bb5203d3b9621a8c808b3b4656a3c2e40d7d17ff2492a3c4990"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-second-time-around.webp"
 				}
 			]
 		],
@@ -1054,7 +1755,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "gadget",
-						"description": "While <Emp>BUNKERED</>, you move <sEmp>30%</> slower but soundwave projectile damage is increased by <Emp>[{0}%]</>."
+						"description": "While <Emp>BUNKERED</>, you move <sEmp>30%</> slower but soundwave projectile damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1078,9 +1782,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Stabilize.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "StabilizeDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "stabilize",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Stabilize.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-stabilize.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-stabilize.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "16beef901f9a7d07eec9f1e08388b37cadf5931e1fa043db9e95a1c408382d32"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-stabilize.webp"
 				},
 				{
 					"slug": "engineer-mobilize",
@@ -1093,7 +1827,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "gadget",
-						"description": "Movement speed while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</> base movement speed."
+						"description": "Movement speed while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</> base movement speed.",
+						"values": {
+							"0": [115, 115, 120, 125]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1124,9 +1861,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Mobilize.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "MobilizeMovementSpeed",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "mobilize",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Mobilize.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-mobilize.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-mobilize.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a626993175dd5b8a41d159bd86cbe02c3ccf17832f2b259a303f6a7387a23264"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-mobilize.webp"
 				},
 				{
 					"slug": "engineer-fortify",
@@ -1139,7 +1906,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "gadget",
-						"description": "Activating Sonic Storm repairs <Emp>[{0}]</> armor integrity."
+						"description": "Activating Sonic Storm repairs <Emp>[{0}]</> armor integrity.",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1163,9 +1933,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Fortify.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FortifyArmorGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fortify",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Fortify.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-fortify.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-fortify.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9d2b57f24a764e2360d4c4a662e4bf59e1f89a320501ed6a4bfe204cb672b939"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-fortify.webp"
 				}
 			],
 			[
@@ -1180,7 +1980,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "gadget",
-						"description": "Soundwave projectile size is increased by <Emp>[{0}%]</>."
+						"description": "Soundwave projectile size is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [35, 35, 45, 55]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1200,12 +2003,8 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Wall of Sound"
-						],
-						"alternateSkillSlugs": [
-							"engineer-wallof-sound"
-						],
+						"alternateNames": ["Wall of Sound"],
+						"alternateSkillSlugs": ["engineer-wallof-sound"],
 						"internalName": "WallofSound",
 						"category": "gadget",
 						"skillNumber": 4,
@@ -1217,9 +2016,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_WallOfSound.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "WallofSoundRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "wallofsound",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_WallOfSound.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-wall-of-sound.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-wall-of-sound.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d1fa5ddc8d91489a91ae5639dd2558b4321ff38c1f705632501d7ef8f26c3c09"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-wall-of-sound.webp"
 				},
 				{
 					"slug": "engineer-high-frequency",
@@ -1232,7 +2061,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "gadget",
-						"description": "Soundwave projectile size and damage is decreased by <sEmp>25%</>, but fire rate is increased and ammo is increased by <Emp>[{0}]</>.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum."
+						"description": "Soundwave projectile size and damage is decreased by <sEmp>25%</>, but fire rate is increased and ammo is increased by <Emp>[{0}]</>.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum.",
+						"values": {
+							"0": [2, 2, 3, 4]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1263,9 +2095,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_HighFrequency.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HigherFrequencyAmmoIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "highfrequency",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_HighFrequency.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-high-frequency.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-high-frequency.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d14d5ad4ab6a2131d905489279af40d8d253474447562bf296cfa720bbb7f926"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-high-frequency.webp"
 				}
 			],
 			[
@@ -1280,7 +2142,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "gadget",
-						"description": "Soundwave projectile penetration is increased by <Emp>[{0}]</>."
+						"description": "Soundwave projectile penetration is increased by <Emp>[{0}]</>.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1311,9 +2176,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_BoneConductor.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BoneConductionPenetrationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "boneconductor",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_BoneConductor.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-bone-conductor.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-bone-conductor.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "80b449880b3c620a676b4745812bafdd8cf7e80e934edd431dd8d5986c002df5"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-bone-conductor.webp"
 				},
 				{
 					"slug": "engineer-clear-the-area",
@@ -1326,7 +2221,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "gadget",
-						"description": "Equip explosion radius is increased by <Emp>[{0}%]</>."
+						"description": "Equip explosion radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [50, 50, 60, 70]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1346,9 +2244,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Clear the Area"
-						],
+						"alternateNames": ["Clear the Area"],
 						"internalName": "ClearTheArea",
 						"category": "gadget",
 						"skillNumber": 7,
@@ -1360,9 +2256,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_ClearTheArea.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ClearTheAreaRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "clearthearea",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_ClearTheArea.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-clear-the-area.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-clear-the-area.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "eab0fb3d657135bc196a253129510175d13e0a6f768967e317be3f4039469100"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-clear-the-area.webp"
 				},
 				{
 					"slug": "engineer-juggernaut",
@@ -1375,7 +2301,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "gadget",
-						"description": "Damage resistance while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</>. <cf><cf>While <Emp>BUNKERED</>, enemies that melee you are <sEmp>Stumbled</>."
+						"description": "Damage resistance while <Emp>BUNKERED</> is increased to <Emp>[{0}%]</>. <cf><cf>While <Emp>BUNKERED</>, enemies that melee you are <sEmp>Stumbled</>.",
+						"values": {
+							"0": [-55, -55, -60, -65]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1406,9 +2335,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Juggernaut.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "JuggernautDamageResistance",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "juggernaut",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Juggernaut.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-juggernaut.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-juggernaut.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "1fa0d7c2f8e7a90ef7ca4e7057b3fe0f08f7d9830edaf501d89e47bd6cf72b31"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-juggernaut.webp"
 				}
 			],
 			[
@@ -1423,7 +2382,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "gadget",
-						"description": "Using a tool restores gadget activation energy up to a maximum of <Emp>[{0}]</> each round. Different tools restore different amounts of gadget energy when used."
+						"description": "Using a tool restores gadget activation energy up to a maximum of <Emp>[{0}]</> each round. Different tools restore different amounts of gadget energy when used.",
+						"values": {
+							"0": [32, 32, 40, 48]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1454,9 +2416,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Reforge.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ReforgeGadgetCooldownReduction",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "reforge",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_Reforge.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-reforge.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-reforge.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "aef19e5ab6088121d1783f9b7942610ba6de9c4cf0d6fdefb2c9a0ea8932a08a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-reforge.webp"
 				},
 				{
 					"slug": "engineer-sonic-salvo",
@@ -1469,7 +2461,11 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "gadget",
-						"description": "Sonic Storm's ammo is increased by <Emp>[{0}]</> and maximum duration is increased by <Emp>[{1}]</> seconds.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum."
+						"description": "Sonic Storm's ammo is increased by <Emp>[{0}]</> and maximum duration is increased by <Emp>[{1}]</> seconds.<cf><cf>Energy refund for ammo remaining still caps at <sEmp>40</> maximum.",
+						"values": {
+							"0": [3, 3, 4, 5],
+							"1": [5, 5, 10, 15]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1500,9 +2496,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_SonicSalvo.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SonicSalvoAmmoIncrease, SonicSalvoDurationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None, ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "sonicsalvo",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_SonicSalvo.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-sonic-salvo.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-sonic-salvo.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "0beac0e49e87af8064f98093ea731a370def473307dfdc1317700a9f5b11d93a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-sonic-salvo.webp"
 				}
 			],
 			[
@@ -1517,7 +2543,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "gadget",
-						"description": "Sonic Storm's fire mode is changed from semi-auto to charge fire.<cf><cf>Fire button can be held down to charge Sonic Storm. After charging for at least <sEmp>0.5</> seconds, soundwave projectile's damage is increased by <Emp>[{0}%]</>."
+						"description": "Sonic Storm's fire mode is changed from semi-auto to charge fire.<cf><cf>Fire button can be held down to charge Sonic Storm. After charging for at least <sEmp>0.5</> seconds, soundwave projectile's damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [40, 40, 50, 60]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1548,9 +2577,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_TakeCharge.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "TakeChargeDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "takecharge",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_TakeCharge.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-take-charge.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-take-charge.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2e0b51ea49f09101fdb2925762fe22279f524e97c59be0f33568514a88ed067d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-take-charge.webp"
 				},
 				{
 					"slug": "engineer-state-of-confusion",
@@ -1563,7 +2622,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "gadget",
-						"description": "Soundwave projectiles now apply <Emp>[{0}]</> <sEmp>Confuse</> affliction. "
+						"description": "Soundwave projectiles now apply <Emp>[{0}]</> <sEmp>Confuse</> affliction. ",
+						"values": {
+							"0": [100, 100, 150, 200]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1583,12 +2645,8 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"State of Confusion"
-						],
-						"alternateSkillSlugs": [
-							"engineer-stateof-confusion"
-						],
+						"alternateNames": ["State of Confusion"],
+						"alternateSkillSlugs": ["engineer-stateof-confusion"],
 						"internalName": "StateofConfusion",
 						"category": "gadget",
 						"skillNumber": 12,
@@ -1600,9 +2658,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_StateofConfusion.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "StateofConfusionConfuse",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "stateofconfusion",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_StateofConfusion.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-state-of-confusion.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-state-of-confusion.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "41954813300b55f88b7b58b5bda35dd774138c0ac6a0e34238ad0c7aeb42d100"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-state-of-confusion.webp"
 				},
 				{
 					"slug": "engineer-reverb-pedal",
@@ -1615,7 +2703,10 @@
 					"skillNumber": 13,
 					"effect": {
 						"type": "gadget",
-						"description": "Firing Sonic Storm generates a sound explosion that deals <Emp>[{0}]</> damage to enemies that are close. "
+						"description": "Firing Sonic Storm generates a sound explosion that deals <Emp>[{0}]</> damage to enemies that are close. ",
+						"values": {
+							"0": [200, 200, 240, 280]
+						}
 					},
 					"source": {
 						"perkSlug": "engineer",
@@ -1646,9 +2737,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Imran",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Imran",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Engineer/Skills/SPEC_Engineer_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_ReverbPedal.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ReverbPedalDamage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "reverbpedal",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/EngineerSkillIcons/Gadget/Eng_Skill_ReverbPedal.uasset",
+							"publicPath": "/skill-icons/engineer/engineer-reverb-pedal.webp",
+							"outputPath": "webapp/static/skill-icons/engineer/engineer-reverb-pedal.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d64d709fe1158171b8cdf18104ee8f229aa52ee516468d1be12687b29e5f2f10"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/engineer/engineer-reverb-pedal.webp"
 				}
 			]
 		]

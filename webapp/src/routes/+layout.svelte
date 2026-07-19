@@ -7,51 +7,43 @@
 
 <div class="app">
 	<Header />
-
-	<main>
-		{@render children()}
-	</main>
-
+	<main>{@render children()}</main>
 	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
+		KF3 Build uses extracted local game data. Values marked pending remain unverified.
 	</footer>
 </div>
 
 <style>
 	.app {
 		display: flex;
-		flex-direction: column;
 		min-height: 100vh;
+		flex-direction: column;
 	}
 
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
 		box-sizing: border-box;
+		width: 100%;
+		max-width: 110rem;
+		margin: 0 auto;
+		padding: 0.65rem 0.85rem 1.25rem;
 	}
 
 	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+		margin-top: auto;
+		border-top: 1px solid var(--line);
+		color: var(--quiet);
+		font-family: var(--font-terminal);
+		font-size: 0.62rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		padding: 0.85rem;
+		text-align: center;
+		text-transform: uppercase;
 	}
 
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
+	@media (min-width: 720px) {
+		main {
+			padding-inline: 1.25rem;
 		}
 	}
 </style>

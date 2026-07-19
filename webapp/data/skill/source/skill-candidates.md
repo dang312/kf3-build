@@ -1,6 +1,6 @@
 # KF3 Skill Candidate Collection
 
-Generated: 2026-06-29T15:30:04.779Z
+Generated: 2026-06-29T19:05:59.378Z
 
 ## Summary
 
@@ -8,10 +8,10 @@ Generated: 2026-06-29T15:30:04.779Z
 - Skill preview files: 149
 - Preview-derived candidate skills: 148
 - Total candidate skills: 211
-- Candidate skills with descriptions: 198
+- Candidate skills with descriptions: 210
 - Candidate skills with tier positions: 210
 - Candidate skills with unlock levels: 210
-- Locres skill records: 198
+- Locres skill records: 210
 - Raw skill-tree assets parsed: 18
 - Raw skill-tree skill references: 210
 - FModel files scanned: 0
@@ -26,6 +26,10 @@ Generated: 2026-06-29T15:30:04.779Z
 ## Duplicate preview-derived candidate skill slugs
 
 - commando-hothead: 2 preview files
+
+## Warnings
+
+- FModel export root not found: scratch/fmodel-export. Skipping FModel text/JSON match scanning.
 
 ## commando
 
@@ -68,7 +72,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 2 — unlock level 10
 
-- **Capacity Tier2** `commando-capacity-tier2`
+- **Capacity Increase** `commando-capacity-tier2` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 3 — unlock level 16
 
@@ -77,7 +81,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 4 — unlock level 22
 
-- **Capacity Tier4** `commando-capacity-tier4`
+- **Capacity Increase** `commando-capacity-tier4` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 5 — unlock level 28
 
@@ -156,7 +160,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 2 — unlock level 10
 
-- **Capacity Tier2** `engineer-capacity-tier2`
+- **Capacity Increase** `engineer-capacity-tier2` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 3 — unlock level 16
 
@@ -165,7 +169,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 4 — unlock level 22
 
-- **Capacity Tier4** `engineer-capacity-tier4`
+- **Capacity Increase** `engineer-capacity-tier4` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 5 — unlock level 28
 
@@ -244,7 +248,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 2 — unlock level 10
 
-- **Capacity Tier2** `firebug-capacity-tier2`
+- **Capacity Increase** `firebug-capacity-tier2` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 3 — unlock level 16
 
@@ -253,7 +257,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 4 — unlock level 22
 
-- **Capacity Tier4** `firebug-capacity-tier4`
+- **Capacity Increase** `firebug-capacity-tier4` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 5 — unlock level 28
 
@@ -332,7 +336,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 2 — unlock level 10
 
-- **Capacity Tier2** `medic-capacity-tier2`
+- **Capacity Increase** `medic-capacity-tier2` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 3 — unlock level 16
 
@@ -341,7 +345,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 4 — unlock level 22
 
-- **Capacity Tier4** `medic-capacity-tier4`
+- **Capacity Increase** `medic-capacity-tier4` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 5 — unlock level 28
 
@@ -420,7 +424,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 2 — unlock level 10
 
-- **Capacity Tier2** `ninja-capacity-tier2`
+- **Capacity Increase** `ninja-capacity-tier2` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 3 — unlock level 16
 
@@ -429,7 +433,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 4 — unlock level 22
 
-- **Capacity Tier4** `ninja-capacity-tier4`
+- **Capacity Increase** `ninja-capacity-tier4` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 5 — unlock level 28
 
@@ -508,7 +512,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 2 — unlock level 10
 
-- **Capacity Tier2** `sharpshooter-capacity-tier2`
+- **Capacity Increase** `sharpshooter-capacity-tier2` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 3 — unlock level 16
 
@@ -517,7 +521,7 @@ Generated: 2026-06-29T15:30:04.779Z
 
 #### Tier 4 — unlock level 22
 
-- **Capacity Tier4** `sharpshooter-capacity-tier4`
+- **Capacity Increase** `sharpshooter-capacity-tier4` — Throwable carrying capacity is increased by <sEmp>1</>.
 
 #### Tier 5 — unlock level 28
 
@@ -554,4 +558,3 @@ Generated: 2026-06-29T15:30:04.779Z
 - **Frosted Tips** `sharpshooter-frosted-tips` — Arrow <sEmp>Freezes</> enemies on contact.<cf><cf>Arrow deals <Emp>[{0}%]</> increased damage to <sEmp>Frozen</> enemies.
 - **Bug Out** `sharpshooter-bug-out` — Radius of arrow's final explosion is greatly increased, and explosion damage is increased by <Emp>[{0}%]</>.
 - **Queen Bee** `sharpshooter-queen-bee` — <Emp>[{0}]</> micro missiles are fired out in addition to the arrow that target random enemies in front of you and deal 250 Ballistic <img id="Ballistic"/> damage on impact.
-

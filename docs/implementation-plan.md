@@ -47,6 +47,30 @@ Goal: users can choose a perk, set level, select legal skills, and read a build 
 4. Replace starter route content with the simulator composition.
 5. Validate manually and run `pnpm check` before handoff.
 
+## Milestone 1.5 — Icon-first in-game skill tree UI
+
+Goal: replace the current full-text skill cards with an in-game-like compact `SkillTreeView` after real skill icons are available.
+
+Status: first implementation is in place. The webapp now has real generated, browser-visible in-game-style silhouette icons, compact three-column skill trees, denser three-option tier rows, a `SkillDetailPanel`, and an `Extended view` toggle for inline detail text.
+
+1. Generate and promote real skill icons first with `tools/kf3-data/generate-skill-icons.mjs`.
+   - Output icons to `webapp/static/skill-icons/{perkSlug}/{skillSlug}.webp`.
+   - Update `SkillOption.icon` and icon source metadata in perk JSON.
+   - Allow partial icon coverage during development, but do not start the compact in-game-style UI until real icons are available for the first pass.
+2. Build the compact in-game-like skill tree presentation.
+   - Three columns: `passives`, `throwable`, and `gadget`.
+   - Level-labeled tier rows.
+   - Icon-first skill nodes using real icons, with generated placeholders only for unresolved stragglers.
+   - Visual selected, available, locked, and focused states.
+3. Add `SkillDetailPanel` as the primary side-panel readout.
+   - Show the last focused skill, defaulting to the first available skill for the selected perk.
+   - Hover/focus updates the panel; click selects/toggles and focuses the skill.
+   - If a focused skill becomes locked after lowering level, keep it focused and show locked state.
+4. Add `ExpandedDetailsMode` after the compact/icon view is in place.
+   - Keep default mode compact.
+   - Expanded mode reveals full descriptions, unlocks, source info, and later scaling/rank details inline.
+   - Do not change `BuildState` or selection rules.
+
 ## Milestone 2 — Shareable build state
 
 Goal: users can share selected perk, level, and skill choices by URL.
@@ -68,7 +92,7 @@ Goal: expand from skills into the rest of the build planner.
 ## Data work still required
 
 - Decode exact game-file source for skill unlock level gates; current collection applies `webapp/data/skill/level_requirement.json` after reading raw skill-tree tiers.
-- Parse scaling values from extracted `SPEC_*_Skills_DT.uasset` / `SPEC_*_Skills_CT.uasset` files or obtain a compatible `.usmap` mapping.
+- Decode the remaining eight `MultiplyBy` skill scaling baselines from `SPEC_*_Skills_DT.uasset`; local curve extraction has already populated reviewed rank-0–3 arrays for 190 skills. See `docs/skill-rank-scaling-analysis.md`.
 - Locate exact Unreal asset paths that contain proficiency data and Operational Budget values/formulas.
 - Replace duplicated placeholder perk JSON with real perk skill data.
 - Hand-author production `PerkSlug` and globally unique `SkillSlug` values in JSON.

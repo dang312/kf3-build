@@ -1,0 +1,20 @@
+{
+	"skillRankCap": 3,
+	"source": {
+		"collectionStatus": "local-game-ui-asset",
+		"assets": [
+			"Nightfall/Content/UI/NightfallUI/Widgets/Buttons/ButttonContent/NF_SkillButton_Content_WDGT.uasset",
+			"Nightfall/Content/UI/NightfallUI/Modals/NF_UpgradeModal_WDGT.uasset"
+		],
+		"evidence": "The skill button serializes Rank1, Rank2, and Rank3 UI elements; the upgrade modal serializes MaxSkillRank and the localized UI contains CURRENT SKILL RANK and MAX RANK REACHED. This establishes the maximum UI rank, not a universal per-skill cap."
+	},
+	"nonUpgradeableSkills": {
+		"internalNames": ["Capacity_Tier2", "Capacity_Tier4"],
+		"assets": [
+			"Nightfall/Content/Characters/Specialists/*/Skills/SPEC_*_Skills_DT.uasset",
+			"Nightfall/Content/Characters/Specialists/*/Skills/SPEC_*_Skills_CT.uasset",
+			"Nightfall/Content/Characters/Specialists/_Gameplay/Skills_Base/GrenadeCapacityIncrease_GA.uasset"
+		],
+		"evidence": "Every Capacity_Tier2 and Capacity_Tier4 entry references the shared GrenadeCapacityIncrease_GA. The local curve tables have no Capacity row and local English localization gives the fixed effect 'Throwable carrying capacity is increased by 1.' It is a fixed equipped effect, not one upgrade rank, so the normalized data uses rankCap: 0 and the UI must not render an upgrade meter."
+	}
+}

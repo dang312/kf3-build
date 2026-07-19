@@ -4,7 +4,7 @@
 	"character": "Obi",
 	"dataStatus": "candidate-extracted",
 	"source": {
-		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionGeneratedAt": "2026-06-29T19:05:59.378Z",
 		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
 		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
 		"collectionSummary": {
@@ -12,10 +12,10 @@
 			"skillPreviewCount": 149,
 			"previewCandidateSkillCount": 148,
 			"candidateSkillCount": 211,
-			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithDescriptions": 210,
 			"candidateSkillsWithTier": 210,
 			"candidateSkillsWithUnlockLevel": 210,
-			"locresSkillRecords": 198,
+			"locresSkillRecords": 210,
 			"rawSkillTreeAssets": 18,
 			"rawSkillTreeSkillReferences": 210,
 			"duplicateCandidateSkillSlugs": [
@@ -38,27 +38,9 @@
 			"fmodelMatchesRecorded": 0
 		},
 		"levelRequirements": {
-			"passives": [
-				2,
-				8,
-				14,
-				20,
-				26
-			],
-			"throwable": [
-				4,
-				10,
-				16,
-				22,
-				28
-			],
-			"gadget": [
-				6,
-				12,
-				18,
-				24,
-				30
-			]
+			"passives": [2, 8, 14, 20, 26],
+			"throwable": [4, 10, 16, 22, 28],
+			"gadget": [6, 12, 18, 24, 30]
 		},
 		"notes": [
 			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
@@ -80,7 +62,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "passives",
-						"description": "Syringe Bags now grant <sEmp>2</> Syringes each.<cf><cf>Using Syringes repairs <Emp>[{0}]</> armor integrity."
+						"description": "Syringe Bags now grant <sEmp>2</> Syringes each.<cf><cf>Using Syringes repairs <Emp>[{0}]</> armor integrity.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -93,9 +78,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"medic-doctors-bag"
-						],
+						"alternateSkillSlugs": ["medic-doctors-bag"],
 						"internalName": "DoctorsBag",
 						"category": "passives",
 						"skillNumber": 1,
@@ -107,9 +90,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_DoctorsBag.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "DoctorsBagArmorGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "doctorsbag",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_DoctorsBag.uasset",
+							"publicPath": "/skill-icons/medic/medic-doctor-s-bag.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-doctor-s-bag.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "cd565ea8fd9b31369b226e85b9a1c9fb8b1046d7f02416a8b5a3c9e766aad276"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-doctor-s-bag.webp"
 				},
 				{
 					"slug": "medic-healing-hands",
@@ -122,7 +135,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "passives",
-						"description": "Ally revivals are <sEmp>50%</> faster.<cf><cf>Reviving allies heals them for an additional <Emp>[{0}]</> health."
+						"description": "Ally revivals are <sEmp>50%</> faster.<cf><cf>Reviving allies heals them for an additional <Emp>[{0}]</> health.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -153,9 +169,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_HealingHands.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HealingHandsReviveHeal",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "healinghands",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_HealingHands.uasset",
+							"publicPath": "/skill-icons/medic/medic-healing-hands.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-healing-hands.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "74ba44b0b1e22e7d351b3120dcad79dcf2eb87c301aab05a72423476bcb1c3a9"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-healing-hands.webp"
 				}
 			],
 			[
@@ -170,7 +216,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemy Flesh and Mire hitzones."
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemy Flesh and Mire hitzones.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -194,9 +243,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_Biohazard.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BiohazardDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "biohazard",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_Biohazard.uasset",
+							"publicPath": "/skill-icons/medic/medic-biohazard.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-biohazard.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "e0abd4c23310b34fe1482e8571f5b9a9a9ba7a973e259ef2a8e3234b37089cd8"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-biohazard.webp"
 				},
 				{
 					"slug": "medic-pill-mill",
@@ -209,7 +288,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "passives",
-						"description": "Maximum ammo capacity is increased by <Emp>[{0}%]</>."
+						"description": "Maximum ammo capacity is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [35, 35, 40, 45]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -233,9 +315,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_PillMill.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PillMillAmmoIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "pillmill",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_PillMill.uasset",
+							"publicPath": "/skill-icons/medic/medic-pill-mill.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-pill-mill.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "5ce15108ff411be0367cdcd8f3583c5d5ab4d247d9048c6f41270b43236f301a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-pill-mill.webp"
 				},
 				{
 					"slug": "medic-stronger-prescription",
@@ -261,9 +373,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"medic-stronger-perscription"
-						],
+						"alternateSkillSlugs": ["medic-stronger-perscription"],
 						"internalName": "StrongerPerscription",
 						"category": "passives",
 						"skillNumber": 5,
@@ -275,9 +385,36 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_StrongerPrescription.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "strongerprescription",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_StrongerPrescription.uasset",
+							"publicPath": "/skill-icons/medic/medic-stronger-prescription.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-stronger-prescription.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c254c4aef27029747a196dc7fc28c1b4dcc7098d7b9c7b0295a666f3515de33b"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-stronger-prescription.webp"
 				}
 			],
 			[
@@ -292,7 +429,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "passives",
-						"description": "Healing allies with your weapon or hitting enemies with your weapon's healing effects heals you for <Emp>[{0}%]</> of your weapon's healing amount."
+						"description": "Healing allies with your weapon or hitting enemies with your weapon's healing effects heals you for <Emp>[{0}%]</> of your weapon's healing amount.",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -323,9 +463,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_Symbiosis.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SymbiosisHealing",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "symbiosis",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_Symbiosis.uasset",
+							"publicPath": "/skill-icons/medic/medic-symbiosis.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-symbiosis.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3d42b18ed5ea33b24ff904bda24e3a0b97d5793032990555f2f0aacad2997151"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-symbiosis.webp"
 				},
 				{
 					"slug": "medic-painkiller",
@@ -338,7 +508,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "passives",
-						"description": "Healing allies with your weapon grants them <sEmp>20%</> damage reduction for <Emp>[{0}]</> seconds."
+						"description": "Healing allies with your weapon grants them <sEmp>20%</> damage reduction for <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [4, 4, 6, 8]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -362,9 +535,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_Painkiller.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PainkillerDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "painkiller",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_Painkiller.uasset",
+							"publicPath": "/skill-icons/medic/medic-painkiller.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-painkiller.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d95ffeca1b80221ad59625003a4d5ab508240cdb6da9105246775ceab12098c9"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-painkiller.webp"
 				}
 			],
 			[
@@ -379,7 +582,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "passives",
-						"description": "While at least one other player or trader pod is nearby, you take <Emp>[{0}%]</> reduced damage."
+						"description": "While at least one other player or trader pod is nearby, you take <Emp>[{0}%]</> reduced damage.",
+						"values": {
+							"0": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -403,9 +609,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_StrengthInNumbers.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "StrengthInNumbersReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "strengthinnumbers",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_StrengthInNumbers.uasset",
+							"publicPath": "/skill-icons/medic/medic-strength-in-numbers.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-strength-in-numbers.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "df445d1d5d5d01ad8dcef739d80bebbb607af375a9fbe6dcda020a9550908718"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-strength-in-numbers.webp"
 				},
 				{
 					"slug": "medic-social-distancing",
@@ -418,7 +654,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "passives",
-						"description": "Shooting downed allies with your weapon's healing effects heals their bleed out health for <Emp>[{0}%]</> of your weapon's standard healing.<cf><cf>Restoring their bleed-out health to full will revive them."
+						"description": "Shooting downed allies with your weapon's healing effects heals their bleed out health for <Emp>[{0}%]</> of your weapon's standard healing.<cf><cf>Restoring their bleed-out health to full will revive them.",
+						"values": {
+							"0": [140, 140, 160, 180]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -449,9 +688,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_SocialDistancing.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SocialDistancingDownedHealing",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "socialdistancing",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_SocialDistancing.uasset",
+							"publicPath": "/skill-icons/medic/medic-social-distancing.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-social-distancing.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "291afa5e05b6a3bb44996c70d1a37e9177dfb1f26da12666ef3e1a7f89d8de2a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-social-distancing.webp"
 				}
 			],
 			[
@@ -466,7 +735,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "passives",
-						"description": "Killing enemies with your weapon has a <Emp>[{0}%]</> chance to trigger a chemical reaction gas cloud that lingers for <sEmp>5</> seconds.<cf><cf>The cloud heals allies over time and applies <sEmp>Panic</> and <sEmp>Toxic</> affliction to enemies."
+						"description": "Killing enemies with your weapon has a <Emp>[{0}%]</> chance to trigger a chemical reaction gas cloud that lingers for <sEmp>5</> seconds.<cf><cf>The cloud heals allies over time and applies <sEmp>Panic</> and <sEmp>Toxic</> affliction to enemies.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -497,9 +769,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_ChemicalReaction.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ChemicalReactionTriggerchance",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "chemicalreaction",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_ChemicalReaction.uasset",
+							"publicPath": "/skill-icons/medic/medic-chemical-reaction.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-chemical-reaction.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2a848a213c2c87682697d5daf1b3463f14877a363565c89c5a4a49af512d8248"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-chemical-reaction.webp"
 				},
 				{
 					"slug": "medic-heal-and-deal",
@@ -532,9 +834,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Heal and Deal"
-						],
+						"alternateNames": ["Heal and Deal"],
 						"internalName": "HealAndDeal",
 						"category": "passives",
 						"skillNumber": 11,
@@ -546,9 +846,36 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_HealandDeal.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "healanddeal",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_HealandDeal.uasset",
+							"publicPath": "/skill-icons/medic/medic-heal-and-deal.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-heal-and-deal.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2477aa01b31fe6fae851f9c63b99bf1d396638e5b15dbc3a443adadd03f057e4"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-heal-and-deal.webp"
 				},
 				{
 					"slug": "medic-damage-plan",
@@ -561,7 +888,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "passives",
-						"description": "Allies healed by your weapons deal <Emp>[{0}%]</> increased weapon damage for <sEmp>5</> seconds."
+						"description": "Allies healed by your weapons deal <Emp>[{0}%]</> increased weapon damage for <sEmp>5</> seconds.",
+						"values": {
+							"0": [20, 20, 23, 26]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -592,9 +922,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_DamagePlan.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "DamagePlanDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "damageplan",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Passive/Med_Skill_DamagePlan.uasset",
+							"publicPath": "/skill-icons/medic/medic-damage-plan.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-damage-plan.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "900952f30b0087998ee9e3bf14a6cb12b7498d10fdcb6e321757a8380fa36141"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-damage-plan.webp"
 				}
 			]
 		],
@@ -611,7 +971,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "throwable",
-						"description": "Biotic Grenade gas cloud deals <Emp>[{0}%]</> increased damage to small enemies."
+						"description": "Biotic Grenade gas cloud deals <Emp>[{0}%]</> increased damage to small enemies.",
+						"values": {
+							"0": [60, 60, 80, 100]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -631,9 +994,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Cull the Weak"
-						],
+						"alternateNames": ["Cull the Weak"],
 						"internalName": "CullTheWeak",
 						"category": "throwable",
 						"skillNumber": 1,
@@ -645,9 +1006,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_CullTheWeak.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "CullTheWeakDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "culltheweak",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_CullTheWeak.uasset",
+							"publicPath": "/skill-icons/medic/medic-cull-the-weak.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-cull-the-weak.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "e0f506ea6076daa17b6800711562a96ad53e1c2da8994b84c2cb13e04764fc1e"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-cull-the-weak.webp"
 				},
 				{
 					"slug": "medic-gas-expansion",
@@ -660,7 +1051,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "throwable",
-						"description": "Biotic Grenade gas cloud radius is increased by <Emp>[{0}%]</>."
+						"description": "Biotic Grenade gas cloud radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -691,9 +1085,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_GasExpansion.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "GasExpansionRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "gasexpansion",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_GasExpansion.uasset",
+							"publicPath": "/skill-icons/medic/medic-gas-expansion.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-gas-expansion.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "fe400235fbf49c223ee605a9f8a447a8d30f199f09b1994e8cc1c5bb2f58fca5"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-gas-expansion.webp"
 				},
 				{
 					"slug": "medic-waste-collector",
@@ -706,7 +1130,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "throwable",
-						"description": "Biotic Grenade leaves behind <Emp>Waste</> that lasts for <Emp>[{0}]</> seconds.<cf><cf>Interacting with the <Emp>Waste</> will collect it to restore <sEmp>1</> Syringe."
+						"description": "Biotic Grenade leaves behind <Emp>Waste</> that lasts for <Emp>[{0}]</> seconds.<cf><cf>Interacting with the <Emp>Waste</> will collect it to restore <sEmp>1</> Syringe.",
+						"values": {
+							"0": [5, 5, 10, 15]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -737,15 +1164,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_WasteCollector.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "WasteCollectorDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "wastecollector",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_WasteCollector.uasset",
+							"publicPath": "/skill-icons/medic/medic-waste-collector.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-waste-collector.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8d555803683ffbde648da6310320fa0c0d69bbcf700f633916a8e9f851475fd5"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-waste-collector.webp"
 				}
 			],
 			[
 				{
 					"slug": "medic-capacity-tier2",
-					"name": "Capacity Tier2",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 2,
 					"unlockLevel": 10,
@@ -753,28 +1210,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "medic",
 						"candidateSkillSlug": "medic-capacity-tier2",
-						"candidateSkillName": "Capacity Tier2",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier2"],
 						"internalName": "Capacity_Tier2",
 						"category": "throwable",
 						"tierNumber": 2,
 						"treeOrder": 0,
 						"unlockLevel": 10,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Obi",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_CapacityUp01.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup01",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_CapacityUp01.uasset",
+							"publicPath": "/skill-icons/medic/medic-capacity-tier2.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-capacity-tier2.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "fd8c6184d40065f8addd424f01ba1d4a887993fb45e524ef007cad009668cd02"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-capacity-tier2.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -789,7 +1279,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "throwable",
-						"description": "Biotic Grenade gas cloud applies <Emp>[{0}]</> <sEmp>Enfeeble</> affliction every <sEmp>0.5</> seconds."
+						"description": "Biotic Grenade gas cloud applies <Emp>[{0}]</> <sEmp>Enfeeble</> affliction every <sEmp>0.5</> seconds.",
+						"values": {
+							"0": [30, 30, 60, 90]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -813,9 +1306,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_Anesthetist.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "AnesthetistEnfeeble",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "anesthetist",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_Anesthetist.uasset",
+							"publicPath": "/skill-icons/medic/medic-anesthetist.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-anesthetist.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d912efa9c7e4387051b6b64836b5edcc9524ae1d6711990bdba4f2e5446f7c34"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-anesthetist.webp"
 				},
 				{
 					"slug": "medic-pulmonologist",
@@ -828,7 +1351,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "throwable",
-						"description": "Biotic Grenade gas cloud healing is increased by <Emp>[{0}%]</>."
+						"description": "Biotic Grenade gas cloud healing is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [55, 55, 70, 85]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -852,15 +1378,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_Pulmonologist.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PulmonologistHealingIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "pulmonologist",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_Pulmonologist.uasset",
+							"publicPath": "/skill-icons/medic/medic-pulmonologist.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-pulmonologist.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "bb5c8efdade701e57d2b680d01b385e2651eb5a40a254c3f86bb3d5e4107957d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-pulmonologist.webp"
 				}
 			],
 			[
 				{
 					"slug": "medic-capacity-tier4",
-					"name": "Capacity Tier4",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 4,
 					"unlockLevel": 22,
@@ -868,28 +1424,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "medic",
 						"candidateSkillSlug": "medic-capacity-tier4",
-						"candidateSkillName": "Capacity Tier4",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier4"],
 						"internalName": "Capacity_Tier4",
 						"category": "throwable",
 						"tierNumber": 4,
 						"treeOrder": 0,
 						"unlockLevel": 22,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Obi",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_CapacityUp02.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup02",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_CapacityUp02.uasset",
+							"publicPath": "/skill-icons/medic/medic-capacity-tier4.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-capacity-tier4.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9a8850399dbb4913226114c25d4a7b468c705e229891667ab13d3db44e649487"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-capacity-tier4.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -904,7 +1493,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "throwable",
-						"description": "Enemies hit by Biotic Grenade gas cloud are <Emp>INFECTED</> for <Emp>[{0}]</>  seconds.<cf><cf><Emp>Infected:</> Enemies deal Biological <img id=\"Biological\"/> damage to themselves and other enemies every <sEmp>0.5</> seconds."
+						"description": "Enemies hit by Biotic Grenade gas cloud are <Emp>INFECTED</> for <Emp>[{0}]</>  seconds.<cf><cf><Emp>Infected:</> Enemies deal Biological <img id=\"Biological\"/> damage to themselves and other enemies every <sEmp>0.5</> seconds.",
+						"values": {
+							"0": [6, 6, 8, 10]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -935,9 +1527,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_ActiveInfection.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ActiveInfectionDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "activeinfection",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_ActiveInfection.uasset",
+							"publicPath": "/skill-icons/medic/medic-active-infection.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-active-infection.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "cf31d7443823c6c6b3de06a32b0ff3d6335c64a33de03ef96fd721698d203992"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-active-infection.webp"
 				},
 				{
 					"slug": "medic-lingering-cloud",
@@ -950,7 +1572,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "throwable",
-						"description": "Biotic Grenade gas cloud duration is increased by <Emp>[{0}]</> seconds."
+						"description": "Biotic Grenade gas cloud duration is increased by <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [6, 6, 8, 10]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -974,9 +1599,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_LingeringCloud.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "LingerCloudDurationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "lingeringcloud",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_LingeringCloud.uasset",
+							"publicPath": "/skill-icons/medic/medic-lingering-cloud.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-lingering-cloud.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a0fa30ea6968fe2fbfb020ec2176e8395b0062738f721da589f5350a153ab73d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-lingering-cloud.webp"
 				},
 				{
 					"slug": "medic-urgent-care",
@@ -989,7 +1644,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "throwable",
-						"description": "Downed allies inside Biotic Grenade gas cloud have their bleed out paused and are healed for <Emp>[{0}]</> bleed-out health each second.<cf><cf>Restoring their bleed out-health to full will revive them."
+						"description": "Downed allies inside Biotic Grenade gas cloud have their bleed out paused and are healed for <Emp>[{0}]</> bleed-out health each second.<cf><cf>Restoring their bleed out-health to full will revive them.",
+						"values": {
+							"0": [3, 3, 6, 9]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1020,9 +1678,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_UrgentCare.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "UrgentCareHealing",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "urgentcare",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Throwable/Med_Skill_UrgentCare.uasset",
+							"publicPath": "/skill-icons/medic/medic-urgent-care.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-urgent-care.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a1eacfac646689b26f9a24c772922888eb87f72d2a3f6716b630acb918940edb"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-urgent-care.webp"
 				}
 			]
 		],
@@ -1039,7 +1727,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "gadget",
-						"description": "Sanctum field expansion blast damage is increased by <Emp>[{0}%]</>."
+						"description": "Sanctum field expansion blast damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1063,9 +1754,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_PowerSurge.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PowerSurgeDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "powersurge",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_PowerSurge.uasset",
+							"publicPath": "/skill-icons/medic/medic-power-surge.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-power-surge.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "4debdef67a85a31a111ebe59a07094869b91f87bb0741a6dbd4c47ab56211abe"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-power-surge.webp"
 				},
 				{
 					"slug": "medic-muscle-stimulant",
@@ -1078,7 +1799,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "gadget",
-						"description": "Allies within Sanctum's radius receive a buff, increasing their movement speed by <Emp>[{0}%]</> for <sEmp>5</> seconds."
+						"description": "Allies within Sanctum's radius receive a buff, increasing their movement speed by <Emp>[{0}%]</> for <sEmp>5</> seconds.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1109,9 +1833,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_MuscleStimulant.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "MuscleStimulantMovementSpeed",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "musclestimulant",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_MuscleStimulant.uasset",
+							"publicPath": "/skill-icons/medic/medic-muscle-stimulant.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-muscle-stimulant.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "bbbcd97981984d5515ce4c40cc7ffde934cc79a235a6426124ae0c7b6c45f0ac"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-muscle-stimulant.webp"
 				},
 				{
 					"slug": "medic-health-benefits",
@@ -1124,7 +1878,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "gadget",
-						"description": "When Sanctum expires, it heals all allies within its radius for <Emp>[{0}]</> health."
+						"description": "When Sanctum expires, it heals all allies within its radius for <Emp>[{0}]</> health.",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1155,9 +1912,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_HealthBenefits.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HealthBenefitsHealing",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "healthbenefits",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_HealthBenefits.uasset",
+							"publicPath": "/skill-icons/medic/medic-health-benefits.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-health-benefits.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "3ac4b2026fd6dcbf89d27f118e5c0b0e04f93000ea2dbbde4cb2ec1dbecb32e0"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-health-benefits.webp"
 				}
 			],
 			[
@@ -1172,7 +1959,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "gadget",
-						"description": "Sanctum's energy field deals <Emp>[{0}%]</> increased damage over time to small enemies."
+						"description": "Sanctum's energy field deals <Emp>[{0}%]</> increased damage over time to small enemies.",
+						"values": {
+							"0": [100, 100, 125, 150]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1203,9 +1993,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_BurnUnit.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BurnUnitDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "burnunit",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_BurnUnit.uasset",
+							"publicPath": "/skill-icons/medic/medic-burn-unit.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-burn-unit.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2655d92c3dc7ad59715d0906842d37e7fbd784c14f9faa0a761a8d37aa024f53"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-burn-unit.webp"
 				},
 				{
 					"slug": "medic-outreach-center",
@@ -1218,7 +2038,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "gadget",
-						"description": "Sanctum field expansion blast radius and energy field radius are increased by <Emp>[{0}%]</>."
+						"description": "Sanctum field expansion blast radius and energy field radius are increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1242,9 +2065,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_OutreachCenter.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "OutreachCenterRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "outreachcenter",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_OutreachCenter.uasset",
+							"publicPath": "/skill-icons/medic/medic-outreach-center.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-outreach-center.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "d87f8013a18ec1e6e74b1adecabfadd1255b85f2e6dd6235f0622cea81336711"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-outreach-center.webp"
 				}
 			],
 			[
@@ -1259,7 +2112,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "gadget",
-						"description": "Allies within Sanctum's radius receive a buff, increasing their weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds."
+						"description": "Allies within Sanctum's radius receive a buff, increasing their weapon damage by <Emp>[{0}%]</> for <sEmp>5</> seconds.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1290,9 +2146,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_SteroidInjection.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SteroidInjectionDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "steroidinjection",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_SteroidInjection.uasset",
+							"publicPath": "/skill-icons/medic/medic-steroid-injection.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-steroid-injection.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "e158e0f9818f41afff8e90bb0cd5f0f3ce82f11d0bfd9485e7e73ca1e2725c56"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-steroid-injection.webp"
 				},
 				{
 					"slug": "medic-suppressor",
@@ -1305,7 +2191,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "gadget",
-						"description": "Enemies damaged by Sanctum's field deal <sEmp>20%</> reduced damage for <Emp>[{0}]</> seconds."
+						"description": "Enemies damaged by Sanctum's field deal <sEmp>20%</> reduced damage for <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [4, 4, 6, 8]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1329,9 +2218,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_Suppressor.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SuppressorDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "suppressor",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_Suppressor.uasset",
+							"publicPath": "/skill-icons/medic/medic-suppressor.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-suppressor.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "f8e192c3949539ca0e76ad735d77de7142a9607be253d08e09322509b0ef04fe"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-suppressor.webp"
 				},
 				{
 					"slug": "medic-field-hospital",
@@ -1344,7 +2263,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "gadget",
-						"description": "Sanctum field's healing is increased by <Emp>[{0}%]</>."
+						"description": "Sanctum field's healing is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [55, 55, 70, 85]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1368,9 +2290,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_FieldHospital.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FieldHospitalHealingIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fieldhospital",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_FieldHospital.uasset",
+							"publicPath": "/skill-icons/medic/medic-field-hospital.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-field-hospital.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "96b190d0d6c408f880d6fe8588e0e83efef6352aafc7b64af63ed872cde11355"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-field-hospital.webp"
 				}
 			],
 			[
@@ -1385,7 +2337,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "gadget",
-						"description": "Gadget energy recharge rate for other allies within Sanctum field is increased by <Emp>[{0}%]</>."
+						"description": "Gadget energy recharge rate for other allies within Sanctum field is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [100, 100, 150, 200]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1416,9 +2371,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_EnergyCycle.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "EnergyCycleEnergyGain",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "energycycle",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_EnergyCycle.uasset",
+							"publicPath": "/skill-icons/medic/medic-energy-cycle.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-energy-cycle.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a09b029fa1c2a4cae01013ba1b1f980aff59dc76321caf17d752b8d778a98e95"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-energy-cycle.webp"
 				},
 				{
 					"slug": "medic-storm-shelter",
@@ -1431,7 +2416,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "gadget",
-						"description": "Sanctum duration is increased by <Emp>[{0}]</> seconds."
+						"description": "Sanctum duration is increased by <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [5, 5, 6, 7]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1455,9 +2443,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_StormShelter.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "StormShelterDurationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "stormshelter",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_StormShelter.uasset",
+							"publicPath": "/skill-icons/medic/medic-storm-shelter.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-storm-shelter.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "4546289a64f9c67e129f91e847393b8b9c8fcd00f2b6d6e632f9eec3da6fbd87"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-storm-shelter.webp"
 				}
 			],
 			[
@@ -1472,7 +2490,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "gadget",
-						"description": "When Sanctum expires, it releases a final explosion that deals <Emp>[{0}]</> Biological <img id=\"Biological\"/> damage."
+						"description": "When Sanctum expires, it releases a final explosion that deals <Emp>[{0}]</> Biological <img id=\"Biological\"/> damage.",
+						"values": {
+							"0": [800, 800, 1200, 1600]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1503,9 +2524,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_TerminalDiagnosis.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "TerminalDiagnosisDamage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "terminaldiagnosis",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_TerminalDiagnosis.uasset",
+							"publicPath": "/skill-icons/medic/medic-terminal-diagnosis.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-terminal-diagnosis.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "14adfcba0e64660b79a34386e637dd4baf72d065b3e04714807544b2c846f69a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-terminal-diagnosis.webp"
 				},
 				{
 					"slug": "medic-double-dose",
@@ -1518,7 +2569,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "gadget",
-						"description": "After activating Sanctum, it can be activated a second time before the first one expires to place a second Sanctum. Ally effects from Sanctums do not stack. You may no longer pick up Sanctum to refund gadget energy.<cf><cf>Sanctum's damage is also reduced by <Emp>[{0}%]</>. "
+						"description": "After activating Sanctum, it can be activated a second time before the first one expires to place a second Sanctum. Ally effects from Sanctums do not stack. You may no longer pick up Sanctum to refund gadget energy.<cf><cf>Sanctum's damage is also reduced by <Emp>[{0}%]</>. ",
+						"values": {
+							"0": [-30, -30, -20, -10]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1549,9 +2603,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_DoubleDose.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "DoubleDoseDamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "doubledose",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_DoubleDose.uasset",
+							"publicPath": "/skill-icons/medic/medic-double-dose.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-double-dose.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "806d020754c45984cb4f4e9d656813da6189d0edd6c0400f0bd8b53cd0d96e2a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-double-dose.webp"
 				},
 				{
 					"slug": "medic-resuscitator",
@@ -1564,7 +2648,10 @@
 					"skillNumber": 13,
 					"effect": {
 						"type": "gadget",
-						"description": "Sanctum field expansion blast revives downed allies and heals all allies within the blast radius for <Emp>[{0}]</> health."
+						"description": "Sanctum field expansion blast revives downed allies and heals all allies within the blast radius for <Emp>[{0}]</> health.",
+						"values": {
+							"0": [20, 20, 30, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "medic",
@@ -1595,9 +2682,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Obi",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Obi",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Medic/Skills/SPEC_Medic_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_Resuscitator.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ResuscitatorBurstHealing",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "resuscitator",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/MedicSkillIcons/Gadget/Med_Skill_Resuscitator.uasset",
+							"publicPath": "/skill-icons/medic/medic-resuscitator.webp",
+							"outputPath": "webapp/static/skill-icons/medic/medic-resuscitator.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6b342a53d9664e8186fd76ac71e605885d8dd514427670d8a798a3f80922ab65"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/medic/medic-resuscitator.webp"
 				}
 			]
 		]

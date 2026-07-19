@@ -4,7 +4,7 @@
 	"character": "Luna",
 	"dataStatus": "candidate-extracted",
 	"source": {
-		"collectionGeneratedAt": "2026-06-29T15:30:04.779Z",
+		"collectionGeneratedAt": "2026-06-29T19:05:59.378Z",
 		"collectionSource": "webapp/data/skill/source/skill-candidates.json",
 		"collectionReport": "webapp/data/skill/source/skill-candidates.md",
 		"collectionSummary": {
@@ -12,10 +12,10 @@
 			"skillPreviewCount": 149,
 			"previewCandidateSkillCount": 148,
 			"candidateSkillCount": 211,
-			"candidateSkillsWithDescriptions": 198,
+			"candidateSkillsWithDescriptions": 210,
 			"candidateSkillsWithTier": 210,
 			"candidateSkillsWithUnlockLevel": 210,
-			"locresSkillRecords": 198,
+			"locresSkillRecords": 210,
 			"rawSkillTreeAssets": 18,
 			"rawSkillTreeSkillReferences": 210,
 			"duplicateCandidateSkillSlugs": [
@@ -38,27 +38,9 @@
 			"fmodelMatchesRecorded": 0
 		},
 		"levelRequirements": {
-			"passives": [
-				2,
-				8,
-				14,
-				20,
-				26
-			],
-			"throwable": [
-				4,
-				10,
-				16,
-				22,
-				28
-			],
-			"gadget": [
-				6,
-				12,
-				18,
-				24,
-				30
-			]
+			"passives": [2, 8, 14, 20, 26],
+			"throwable": [4, 10, 16, 22, 28],
+			"gadget": [6, 12, 18, 24, 30]
 		},
 		"notes": [
 			"Generated from local KF3/Nightfall files by tools/kf3-data/promote-skill-candidates-to-webapp.mjs.",
@@ -80,7 +62,11 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "passives",
-						"description": "While crouching, weapon spread and recoil per shot is reduced by <Emp>[{0}%]</>,  spread decay and recoil recovery rate is increased by <Emp>[{1}%]</>, and weapon damage is increased by <sEmp>10%</>."
+						"description": "While crouching, weapon spread and recoil per shot is reduced by <Emp>[{0}%]</>,  spread decay and recoil recovery rate is increased by <Emp>[{1}%]</>, and weapon damage is increased by <sEmp>10%</>.",
+						"values": {
+							"0": [-10, -10, -15, -20],
+							"1": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -111,9 +97,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive1_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive1_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Sniper.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "SniperSpreadReduction, SniperDecayRateIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange, ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "sniper",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Sniper.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-sniper.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-sniper.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a5b042c5f6fc782bf27ae282c2fb2d3ccfa4eee089ec9da54557d2b901d47ad8"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-sniper.webp"
 				},
 				{
 					"slug": "sharpshooter-hunter",
@@ -126,7 +142,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "passives",
-						"description": "Weapon spread penalty while walking is reduced by <Emp>[{0}%]</>.<cf><cf>Walk at full speed while aiming down sights."
+						"description": "Weapon spread penalty while walking is reduced by <Emp>[{0}%]</>.<cf><cf>Walk at full speed while aiming down sights.",
+						"values": {
+							"0": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -157,9 +176,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive2_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive2_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Hunter.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HunterMovementSpeedPenaltyMultiplier",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "hunter",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Hunter.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-hunter.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-hunter.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8e5fbdff56c0ac3e51cec22c0c421e0c4f7e02f7fd06ee5687161ce241dc6062"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-hunter.webp"
 				}
 			],
 			[
@@ -174,7 +223,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "passives",
-						"description": "If you haven't taken damage in the last <sEmp>10</> seconds, deal <Emp>[{0}%]</> increased weapon damage to enemy weak spots."
+						"description": "If you haven't taken damage in the last <sEmp>10</> seconds, deal <Emp>[{0}%]</> increased weapon damage to enemy weak spots.",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -198,9 +250,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive3_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive3_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Untouchable.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "UntouchableCritDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "untouchable",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Untouchable.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-untouchable.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-untouchable.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c8dfd7209be2d221547e200d6935c06eece478b320fdeb1acb93077d7f1ef4ae"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-untouchable.webp"
 				},
 				{
 					"slug": "sharpshooter-easy-prey",
@@ -213,7 +295,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemies that have at least one affliction applied. "
+						"description": "Deal <Emp>[{0}%]</> increased weapon damage to enemies that have at least one affliction applied. ",
+						"values": {
+							"0": [10, 10, 15, 20]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -244,9 +329,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive4_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive4_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_EasyPrey.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "EasyPreyDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "easyprey",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_EasyPrey.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-easy-prey.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-easy-prey.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a966dbada6f6ae97e25341e11d4a2317135cd56691bd60129993872458d4de48"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-easy-prey.webp"
 				},
 				{
 					"slug": "sharpshooter-big-shot",
@@ -259,7 +374,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "passives",
-						"description": "Weapon damage to enemy weak spots while aiming down sights is increased by <Emp>[{0}%]</>."
+						"description": "Weapon damage to enemy weak spots while aiming down sights is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -290,9 +408,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive5_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive5_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_BigShot.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BigshotCritDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "bigshot",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_BigShot.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-big-shot.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-big-shot.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a613f2a042ebfd7f3a9a9cbcaac3ea7aca8c5ae35051691ef26da0fccf843f87"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-big-shot.webp"
 				}
 			],
 			[
@@ -307,7 +455,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "passives",
-						"description": "Fully prevent the next instance of melee damage.<cf><cf>This ability has a <Emp>[{0}]</> second cooldown between triggers."
+						"description": "Fully prevent the next instance of melee damage.<cf><cf>This ability has a <Emp>[{0}]</> second cooldown between triggers.",
+						"values": {
+							"0": [40, 40, 35, 30]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -338,9 +489,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive6_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive6_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Hardshell.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "HardshellCooldownTime",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "hardshell",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_Hardshell.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-hardshell.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-hardshell.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "7b5bdafd355a555ad96d660b5b63e3d52edb6c82f70fe753da41fbfb6e9f05e7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-hardshell.webp"
 				},
 				{
 					"slug": "sharpshooter-evasive-maneuvers",
@@ -353,7 +534,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "passives",
-						"description": "Take <Emp>[{0}%]</> reduced damage while sprinting and sliding."
+						"description": "Take <Emp>[{0}%]</> reduced damage while sprinting and sliding.",
+						"values": {
+							"0": [-10, -10, -15, -20]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -384,9 +568,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive7_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive7_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_EvasiveManeuvers.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "EvasiveManeuversDamageReduction",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "evasivemaneuvers",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_EvasiveManeuvers.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-evasive-maneuvers.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-evasive-maneuvers.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "2d822943b36df2f70437d36ae8cf88d57ac990a5ddd57e4941c7e11bd80d594e"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-evasive-maneuvers.webp"
 				}
 			],
 			[
@@ -401,7 +615,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "passives",
-						"description": "Carry an additional <sEmp>2</> Syringes. <cf><cf>Increase the initial burst healing from using a Syringe by <Emp>[{0}%]</>."
+						"description": "Carry an additional <sEmp>2</> Syringes. <cf><cf>Increase the initial burst healing from using a Syringe by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [350, 350, 400, 450]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -425,9 +642,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive8_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive8_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_FieldSupplies.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FieldSuppliesBonusBurstHeal",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fieldsupplies",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_FieldSupplies.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-field-supplies.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-field-supplies.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "e6df0ca87f11acf1f43f821246b378f67e557c60694896c1c7bb978be00bf95e"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-field-supplies.webp"
 				},
 				{
 					"slug": "sharpshooter-flight-response",
@@ -440,7 +687,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "passives",
-						"description": "Taking damage increases movement speed by <Emp>[{0}%]</> for <sEmp>4</> seconds."
+						"description": "Taking damage increases movement speed by <Emp>[{0}%]</> for <sEmp>4</> seconds.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -471,9 +721,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive9_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive9_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_FlightResponse.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FlightResponseMovementSpeedIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "flightresponse",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_FlightResponse.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-flight-response.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-flight-response.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "469eac4969369dc1488db5dae494e7f32108a8871a0bf14bcb3157e724e757b7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-flight-response.webp"
 				}
 			],
 			[
@@ -488,7 +768,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "passives",
-						"description": "Shooting an enemy's weak spot grants a stack of <Emp>PERFECTION</> up to <sEmp>10</> stacks maximum. Failing to hit an enemy will remove all stacks of <Emp>PERFECTION</>.<cf><cf><Emp>PERFECTION:</> Deal <Emp>[{0}%]</> increased weapon damage to enemy weak spots for each stack."
+						"description": "Shooting an enemy's weak spot grants a stack of <Emp>PERFECTION</> up to <sEmp>10</> stacks maximum. Failing to hit an enemy will remove all stacks of <Emp>PERFECTION</>.<cf><cf><Emp>PERFECTION:</> Deal <Emp>[{0}%]</> increased weapon damage to enemy weak spots for each stack.",
+						"values": {
+							"0": [4, 4, 5, 6]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -519,9 +802,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive10_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive10_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_PerfectShot.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PerfectShotCritDamageIncreasePerStack",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "perfectshot",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_PerfectShot.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-perfect-shot.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-perfect-shot.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "46e3e0df7a806ab7790a58b2d25286b0ce47f1828db7f114621bc75a38f41acd"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-perfect-shot.webp"
 				},
 				{
 					"slug": "sharpshooter-big-game-hunter",
@@ -534,7 +847,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "passives",
-						"description": "Deal <Emp>[{0}%]</> increased Ballistic <img id=\"Ballistic\"/> and Cold <img id=\"Cold\"/> weapon damage to large enemies and bosses. Participating in a large enemy takedown gives stacks of <Emp>BIG GAME HUNTER</>, up to <sEmp>10</> stacks maximum.<cf><cf><Emp>BIG GAME HUNTER:</> Deal <sEmp>1.5%</> increased damage to large enemies and bosses for each stack."
+						"description": "Deal <Emp>[{0}%]</> increased Ballistic <img id=\"Ballistic\"/> and Cold <img id=\"Cold\"/> weapon damage to large enemies and bosses. Participating in a large enemy takedown gives stacks of <Emp>BIG GAME HUNTER</>, up to <sEmp>10</> stacks maximum.<cf><cf><Emp>BIG GAME HUNTER:</> Deal <sEmp>1.5%</> increased damage to large enemies and bosses for each stack.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -565,9 +881,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive11_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive11_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_BigGameHunter.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BigGameHunterDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "biggamehunter",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_BigGameHunter.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-big-game-hunter.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-big-game-hunter.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "63bbed3f47d6f70d7e7fb4211228c04671654ba09a7482e6cea4b0fe8f40b222"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-big-game-hunter.webp"
 				},
 				{
 					"slug": "sharpshooter-rack-em-up",
@@ -580,7 +926,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "passives",
-						"description": "Destroying enemy critical hitzones with weapons grants stack of  <Emp>RACK 'EM UP</> up to <sEmp>5</> stacks maximum. Stacks last for <sEmp>10</> seconds and fall off one at a time.<cf><cf><Emp>RACK 'EM UP:</> Deal <Emp>[{0}%]</> increased weapon damage per stack."
+						"description": "Destroying enemy critical hitzones with weapons grants stack of  <Emp>RACK 'EM UP</> up to <sEmp>5</> stacks maximum. Stacks last for <sEmp>10</> seconds and fall off one at a time.<cf><cf><Emp>RACK 'EM UP:</> Deal <Emp>[{0}%]</> increased weapon damage per stack.",
+						"values": {
+							"0": [4, 4, 5, 6]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -600,9 +949,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Rack 'Em Up"
-						],
+						"alternateNames": ["Rack 'Em Up"],
 						"internalName": "RackEmUp",
 						"category": "passives",
 						"skillNumber": 12,
@@ -614,9 +961,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Passive12_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Passive12_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_PassiveSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_RackEmUp.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "RackemUpDamageIncreasePerStack",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "rackemup",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Passive/Shrp_Skill_RackEmUp.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-rack-em-up.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-rack-em-up.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8398fd21481e438d34cc586e0a2942261a2f95080899b891aeec222e7a2c86ce"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-rack-em-up.webp"
 				}
 			]
 		],
@@ -633,7 +1010,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "throwable",
-						"description": "Cryo-Grenade explosion radius is increased by <Emp>[{0}%]</>."
+						"description": "Cryo-Grenade explosion radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [25, 25, 30, 35]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -664,9 +1044,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable1_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable1_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_ColdSnap.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ColdSnapRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "coldsnap",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_ColdSnap.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-cold-snap.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-cold-snap.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a0e250052c8aad89fc6aebdb634184f3bd3ff77fbbd54f13a0649519beba9cf6"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-cold-snap.webp"
 				},
 				{
 					"slug": "sharpshooter-chilling-effect",
@@ -679,7 +1089,10 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "throwable",
-						"description": "Enemies <sEmp>Frozen</> by Cryo-Grenade are <sEmp>Frozen</> for <Emp>[{0}%]</> longer."
+						"description": "Enemies <sEmp>Frozen</> by Cryo-Grenade are <sEmp>Frozen</> for <Emp>[{0}%]</> longer.",
+						"values": {
+							"0": [20, 20, 25, 30]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -710,9 +1123,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable2_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable2_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_ChillingEffect.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ChillingEffectDurationIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "chillingeffect",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_ChillingEffect.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-chilling-effect.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-chilling-effect.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "383c3c6796cdd0ccb02d961c25cb3ff6a01edfce60687791a7ae07390f78b79a"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-chilling-effect.webp"
 				},
 				{
 					"slug": "sharpshooter-freezer-burn",
@@ -725,7 +1168,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "throwable",
-						"description": "Cryo-Grenade explosion damage is increased by <Emp>[{0}%]</>."
+						"description": "Cryo-Grenade explosion damage is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [150, 150, 200, 250]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -756,15 +1202,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable3_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable3_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_FreezerBurn.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FreezerBurnDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "freezerburn",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_FreezerBurn.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-freezer-burn.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-freezer-burn.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "9d29931c643f56a5719110bd2f042f17dd846bb54cdb0bb1583275659830cfaa"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-freezer-burn.webp"
 				}
 			],
 			[
 				{
 					"slug": "sharpshooter-capacity-tier2",
-					"name": "Capacity Tier2",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 2,
 					"unlockLevel": 10,
@@ -772,28 +1248,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
 						"candidateSkillSlug": "sharpshooter-capacity-tier2",
-						"candidateSkillName": "Capacity Tier2",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier2"],
 						"internalName": "Capacity_Tier2",
 						"category": "throwable",
 						"tierNumber": 2,
 						"treeOrder": 0,
 						"unlockLevel": 10,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Luna",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_CapacityUp.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_CapacityUp.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-capacity-tier2.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-capacity-tier2.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6341cd99cb3fd0a3892d2717f93fecb01dedf171bdf42efb7703eada2f5f875d"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-capacity-tier2.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -808,7 +1317,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "throwable",
-						"description": " Cryo-Grenade explosion creates <sEmp>3</>  <Emp>Blizzard</> ground effects that apply <sEmp>Freeze</> affliction over time to enemies within their radius.<cf><cf><Emp>Blizzard</> ground effects last for <Emp>[{0}]</> seconds."
+						"description": " Cryo-Grenade explosion creates <sEmp>3</>  <Emp>Blizzard</> ground effects that apply <sEmp>Freeze</> affliction over time to enemies within their radius.<cf><cf><Emp>Blizzard</> ground effects last for <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [5, 5, 6, 7]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -839,9 +1351,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable4_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable4_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_Blizzard.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BlizzardDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "blizzard",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_Blizzard.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-blizzard.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-blizzard.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "c12255c41b6ce31c4d3b91b27037ce060972e2ef38858293b8eb992c38d2113f"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-blizzard.webp"
 				},
 				{
 					"slug": "sharpshooter-black-ice",
@@ -854,7 +1396,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "throwable",
-						"description": "Cryo-Grenade explosion creates <sEmp>3</>  <Emp>Black Ice</> ground effects that apply Cold <img id=\"Cold\"/> damage and <sEmp>Enfeeble</> affliction over time to enemies within their radius. <cf><cf><Emp>Black Ice</> ground effects last for <Emp>[{0}]</> seconds."
+						"description": "Cryo-Grenade explosion creates <sEmp>3</>  <Emp>Black Ice</> ground effects that apply Cold <img id=\"Cold\"/> damage and <sEmp>Enfeeble</> affliction over time to enemies within their radius. <cf><cf><Emp>Black Ice</> ground effects last for <Emp>[{0}]</> seconds.",
+						"values": {
+							"0": [5, 5, 6, 7]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -885,15 +1430,45 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable5_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable5_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_BlackIce.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BlackIceDuration",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "blackice",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_BlackIce.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-black-ice.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-black-ice.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "4a22067900ca8a32c5d60c811d80faf15d4c8ac9679bc0708f9777c83c695ef3"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-black-ice.webp"
 				}
 			],
 			[
 				{
 					"slug": "sharpshooter-capacity-tier4",
-					"name": "Capacity Tier4",
+					"name": "Capacity Increase",
 					"category": "throwable",
 					"tierNumber": 4,
 					"unlockLevel": 22,
@@ -901,28 +1476,61 @@
 					"treeOrder": 0,
 					"effect": {
 						"type": "throwable",
-						"description": ""
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>."
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
 						"candidateSkillSlug": "sharpshooter-capacity-tier4",
-						"candidateSkillName": "Capacity Tier4",
-						"collectionStatus": "raw-skill-tree-tier",
+						"candidateSkillName": "Capacity Increase",
+						"collectionStatus": "locres-description+raw-skill-tree-tier",
 						"previewFiles": [],
 						"fmodelMatches": [],
 						"notes": [
-							"Category and one-based tier position recovered from raw skill tree asset."
+							"Category and one-based tier position recovered from raw skill tree asset.",
+							"Name and detailed effect text recovered from English Game.locres."
 						],
+						"alternateNames": ["Capacity Tier4"],
 						"internalName": "Capacity_Tier4",
 						"category": "throwable",
 						"tierNumber": 4,
 						"treeOrder": 0,
 						"unlockLevel": 22,
+						"description": "Throwable carrying capacity is increased by <sEmp>1</>.",
 						"gameSources": {
+							"locresNameKey": "NF_Foster_SkillNames::ThrowableCapacity_SkillName_Luna",
+							"locresDescriptionKey": "Foster_Skill_ST::ThrowableCapacity_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_CapacityUp02.uasset",
+							"iconCollectionMethod": "capacity-tier-icon-name"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "capacity-tier-icon-name",
+							"matchedIconKey": "capacityup02",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_CapacityUp02.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-capacity-tier4.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-capacity-tier4.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "161e349725162a94d59cc4285d5a85dd49b239fa4a8aba7057d9e02f4d7e4fad"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-capacity-tier4.webp",
+					"rankCap": 0
 				}
 			],
 			[
@@ -937,7 +1545,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "throwable",
-						"description": "Enemies hit by Cryo-Grenade explosion have their vulnerability to Ballistic <img id=\"Ballistic\"/>, Force <img id=\"Force\"/>, and Cold <img id=\"Cold\"/> damage increased by <Emp>[{0}%]</> for <sEmp>5</> seconds."
+						"description": "Enemies hit by Cryo-Grenade explosion have their vulnerability to Ballistic <img id=\"Ballistic\"/>, Force <img id=\"Force\"/>, and Cold <img id=\"Cold\"/> damage increased by <Emp>[{0}%]</> for <sEmp>5</> seconds.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -968,9 +1579,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable6_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable6_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_Frostbite.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FrostbiteDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::Percent"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "frostbite",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_Frostbite.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-frostbite.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-frostbite.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "094cf9c1e168443fc77b3335123005280cfbbbc76231a97b601199d8a8517c02"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-frostbite.webp"
 				},
 				{
 					"slug": "sharpshooter-polar-vortex",
@@ -983,7 +1624,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "throwable",
-						"description": "The radius of your <Emp>Blizzard</> or <Emp>Black Ice</> ground effects is increased by <Emp>[{0}%]</>."
+						"description": "The radius of your <Emp>Blizzard</> or <Emp>Black Ice</> ground effects is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [40, 40, 50, 60]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1007,9 +1651,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable7_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable7_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_PolarVortex.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "PolarVortexExplosionScaleIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "polarvortex",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_PolarVortex.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-polar-vortex.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-polar-vortex.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "01e1dcd85c520c91ba3c041605d1ee5bcac65204589d1070d491dedecf1feaee"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-polar-vortex.webp"
 				},
 				{
 					"slug": "sharpshooter-ice-breaker",
@@ -1022,7 +1696,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "throwable",
-						"description": "Cryo-Grenade explodes a second time after the first explosion.<cf><cf>The second explosion applies <sEmp>Stumble</> affliction and <Emp>[{0}]</> Force <img id=\"Force\"/> damage to all enemies hit."
+						"description": "Cryo-Grenade explodes a second time after the first explosion.<cf><cf>The second explosion applies <sEmp>Stumble</> affliction and <Emp>[{0}]</> Force <img id=\"Force\"/> damage to all enemies hit.",
+						"values": {
+							"0": [300, 300, 350, 400]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1053,9 +1730,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Throwable8_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Throwable8_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GrenadeSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_Icebreaker.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "IceBreakerDamage",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "icebreaker",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Throwable/Shrp_Skill_Icebreaker.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-ice-breaker.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-ice-breaker.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "aa307185e9fb2e3237d6400f509d1b30f5a4b6b818bfe54113fe24fcae8db1c7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-ice-breaker.webp"
 				}
 			]
 		],
@@ -1072,7 +1779,10 @@
 					"skillNumber": 1,
 					"effect": {
 						"type": "gadget",
-						"description": "Death's Hand deals <Emp>[{0}%]</> increased damage to enemies it has not hit before."
+						"description": "Death's Hand deals <Emp>[{0}%]</> increased damage to enemies it has not hit before.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1096,9 +1806,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget1_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget1_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_BusyBee.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BusyBeeDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "busybee",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_BusyBee.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-busy-bee.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-busy-bee.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6a95a07a5a9d526494e60ea2beb84a0b447237e022da03b5c23d79cd6e2d9395"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-busy-bee.webp"
 				},
 				{
 					"slug": "sharpshooter-buzz-bomb",
@@ -1111,7 +1851,11 @@
 					"skillNumber": 2,
 					"effect": {
 						"type": "gadget",
-						"description": "Arrow's final explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction and deals <Emp>[{1}%]</> increased damage."
+						"description": "Arrow's final explosion applies <Emp>[{0}]</> <sEmp>Knockdown</> affliction and deals <Emp>[{1}%]</> increased damage.",
+						"values": {
+							"0": [125, 125, 150, 175],
+							"1": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1142,9 +1886,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget2_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget2_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_BuzzBomb.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BuzzBombKnockdown, BuzzBombDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::None, ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "buzzbomb",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_BuzzBomb.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-buzz-bomb.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-buzz-bomb.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "29ee7a03c4ba55ffe175ebb28dca8fc8f224286f3640a90f1c890a614eb0f100"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-buzz-bomb.webp"
 				},
 				{
 					"slug": "sharpshooter-bloodsucker",
@@ -1157,7 +1931,10 @@
 					"skillNumber": 3,
 					"effect": {
 						"type": "gadget",
-						"description": "Heal for <sEmp>3</> health whenever the arrow pierces an enemy up to <Emp>[{0}]</> times per use."
+						"description": "Heal for <sEmp>3</> health whenever the arrow pierces an enemy up to <Emp>[{0}]</> times per use.",
+						"values": {
+							"0": [8, 8, 10, 12]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1188,9 +1965,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget3_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget3_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_Bloodsucker.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BloodsuckerMaxHits",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "bloodsucker",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_Bloodsucker.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-bloodsucker.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-bloodsucker.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "6b969fe27734500e1e3ebdd1a5083f0f4bcdfb892692c77524a594052f193783"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-bloodsucker.webp"
 				}
 			],
 			[
@@ -1205,7 +2012,10 @@
 					"skillNumber": 4,
 					"effect": {
 						"type": "gadget",
-						"description": "While arrow is in-flight, gain <Emp>[{0}%]</> increased weapon damage."
+						"description": "While arrow is in-flight, gain <Emp>[{0}%]</> increased weapon damage.",
+						"values": {
+							"0": [10, 10, 13, 16]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1229,9 +2039,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget4_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget4_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_StingOperation.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "StingOperationDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "stingoperation",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_StingOperation.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-sting-operation.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-sting-operation.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "bab0ca2444d21a6717cd0202ac4821c3a3597e276ecdfce6a31a45b430ddfa8e"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-sting-operation.webp"
 				},
 				{
 					"slug": "sharpshooter-fightor-flight",
@@ -1244,7 +2084,10 @@
 					"skillNumber": 5,
 					"effect": {
 						"type": "gadget",
-						"description": "While arrow is in-flight, gain <Emp>[{0}%]</> increased movement speed."
+						"description": "While arrow is in-flight, gain <Emp>[{0}%]</> increased movement speed.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1264,12 +2107,8 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Fight or Flight"
-						],
-						"alternateSkillSlugs": [
-							"sharpshooter-fight-or-flight"
-						],
+						"alternateNames": ["Fight or Flight"],
+						"alternateSkillSlugs": ["sharpshooter-fight-or-flight"],
 						"internalName": "FightorFlight",
 						"category": "gadget",
 						"skillNumber": 5,
@@ -1281,9 +2120,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget5_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget5_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_FightorFlight.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FightorFlightMovementSpeedIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "fightorflight",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_FightorFlight.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-fightor-flight.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-fightor-flight.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "7e283bf18e825963ee5fa76ea45b8b1574f322d1f126bd5e1cfe36c70fc60c92"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-fightor-flight.webp"
 				}
 			],
 			[
@@ -1298,7 +2167,10 @@
 					"skillNumber": 6,
 					"effect": {
 						"type": "gadget",
-						"description": "The arrow deals <Emp>[{0}%]</> increased damage to large enemies."
+						"description": "The arrow deals <Emp>[{0}%]</> increased damage to large enemies.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1329,9 +2201,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget6_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget6_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_GiantSlayer.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "GiantSlayerDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "giantslayer",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_GiantSlayer.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-giant-slayer.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-giant-slayer.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8907ef18b6122df64ba7dfd8bee4fec7f9db7fe5046a23bf82c5beff7414bf65"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-giant-slayer.webp"
 				},
 				{
 					"slug": "sharpshooter-killer-bee",
@@ -1344,7 +2246,10 @@
 					"skillNumber": 7,
 					"effect": {
 						"type": "gadget",
-						"description": "Arrow projectile speed is increased by <sEmp>25%</>.<cf><cf>Whenever the arrow kills an enemy, it increases its max number of targets by <sEmp>1</> up to <Emp>[{0}]</> max."
+						"description": "Arrow projectile speed is increased by <sEmp>25%</>.<cf><cf>Whenever the arrow kills an enemy, it increases its max number of targets by <sEmp>1</> up to <Emp>[{0}]</> max.",
+						"values": {
+							"0": [2, 2, 3, 4]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1375,9 +2280,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget7_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget7_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_KillerBee.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "KillerBeeAdditionalTargets",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "killerbee",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_KillerBee.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-killer-bee.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-killer-bee.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "8562ef27c909924df527aba0ef0aae1f9865c4b3387cf9226ac0e1fa6d63cbf8"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-killer-bee.webp"
 				},
 				{
 					"slug": "sharpshooter-cold-blooded",
@@ -1390,7 +2325,10 @@
 					"skillNumber": 8,
 					"effect": {
 						"type": "gadget",
-						"description": "When Death's Hand is fired, <sEmp>Freeze</> all enemies in a cone in front of you.<cf><cf>Cone's radius is increased by <Emp>[{0}%]</>."
+						"description": "When Death's Hand is fired, <sEmp>Freeze</> all enemies in a cone in front of you.<cf><cf>Cone's radius is increased by <Emp>[{0}%]</>.",
+						"values": {
+							"0": [0, 0, 20, 40]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1410,9 +2348,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Cold-Blooded"
-						],
+						"alternateNames": ["Cold-Blooded"],
 						"internalName": "ColdBlooded",
 						"category": "gadget",
 						"skillNumber": 8,
@@ -1424,9 +2360,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget8_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget8_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_ColdBlooded.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ColdBloodedRadiusIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "coldblooded",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_ColdBlooded.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-cold-blooded.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-cold-blooded.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "a51841225e569023efa4cba4e9d826b53d89c5e9f49dadf91d4e84974a456453"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-cold-blooded.webp"
 				}
 			],
 			[
@@ -1441,7 +2407,10 @@
 					"skillNumber": 9,
 					"effect": {
 						"type": "gadget",
-						"description": "Killing far away enemies grants <Emp>[{0}]</> gadget energy.<cf><cf>Gadget kills do not count towards this."
+						"description": "Killing far away enemies grants <Emp>[{0}]</> gadget energy.<cf><cf>Gadget kills do not count towards this.",
+						"values": {
+							"0": [3, 3, 4, 5]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1461,12 +2430,8 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateNames": [
-							"Arm's Length"
-						],
-						"alternateSkillSlugs": [
-							"sharpshooter-arm-s-length"
-						],
+						"alternateNames": ["Arm's Length"],
+						"alternateSkillSlugs": ["sharpshooter-arm-s-length"],
 						"internalName": "ArmsLength",
 						"category": "gadget",
 						"skillNumber": 9,
@@ -1478,9 +2443,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget9_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget9_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_ArmsLength.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "ArmsLengthEnergyGain",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "armslength",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_ArmsLength.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-arms-length.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-arms-length.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "11f173bc77094bc9079258d42875e32b49ef64e2d7350240d5f97dcf911c5e71"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-arms-length.webp"
 				},
 				{
 					"slug": "sharpshooter-target-run",
@@ -1493,7 +2488,10 @@
 					"skillNumber": 10,
 					"effect": {
 						"type": "gadget",
-						"description": "Increase max number of targets for arrow by <Emp>[{0}]</>."
+						"description": "Increase max number of targets for arrow by <Emp>[{0}]</>.",
+						"values": {
+							"0": [4, 4, 5, 6]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1524,9 +2522,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget10_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget10_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_TargetRun.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "TargetRunAdditionalTargets",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "targetrun",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_TargetRun.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-target-run.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-target-run.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "36e6955d8340c5fd4f0c0b8ea76afb8073443c1f38409899cec211a8359455d6"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-target-run.webp"
 				}
 			],
 			[
@@ -1541,7 +2569,10 @@
 					"skillNumber": 11,
 					"effect": {
 						"type": "gadget",
-						"description": "Arrow <sEmp>Freezes</> enemies on contact.<cf><cf>Arrow deals <Emp>[{0}%]</> increased damage to <sEmp>Frozen</> enemies."
+						"description": "Arrow <sEmp>Freezes</> enemies on contact.<cf><cf>Arrow deals <Emp>[{0}%]</> increased damage to <sEmp>Frozen</> enemies.",
+						"values": {
+							"0": [15, 15, 20, 25]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1561,9 +2592,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"sharpshooter-queen-bee"
-						],
+						"alternateSkillSlugs": ["sharpshooter-queen-bee"],
 						"internalName": "QueenBee",
 						"category": "gadget",
 						"skillNumber": 11,
@@ -1575,9 +2604,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget11_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget11_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_FrostedTips.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "FrostedTipsDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "frostedtips",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_FrostedTips.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-frosted-tips.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-frosted-tips.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "489a8befa7e93ef8a49b19b9f0d873d05c9f7acdf1973e0b6548e4aee7a813d7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-frosted-tips.webp"
 				},
 				{
 					"slug": "sharpshooter-bug-out",
@@ -1590,7 +2649,10 @@
 					"skillNumber": 12,
 					"effect": {
 						"type": "gadget",
-						"description": "Radius of arrow's final explosion is greatly increased, and explosion damage is increased by <Emp>[{0}%]</>. "
+						"description": "Radius of arrow's final explosion is greatly increased, and explosion damage is increased by <Emp>[{0}%]</>. ",
+						"values": {
+							"0": [50, 50, 75, 100]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1621,9 +2683,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget12_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget12_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_BugOut.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "BugOutDamageIncrease",
+							"rankScalingRules": "ENF_StatConversionRule::PercentChange"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "bugout",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_BugOut.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-bug-out.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-bug-out.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "5c4d6401545869361fc68c918ddb8a628f8f868085d85f10b51e05e169a388aa"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-bug-out.webp"
 				},
 				{
 					"slug": "sharpshooter-queen-bee",
@@ -1636,7 +2728,10 @@
 					"skillNumber": 13,
 					"effect": {
 						"type": "gadget",
-						"description": " <Emp>[{0}]</> micro missiles are fired out in addition to the arrow that target random enemies in front of you and deal 250 Ballistic <img id=\"Ballistic\"/> damage on impact. "
+						"description": " <Emp>[{0}]</> micro missiles are fired out in addition to the arrow that target random enemies in front of you and deal 250 Ballistic <img id=\"Ballistic\"/> damage on impact. ",
+						"values": {
+							"0": [4, 4, 5, 6]
+						}
 					},
 					"source": {
 						"perkSlug": "sharpshooter",
@@ -1656,9 +2751,7 @@
 							"Category and one-based tier position recovered from raw skill tree asset.",
 							"Name and detailed effect text recovered from English Game.locres."
 						],
-						"alternateSkillSlugs": [
-							"sharpshooter-frosted-tips"
-						],
+						"alternateSkillSlugs": ["sharpshooter-frosted-tips"],
 						"internalName": "FrostedTips",
 						"category": "gadget",
 						"skillNumber": 13,
@@ -1670,9 +2763,39 @@
 							"locresNameKey": "NF_Foster_SkillNames::Gadget13_SkillName_Luna",
 							"locresDescriptionKey": "Foster_Skill_ST::Gadget13_SkillDescription_Luna",
 							"levelRequirementSource": "webapp/data/skill/level_requirement.json",
-							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset"
+							"rawSkillTreeAsset": "Nightfall/Content/Characters/Specialists/Sharpshooter/Skills/SPEC_Sharpshooter_GadgetSkillTree.uasset",
+							"iconAsset": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_QueenBee.uasset",
+							"iconCollectionMethod": "exact-skill-slug-tail",
+							"rankScalingSource": "Local game files: paired SPEC_*_Skills_CT.uasset curve table and SPEC_*_Skills_DT.uasset conversion rules.",
+							"rankScalingCurves": "QueenBeeMissiles",
+							"rankScalingRules": "ENF_StatConversionRule::None"
+						},
+						"iconSource": {
+							"collectionStatus": "generated-high-confidence",
+							"confidence": "high",
+							"matchedBy": "exact-skill-slug-tail",
+							"matchedIconKey": "queenbee",
+							"gameAssetPath": "Nightfall/Content/UI/NightfallUI/Textures/SpecialistSkillIcons/SharpshooterSkillIcons/Gadget/Shrp_Skill_QueenBee.uasset",
+							"publicPath": "/skill-icons/sharpshooter/sharpshooter-queen-bee.webp",
+							"outputPath": "webapp/static/skill-icons/sharpshooter/sharpshooter-queen-bee.webp",
+							"sourceTexture": {
+								"pixelFormat": "PF_DXT5",
+								"width": 256,
+								"height": 256
+							},
+							"rendering": {
+								"method": "rgb-mask-ingame-silhouette",
+								"note": "KF3 skill icon textures store the crisp in-game glyph in the RGB mask channels; generated WebP files threshold that mask into a high-contrast off-white silhouette with a hard one-pixel cool outline, then upscale from the native 256px texture to 512px with high-quality resampling so browser-sized icons keep the near-match color without looking blocky."
+							},
+							"output": {
+								"format": "webp",
+								"width": 512,
+								"height": 512,
+								"sha256": "eed82d6d78a3481611ac18c5f16dbfa3ddafcb8f13ca79a53b4520ab3a6ecbc7"
+							}
 						}
-					}
+					},
+					"icon": "/skill-icons/sharpshooter/sharpshooter-queen-bee.webp"
 				}
 			]
 		]
