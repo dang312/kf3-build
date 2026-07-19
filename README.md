@@ -42,6 +42,7 @@ Do not add these without an explicit scope decision:
 - [`AGENTS.md`](./AGENTS.md) — implementation guidance and handoff instructions for agents.
 - [`CONTEXT.md`](./CONTEXT.md) — canonical domain glossary.
 - [`docs/implementation-plan.md`](./docs/implementation-plan.md) — current implementation plan.
+- [`docs/stitch-starter-project.md`](./docs/stitch-starter-project.md) — starter workflow and prompt for Google Stitch UI concepts.
 - [`docs/data-collection-plan.md`](./docs/data-collection-plan.md) — plan for collecting skill data from web and game-file sources.
 - [`tools/kf3-data/`](./tools/kf3-data/) — local data investigation and skill-candidate collection tools. Simple rerun: `node tools/kf3-data/run-skill-collection.mjs`.
 - [`docs/adr/`](./docs/adr/) — accepted architecture/domain decisions.

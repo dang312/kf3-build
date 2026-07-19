@@ -256,6 +256,7 @@ Keep Svelte route files thin. They should compose data, state, and components, n
 
 ### Visual approval workflow
 
+- When creating a new Google Stitch concept, follow [`docs/stitch-starter-project.md`](./docs/stitch-starter-project.md) and treat its output as a reference subject to this approval workflow.
 - Every generated UI mock or visual reference requires browser-based approval before implementation, even when there is only one candidate.
 - A single-candidate picker must show Direction A (the candidate), Direction B (the current default implementation or approved reference), and Direction C (not approved). A multi-candidate picker uses Directions A/B for the candidates and Direction C for rejection. Feedback is available on every option and required for Direction C.
 - Serve the picker with `/home/dang312/.pi/agent/extensions/ui-review-callback/ui-review-picker.py` and launch its local URL in the browser. Do not only paste an image or URL into the chat.
