@@ -256,7 +256,10 @@ Keep Svelte route files thin. They should compose data, state, and components, n
 
 ### Visual approval workflow
 
-- When creating a new Google Stitch concept, follow [`docs/stitch-starter-project.md`](./docs/stitch-starter-project.md) and treat its output as a reference subject to this approval workflow.
+- The current visual source of truth is [`DESIGN.md`](./DESIGN.md), based on the Medic HUD source at [`docs/design-source/stitch/kf3_hud_medic_detail/screen.png`](./docs/design-source/stitch/kf3_hud_medic_detail/screen.png). The icon reference is [`docs/design-source/stitch/icon/screen.png`](./docs/design-source/stitch/icon/screen.png). Preserve the Horzine Tactical HUD direction: sharp 0px geometry, Fira Mono/Inter typography, dense three-tree layout, cyan active energy, orange focus, green maxed states, and a reachable Build Summary telemetry rail.
+- Design-first rule: for substantial UI work, complete the Stitch design pass and browser approval before editing frontend code. Combine the previously approved KF3 direction with the Medic HUD and icon references; do not skip directly to implementation.
+- When creating a new Google Stitch concept, follow [`docs/stitch-starter-project.md`](./docs/stitch-starter-project.md) and treat its output as a reference subject to this approval workflow. If Stitch is unavailable, use image-gen2; if both are unavailable, use the checked-in Stitch Medic HUD reference and continue.
+- The exported Stitch HTML is reference material only. Do not copy its remote scripts, external font dependencies, injected browser scripts, remote imagery, or fictional example skill data into production.
 - Every generated UI mock or visual reference requires browser-based approval before implementation, even when there is only one candidate.
 - A single-candidate picker must show Direction A (the candidate), Direction B (the current default implementation or approved reference), and Direction C (not approved). A multi-candidate picker uses Directions A/B for the candidates and Direction C for rejection. Feedback is available on every option and required for Direction C.
 - Serve the picker with `/home/dang312/.pi/agent/extensions/ui-review-callback/ui-review-picker.py` and launch its local URL in the browser. Do not only paste an image or URL into the chat.

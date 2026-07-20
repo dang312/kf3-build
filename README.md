@@ -13,7 +13,7 @@ The first target is an in-game skill-tree simulator:
 - Summarize the build after skills are selected.
 - Show Operational Budget / Starting Money when data exists, labeling provisional values until verified.
 
-Future agents should read [`AGENTS.md`](./AGENTS.md) and [`CONTEXT.md`](./CONTEXT.md) before working in this repo.
+Future agents should read [`AGENTS.md`](./AGENTS.md), [`DESIGN.md`](./DESIGN.md), and [`CONTEXT.md`](./CONTEXT.md) before working in this repo.
 
 ## Product essentials
 
@@ -40,6 +40,7 @@ Do not add these without an explicit scope decision:
 ## Project docs
 
 - [`AGENTS.md`](./AGENTS.md) — implementation guidance and handoff instructions for agents.
+- [`DESIGN.md`](./DESIGN.md) — approved Horzine Tactical HUD visual contract and source references.
 - [`CONTEXT.md`](./CONTEXT.md) — canonical domain glossary.
 - [`docs/implementation-plan.md`](./docs/implementation-plan.md) — current implementation plan.
 - [`docs/stitch-starter-project.md`](./docs/stitch-starter-project.md) — starter workflow and prompt for Google Stitch UI concepts.

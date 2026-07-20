@@ -47,7 +47,15 @@ Goal: users can choose a perk, set level, select legal skills, and read a build 
 4. Replace starter route content with the simulator composition.
 5. Validate manually and run `pnpm check` before handoff.
 
-## Milestone 1.5 — Icon-first in-game skill tree UI
+## Milestone 1.5 — Stitch-first visual system and icon-first UI
+
+Goal: approve the visual direction in Stitch before implementing or redesigning the Svelte frontend, then use the approved design to deliver an in-game-like compact `SkillTreeView`.
+
+Design gate (completed for the current redesign):
+- Stitch project: `projects/4988160711639323392`.
+- Combined source direction: the previously approved five-tier KF3 layout in `.pi/ui-renders/kf3-ui-direction-a-v2.png`, the Medic HUD source in `docs/design-source/stitch/kf3_hud_medic_detail/screen.png`, and the full icon library in `docs/design-source/stitch/icon/screen.png`.
+- The refined Stitch desktop concept removes fictional navigation, uses the authentic Medic tier gates, retains a 320px Build Summary rail, and uses cyan/orange/green/locked icon states.
+- Frontend work must wait for the browser approval picker. Use Stitch first for future redesigns; use image-gen2 only as a fallback when Stitch is unavailable.
 
 Goal: replace the current full-text skill cards with an in-game-like compact `SkillTreeView` after real skill icons are available.
 
@@ -56,6 +64,7 @@ Status: first implementation is in place. The webapp now has real generated, bro
 1. Generate and promote real skill icons first with `tools/kf3-data/generate-skill-icons.mjs`.
    - Output icons to `webapp/static/skill-icons/{perkSlug}/{skillSlug}.webp`.
    - Update `SkillOption.icon` and icon source metadata in perk JSON.
+   - Apply the approved icon-library palette deterministically with `tools/kf3-data/style-skill-icons.mjs`; preserve glyph identity and alpha masks while leaving selected/maxed/locked state colors to CSS.
    - Allow partial icon coverage during development, but do not start the compact in-game-style UI until real icons are available for the first pass.
 2. Build the compact in-game-like skill tree presentation.
    - Three columns: `passives`, `throwable`, and `gadget`.

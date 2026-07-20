@@ -27,19 +27,25 @@
 <style>
 	.field {
 		display: grid;
-		grid-template-columns: auto minmax(9rem, 1fr);
+		min-width: 0;
+		grid-template-columns: auto minmax(0, 1fr);
 		align-items: center;
 		gap: 0.7rem;
-		min-height: 3.2rem;
-		border: 1px solid var(--line);
-		background: var(--surface-1);
-		padding: 0 0.75rem;
+		min-height: 3rem;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-terminal);
+		padding: 0 0.7rem;
+	}
+
+	.field:focus-within {
+		border-color: var(--hud-cyan);
+		box-shadow: inset 0 0 7px rgb(0 219 231 / 12%);
 	}
 
 	span {
-		color: var(--muted);
+		color: var(--hud-muted);
 		font-family: var(--font-terminal);
-		font-size: 0.64rem;
+		font-size: 0.56rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
@@ -47,19 +53,24 @@
 
 	select {
 		min-width: 0;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 		border: 0;
 		outline: 0;
 		background: transparent;
-		color: var(--ink);
+		color: var(--hud-cyan-bright);
 		font-family: var(--font-terminal);
-		font-size: 0.9rem;
+		font-size: 0.82rem;
 		font-weight: 700;
 		letter-spacing: 0.04em;
+		text-align: right;
 		text-transform: uppercase;
 	}
 
 	select option {
-		background: var(--surface-1);
-		color: var(--ink);
+		background: var(--hud-surface);
+		color: var(--hud-ink);
 	}
 </style>

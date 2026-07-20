@@ -82,29 +82,35 @@
 	.skill-tree {
 		display: grid;
 		align-content: start;
-		gap: 0.7rem;
-		min-width: 15rem;
-		border: 1px solid var(--line);
-		background: var(--surface-1);
-		padding: 0.7rem;
+		gap: 0.35rem;
+		width: 100%;
+		min-width: 0;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-surface);
+		padding: 0.35rem;
 	}
 
 	h2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.1rem;
 		margin: 0;
-		border-bottom: 1px solid var(--line);
-		color: var(--ink);
+		border-bottom: 1px solid var(--hud-line-bright);
+		color: var(--hud-cyan);
 		font-family: var(--font-terminal);
-		font-size: 1.35rem;
+		font-size: clamp(0.72rem, 1.2vw, 0.95rem);
 		font-weight: 700;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.14em;
 		line-height: 1.1;
-		padding: 0.25rem 0.25rem 0.7rem;
+		padding: 0.15rem 0.25rem 0.35rem;
 		text-align: center;
+		text-shadow: 0 0 8px rgb(0 219 231 / 45%);
 		text-transform: uppercase;
 	}
 
 	.tiers {
 		display: grid;
-		gap: 0.55rem;
+		gap: 0.3rem;
 	}
 </style>

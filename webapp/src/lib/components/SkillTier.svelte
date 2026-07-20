@@ -95,23 +95,24 @@
 <style>
 	.skill-tier {
 		display: grid;
-		grid-template-columns: 3.65rem minmax(0, 1fr);
-		gap: 0.5rem;
-		border: 1px solid var(--line);
-		background: var(--surface-0);
-		padding: 0.5rem;
+		grid-template-columns: 2.85rem minmax(0, 1fr);
+		gap: 0.3rem;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-terminal);
+		padding: 0.25rem;
 	}
 
 	.skill-tier.locked {
-		opacity: 0.68;
+		border-color: rgb(132 148 149 / 55%);
 	}
 
 	header {
 		display: grid;
+		min-width: 0;
 		align-content: center;
-		gap: 0.18rem;
-		border-right: 1px solid var(--line);
-		padding-right: 0.4rem;
+		gap: 0.15rem;
+		border-right: 1px solid var(--hud-line);
+		padding-right: 0.3rem;
 	}
 
 	h3,
@@ -119,26 +120,33 @@
 		margin: 0;
 		font-family: var(--font-terminal);
 		font-weight: 700;
-		letter-spacing: 0.04em;
+		letter-spacing: 0.03em;
 		text-transform: uppercase;
 	}
 
 	h3 {
-		color: var(--ink);
-		font-size: 0.73rem;
+		color: var(--hud-ink);
+		font-size: 0.6rem;
 		line-height: 1.15;
 	}
 
 	header span {
-		color: var(--muted);
-		font-size: 0.52rem;
+		color: var(--hud-muted);
+		font-size: 0.45rem;
 		line-height: 1.25;
+	}
+
+	.skill-tier.locked header h3,
+	.skill-tier.locked header span {
+		color: var(--hud-quiet);
 	}
 
 	.skill-options {
 		display: grid;
+		width: 100%;
+		min-width: 0;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 0.45rem;
+		gap: 0.25rem;
 	}
 
 	.skill-options.singleOption,
@@ -152,15 +160,12 @@
 
 	@media (max-width: 420px) {
 		.skill-tier {
-			grid-template-columns: 1fr;
+			grid-template-columns: 2.5rem minmax(0, 1fr);
 		}
 
-		header {
-			grid-template-columns: 1fr auto;
-			align-items: center;
-			border-right: 0;
-			border-bottom: 1px solid var(--line);
-			padding: 0 0 0.4rem;
+		.skill-options,
+		.skill-options.threeOptions {
+			grid-template-columns: minmax(0, 1fr);
 		}
 	}
 </style>

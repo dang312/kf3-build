@@ -1,21 +1,26 @@
 # Google Stitch starter project
 
-Use Google Stitch to explore a visual direction before changing the SvelteKit app. Treat generated screens and code as references, not as production-ready replacements.
+Use Google Stitch as the design stage before changing the SvelteKit app. Treat generated screens and code as references, not production replacements. The current project is `projects/4988160711639323392` and the current design-system asset is `assets/667821455571339371`.
 
-## Current design reference
+## Combined design reference
 
-![Current KF3 Build design](./assets/kf3-current-design.png)
+1. **Functional layout:** [`../.pi/ui-renders/kf3-ui-direction-a-v2.png`](../.pi/ui-renders/kf3-ui-direction-a-v2.png) — the previously approved dense five-tier layout and right Build Summary rail.
+2. **Visual base:** [`design-source/stitch/kf3_hud_medic_detail/screen.png`](design-source/stitch/kf3_hud_medic_detail/screen.png) — Medic HUD color, telemetry framing, and sharp geometry.
+3. **Icon states:** [`design-source/stitch/icon/screen.png`](design-source/stitch/icon/screen.png) — active, inactive, and locked schematic icon treatment.
+4. **Written contract:** [`../DESIGN.md`](../DESIGN.md).
+5. **Refined Stitch concept:** [`design-source/stitch/kf3_build_medic_refined/screen.png`](design-source/stitch/kf3_build_medic_refined/screen.png).
 
-This screenshot is the current implementation reference. Upload it to Stitch with the starter prompt when creating a new concept. Preserve its dark armory-terminal palette, three-tree layout, right-side Build Summary rail, tier states, compact skill cards, and interaction hierarchy unless the concept explicitly explores a documented alternative.
+The refined Stitch desktop concept combines these references. Keep all five authentic tier rows for each tree, the three-tree workspace, 320px summary rail, and real skill icons. Do not copy fictional examples, remote scripts, remote fonts, injected scripts, or external images from Stitch exports.
 
 ## Create the starter project
 
-1. Read [`PRODUCT.md`](../PRODUCT.md) and the UI rules in [`AGENTS.md`](../AGENTS.md).
-2. Open [Google Stitch](https://stitch.withgoogle.com/) and create a project from an image and text prompt.
-3. Upload `docs/assets/kf3-current-design.png`, paste the starter prompt below, and generate the desktop screen first.
-4. Ask Stitch for a mobile version of the same screen without changing its colors, information hierarchy, or interaction states.
-5. Check both versions against the accessibility, responsive, and visual-approval requirements in `AGENTS.md`.
-6. Export or copy useful design/code only as a reference. Adapt it to the existing SvelteKit components and domain helpers instead of replacing the app wholesale.
+1. Read [`PRODUCT.md`](../PRODUCT.md), [`DESIGN.md`](../DESIGN.md), and the UI rules in [`AGENTS.md`](../AGENTS.md).
+2. Create or open the Stitch project and configure a dark sharp-corner design system before screen generation.
+3. Feed Stitch the combined functional layout, Medic HUD, and icon references above; generate the desktop screen first.
+4. Remove invented navigation and verify authentic tier counts, level gates, and data caveats against the repo before approving.
+5. Serve the browser picker from `/home/dang312/.pi/agent/extensions/ui-review-callback/ui-review-picker.py`; approve Direction A/B with empty feedback before frontend implementation.
+6. Generate mobile later when the responsive milestone is active.
+7. Export or copy useful design/code only as a reference. Adapt it to the existing SvelteKit components and domain helpers instead of replacing the app wholesale.
 
 ## Starter prompt
 

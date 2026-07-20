@@ -9,41 +9,52 @@
 	<Header />
 	<main>{@render children()}</main>
 	<footer>
-		KF3 Build uses extracted local game data. Values marked pending remain unverified.
+		<span>KF3 BUILD // LOCAL SIMULATION</span>
+		<span>Extracted game data. Pending values remain unverified.</span>
 	</footer>
 </div>
 
 <style>
 	.app {
 		display: flex;
+		min-width: 0;
 		min-height: 100vh;
 		flex-direction: column;
 	}
 
 	main {
 		box-sizing: border-box;
-		width: 100%;
-		max-width: 110rem;
+		width: min(100%, 110rem);
+		min-width: 0;
 		margin: 0 auto;
-		padding: 0.65rem 0.85rem 1.25rem;
+		padding: 0.75rem 1.25rem 1.5rem;
 	}
 
 	footer {
+		display: flex;
+		min-width: 0;
+		justify-content: space-between;
+		gap: 1rem;
 		margin-top: auto;
-		border-top: 1px solid var(--line);
-		color: var(--quiet);
+		border-top: 1px solid var(--hud-line);
+		color: var(--hud-quiet);
 		font-family: var(--font-terminal);
-		font-size: 0.62rem;
+		font-size: 0.55rem;
 		font-weight: 700;
-		letter-spacing: 0.04em;
-		padding: 0.85rem;
-		text-align: center;
+		letter-spacing: 0.05em;
+		padding: 0.75rem 1.25rem;
 		text-transform: uppercase;
 	}
 
-	@media (min-width: 720px) {
+	@media (max-width: 700px) {
 		main {
-			padding-inline: 1.25rem;
+			padding: 0.5rem 0.75rem 1.25rem;
+		}
+
+		footer {
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
 		}
 	}
 </style>

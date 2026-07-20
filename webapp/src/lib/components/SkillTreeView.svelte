@@ -53,26 +53,49 @@
 
 <style>
 	.skill-tree-view {
+		width: 100%;
 		min-width: 0;
+		max-width: 100%;
+		overflow: hidden;
+		border: 1px solid var(--hud-line);
+		background: rgb(11 9 6 / 72%);
+		padding: 0.35rem;
 	}
 
 	.tree-columns {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(15rem, 1fr));
-		gap: 0.75rem;
+		width: 100%;
 		min-width: 0;
-		overflow-x: auto;
-		padding-bottom: 0.5rem;
-		scroll-snap-type: x proximity;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.35rem;
+		min-width: 0;
 	}
 
 	.tree-columns :global(.skill-tree) {
-		scroll-snap-align: start;
+		min-width: 0;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1040px) {
 		.tree-columns {
-			grid-template-columns: repeat(3, minmax(16rem, 82vw));
+			grid-template-columns: repeat(3, minmax(15.5rem, 1fr));
+			overflow-x: auto;
+			padding-bottom: 0.35rem;
+			scroll-snap-type: x proximity;
+		}
+
+		.tree-columns :global(.skill-tree) {
+			scroll-snap-align: start;
+		}
+	}
+
+	@media (max-width: 680px) {
+		.skill-tree-view {
+			padding: 0.25rem;
+		}
+
+		.tree-columns {
+			grid-template-columns: minmax(0, 1fr);
+			overflow: visible;
 		}
 	}
 </style>

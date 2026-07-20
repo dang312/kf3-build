@@ -36,26 +36,34 @@
 <style>
 	.level-control {
 		display: grid;
-		grid-template-columns: minmax(7rem, auto) minmax(5rem, 9rem);
+		min-width: 0;
+		grid-template-columns: minmax(0, 7rem) minmax(0, 1fr);
 		align-items: center;
-		gap: 0.6rem;
+		gap: 0.4rem;
 	}
 
 	.field {
 		display: grid;
-		grid-template-columns: auto 1fr;
+		min-width: 0;
+		grid-template-columns: auto minmax(0, 1fr);
 		align-items: center;
 		gap: 0.55rem;
-		min-height: 3.2rem;
-		border: 1px solid var(--line);
-		background: var(--surface-1);
-		padding: 0 0.75rem;
+		min-height: 3rem;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-terminal);
+		padding: 0 0.7rem;
+	}
+
+	.field:focus-within,
+	.range-field:focus-within {
+		border-color: var(--hud-cyan);
+		box-shadow: inset 0 0 7px rgb(0 219 231 / 12%);
 	}
 
 	.field span {
-		color: var(--muted);
+		color: var(--hud-muted);
 		font-family: var(--font-terminal);
-		font-size: 0.64rem;
+		font-size: 0.56rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
@@ -63,43 +71,47 @@
 
 	select {
 		min-width: 0;
+		width: 100%;
 		border: 0;
 		outline: 0;
 		background: transparent;
-		color: var(--accent);
+		color: var(--hud-orange-soft);
 		font-family: var(--font-terminal);
-		font-size: 1.1rem;
+		font-size: 0.9rem;
 		font-weight: 700;
 		text-align: right;
 	}
 
 	select option {
-		background: var(--surface-1);
-		color: var(--ink);
+		background: var(--hud-surface);
+		color: var(--hud-ink);
 	}
 
 	.range-field {
 		display: flex;
+		min-width: 0;
 		align-items: center;
-		min-height: 3.2rem;
-		border: 1px solid var(--line);
-		background: var(--surface-1);
+		min-height: 3rem;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-terminal);
 		padding: 0 0.65rem;
 	}
 
 	input[type='range'] {
 		width: 100%;
-		accent-color: var(--accent);
+		height: 0.4rem;
+		accent-color: var(--hud-orange);
+		cursor: pointer;
 	}
 
 	@media (max-width: 520px) {
 		.level-control {
 			grid-template-columns: 1fr;
-			gap: 0.35rem;
+			gap: 0.3rem;
 		}
 
 		.range-field {
-			min-height: 2.4rem;
+			min-height: 2.2rem;
 		}
 	}
 </style>

@@ -100,14 +100,24 @@
 		onfocus={focusSkill}
 		onpointerenter={focusSkill}
 	>
-		<span class="icon-shell" aria-hidden="true">
-			{#if skill.icon}
-				<img src={skill.icon} alt="" loading="lazy" />
-			{:else}
-				<span>{iconInitials}</span>
-			{/if}
+		<span class="card-topline">
+			<span class="icon-shell" aria-hidden="true">
+				{#if skill.icon}
+					<img src={skill.icon} alt="" loading="lazy" />
+				{:else}
+					<span>{iconInitials}</span>
+				{/if}
+			</span>
+			<span class="state-mark" aria-hidden="true"
+				>{locked ? 'LOCKED' : maxed ? 'MAX' : selected ? 'ACTIVE' : 'READY'}</span
+			>
 		</span>
 		<span class="skill-name">{skill.name}</span>
+		{#if locked}
+			<span class="lock-reason"
+				>{skill.unlockLevel ? `UNLOCK LV ${skill.unlockLevel}` : 'PREREQUISITE'}</span
+			>
+		{/if}
 		{#if upgradeable}
 			<span class="rank-meter" aria-hidden="true" style:--rank-cap={rankCap}>
 				{#each Array.from({ length: rankCap }).keys() as index (index)}
@@ -135,126 +145,156 @@
 	.skill-card {
 		position: relative;
 		display: grid;
-		gap: 0.4rem;
+		gap: 0.22rem;
 		min-width: 0;
 	}
 
 	.skill-button {
 		display: grid;
-		grid-template-rows: minmax(0, 1fr) minmax(1.7rem, auto) auto;
+		min-width: 0;
+		grid-template-rows: auto minmax(1.45rem, auto) auto auto;
 		justify-items: center;
-		gap: 0.3rem;
+		gap: 0.22rem;
 		width: 100%;
-		min-height: 7rem;
-		border: 1px solid var(--line);
-		background: var(--surface-1);
-		color: var(--ink);
-		padding: 0.45rem 0.3rem 0;
+		min-height: 5.95rem;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-panel);
+		color: var(--hud-ink);
+		padding: 0.28rem 0.22rem 0;
 		cursor: pointer;
 	}
 
 	.skill-button:hover,
 	.skill-button:focus-visible,
 	.focused .skill-button {
-		border-color: var(--line-strong);
-		background: var(--surface-2);
+		border-color: var(--hud-cyan);
+		background: #202428;
+		box-shadow: inset 0 0 8px rgb(0 219 231 / 12%);
 	}
 
 	.selected .skill-button {
-		border-color: var(--accent);
-		background: oklch(24% 0.035 60);
-		box-shadow: inset 0 0 0 1px oklch(72% 0.17 65 / 32%);
+		border-color: var(--hud-orange);
+		background: rgb(255 138 0 / 7%);
+		box-shadow:
+			inset 0 0 0 1px rgb(255 138 0 / 35%),
+			0 0 5px rgb(255 138 0 / 22%);
 	}
 
 	.maxed .skill-button {
-		border-color: oklch(77% 0.15 145);
-		background: oklch(24% 0.04 145);
-		box-shadow: inset 0 0 0 1px oklch(77% 0.15 145 / 34%);
+		border-color: var(--hud-green);
+		background: rgb(113 205 118 / 7%);
+		box-shadow: inset 0 0 0 1px rgb(113 205 118 / 32%);
 	}
 
 	.locked .skill-button {
-		color: var(--quiet);
+		color: var(--hud-quiet);
 		cursor: not-allowed;
 	}
 
 	.rank-meter {
 		box-sizing: border-box;
 		display: grid;
-		grid-template-columns: repeat(var(--rank-cap), 0.48rem) minmax(0, 1fr);
+		grid-template-columns: repeat(var(--rank-cap), minmax(0, 1fr)) auto;
 		align-items: center;
-		gap: 0.14rem;
-		width: calc(100% + 0.6rem);
-		min-height: 1.5rem;
-		margin: 0 -0.3rem;
-		padding: 0.3rem 0.35rem;
-		border-top: 1px solid var(--line-strong);
-		background: var(--surface-0);
+		gap: 0.12rem;
+		width: calc(100% + 0.44rem);
+		min-height: 1.08rem;
+		margin: 0 -0.22rem;
+		padding: 0.2rem 0.25rem;
+		border-top: 1px solid var(--hud-line);
+		background: var(--hud-terminal);
 	}
 
 	.rank-meter i {
 		display: block;
-		height: 0.38rem;
-		border: 1px solid var(--line-strong);
-		background: var(--surface-1);
+		height: 0.3rem;
+		border: 1px solid var(--hud-line-bright);
+		background: var(--hud-panel);
 	}
 
 	.spent .rank-meter i.filled {
-		border-color: oklch(74% 0.13 220);
-		background: oklch(64% 0.12 220);
+		border-color: var(--hud-cyan);
+		background: var(--hud-cyan);
+		box-shadow: 0 0 4px rgb(0 219 231 / 65%);
 	}
 
 	.rank-meter b {
-		min-width: 0;
-		color: var(--muted);
+		min-width: 1.35rem;
+		color: var(--hud-muted);
 		font-family: var(--font-terminal);
-		font-size: 0.55rem;
+		font-size: 0.43rem;
 		font-variant-numeric: tabular-nums;
 		line-height: 1;
 		text-align: right;
 	}
 
 	.spent .rank-meter b {
-		color: oklch(86% 0.08 220);
+		color: var(--hud-cyan-bright);
 	}
 
 	.maxed .rank-meter i.filled {
-		border-color: oklch(77% 0.15 145);
-		background: oklch(67% 0.14 145);
+		border-color: var(--hud-green);
+		background: var(--hud-green);
+		box-shadow: 0 0 4px rgb(113 205 118 / 55%);
 	}
 
 	.maxed .rank-meter b {
-		color: oklch(88% 0.1 145);
+		color: var(--hud-green);
 	}
 
 	.icon-shell {
 		display: grid;
 		place-items: center;
-		width: min(100%, 4rem);
+		width: min(100%, 2.35rem);
 		aspect-ratio: 1;
-		border: 1px solid var(--line-strong);
-		background: var(--surface-0);
+		border: 1px solid var(--hud-line-bright);
+		background: var(--hud-bg);
 		overflow: hidden;
 	}
 
 	.icon-shell img {
-		width: 82%;
-		height: 82%;
+		width: 84%;
+		height: 84%;
+		filter: grayscale(1) brightness(1.55);
 		object-fit: contain;
 	}
 
+	.selected .icon-shell img {
+		filter: sepia(1) saturate(8) hue-rotate(335deg) brightness(1.2);
+	}
+
+	.spent .icon-shell img {
+		filter: none;
+	}
+
+	.maxed .icon-shell img {
+		filter: sepia(1) saturate(5) hue-rotate(65deg) brightness(1.05);
+	}
+
+	.locked .icon-shell img {
+		filter: grayscale(1) brightness(0.7);
+	}
+
 	.icon-shell span {
-		color: var(--accent);
+		color: var(--hud-cyan);
 		font-family: var(--font-terminal);
-		font-size: 1rem;
+		font-size: 0.72rem;
 		font-weight: 700;
 	}
 
 	.selected .icon-shell {
-		border-color: var(--accent);
+		border-color: var(--hud-orange);
+		box-shadow: 0 0 6px rgb(255 138 0 / 38%);
+	}
+
+	.spent .icon-shell {
+		border-color: var(--hud-cyan);
+		box-shadow: 0 0 6px rgb(0 219 231 / 38%);
 	}
 
 	.maxed .icon-shell {
-		border-color: oklch(77% 0.15 145);
+		border-color: var(--hud-green);
+		box-shadow: 0 0 6px rgb(113 205 118 / 38%);
 	}
 
 	.locked .icon-shell {
@@ -264,28 +304,71 @@
 
 	.skill-name {
 		display: -webkit-box;
+		max-width: 100%;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
 		line-clamp: 2;
+		min-width: 0;
 		overflow: hidden;
 		font-family: var(--font-terminal);
-		font-size: 0.6rem;
+		font-size: clamp(0.45rem, 0.65vw, 0.56rem);
 		font-weight: 700;
 		letter-spacing: 0.02em;
-		line-height: 1.25;
+		line-height: 1.15;
+		text-align: center;
 		text-transform: uppercase;
 	}
 
+	.card-topline {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		gap: 0.2rem;
+		width: 100%;
+	}
+
+	.state-mark,
+	.lock-reason {
+		font-family: var(--font-terminal);
+		font-size: 0.38rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		line-height: 1.1;
+		text-align: right;
+		text-transform: uppercase;
+	}
+
+	.state-mark {
+		color: var(--hud-quiet);
+	}
+
+	.selected .state-mark {
+		color: var(--hud-orange-soft);
+	}
+
+	.spent .state-mark {
+		color: var(--hud-cyan);
+	}
+
+	.maxed .state-mark {
+		color: var(--hud-green);
+	}
+
+	.locked .state-mark,
+	.lock-reason {
+		color: var(--hud-danger);
+	}
+
 	.expanded-details {
-		border: 1px solid var(--line);
-		background: var(--surface-0);
-		padding: 0.6rem;
+		border: 1px solid var(--hud-line);
+		background: var(--hud-bg);
+		padding: 0.45rem;
 	}
 
 	.expanded-details p {
 		margin: 0;
-		color: var(--muted);
-		font-size: 0.8rem;
-		line-height: 1.45;
+		color: var(--hud-muted);
+		font-size: 0.68rem;
+		line-height: 1.35;
 	}
 </style>
